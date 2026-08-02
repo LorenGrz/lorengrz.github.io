@@ -1,8 +1,5 @@
 import Image from "next/image";
-import { AdminProjectForm } from "@/components/AdminProjectForm";
-import { listProjects } from "@/lib/projects/repository";
-
-export const dynamic = "force-dynamic";
+import { seedProjects } from "@/lib/projects/seed-projects";
 
 const skills = [
   {
@@ -60,8 +57,8 @@ const experience = [
   },
 ] as const;
 
-export default async function Home() {
-  const projects = await listProjects();
+export default function Home() {
+  const projects = seedProjects;
 
   return (
     <>
@@ -311,7 +308,6 @@ export default async function Home() {
           </div>
         </section>
 
-        <AdminProjectForm />
       </main>
 
       <footer className="border-t border-outline-variant bg-surface py-8">

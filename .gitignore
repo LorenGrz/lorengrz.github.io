@@ -20,6 +20,10 @@
 # production
 /build
 
+# SAM build artifacts and generated static files
+/.aws-sam/
+/deploy/public/
+
 # misc
 .DS_Store
 *.pem

@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Lorenzo Graizzaro portfolio - Next.js app with serverless Node.js API and PostgreSQL project storage.
+
+Parameters:
+  DatabaseUrl:
+    Type: String
+    NoEcho: true
+    Description: PostgreSQL connection string for the relational projects database.
+  AdminToken:
+    Type: String
+    NoEcho: true
+    Description: Private token used by the Soy Lorenzo project form.
+
+Globals:
+  Function:
+    Runtime: nodejs22.x
+    Architectures: [arm64]
+    MemorySize: 512
+    Timeout: 30
+    Environment:
+      Variables:
+        DATABASE_URL: !Ref DatabaseUrl
+        ADMIN_TOKEN: !Ref AdminToken
+        DATABASE_POOL_MAX: "2"
+
+Resources:
+  PortfolioFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: lorenzo-portfolio
+      Handler: index.handler
+      CodeUri: .open-next/server-functions/default/
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        Root:
+          Type: Api
+          Properties:
+            Path: /
+            Method: ANY
+        Proxy:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+Outputs:
+  AppUrl:
+    Description: Portfolio API Gateway URL
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

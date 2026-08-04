@@ -1,81 +1,58 @@
-# Lorenzo Graizzaro Portfolio
+# Lorenzo Graizzaro — Portfolio
 
-Personal full-stack portfolio built with Next.js, TypeScript, Tailwind CSS, Node.js route handlers, and PostgreSQL.
+Portfolio personal desplegado como sitio estático en S3 + CloudFront.
 
-The public page presents Lorenzo's profile, skills, work experience, and featured projects. The private `Soy Lorenzo` form lets Lorenzo add a new project without editing source code.
+**URL en vivo:** https://d3q8bee4t9y11e.cloudfront.net
 
 ## Stack
 
-- Next.js App Router
-- React
-- TypeScript
-- Tailwind CSS
-- PostgreSQL through `pg`
-- Zod for API request validation
-- AWS SAM deployment draft for a serverless Node.js runtime
+- Next.js 16 (App Router, `output: 'export'` — sitio 100% estático)
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- pnpm 11
+- AWS SAM (infra: S3 + CloudFront via CloudFormation)
 
-## Local Setup
+## Setup local
 
 ```bash
 pnpm install
-cp .env.example .env.local
 pnpm dev
+# http://localhost:3000
 ```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-Without `DATABASE_URL`, the app renders seeded projects from `src/lib/projects/seed-projects.ts`. Creating projects requires a PostgreSQL database and `ADMIN_TOKEN`.
-
-## Database
-
-Run the schema in `database/schema.sql` against PostgreSQL:
-
-```bash
-psql "$DATABASE_URL" -f database/schema.sql
-```
-
-Project data is stored in relational tables:
-
-- `projects`: title, slug, summary, description, stack, GitHub/live links, status, featured flag.
-- `project_images`: image URL, alt text, and order for each project.
-
-Images are stored as URLs instead of binary blobs. For AWS production, the next step is S3 uploads with presigned URLs while keeping the relational database as the source of truth.
-
-## Admin Flow
-
-1. Set `ADMIN_TOKEN` in the server environment.
-2. Open the homepage.
-3. Click `Soy Lorenzo`.
-4. Enter the token and project details.
-5. Submit the form.
-
-The API validates the request and writes to PostgreSQL through `POST /api/projects`.
 
 ## Scripts
 
 ```bash
-pnpm dev
+pnpm dev          # servidor de desarrollo
+pnpm build        # build estático → ./out
 pnpm lint
 pnpm typecheck
-pnpm build
-pnpm start
+pnpm deploy       # build + sam deploy (infra) + s3 sync + cloudfront invalidation
 ```
 
-## AWS Serverless Notes
+## Deploy
 
-The project includes `aws/template.yaml`, modeled after the `ServerlessScanner` SAM approach, but Next.js requires a build adapter before SAM can package the Lambda.
+El script `scripts/deploy.sh` hace todo el pipeline:
 
-Recommended path:
+```bash
+pnpm deploy
+```
 
-1. Use OpenNext to generate `.open-next/server-functions/default/`.
-2. Point `aws/template.yaml` at that generated handler.
-3. Provide `DatabaseUrl` and `AdminToken` during `sam deploy`.
-4. Use Amazon RDS PostgreSQL or Aurora PostgreSQL for the relational database.
+Pasos internos: `pnpm build` → `sam deploy` (stack `lorenzo-portfolio`) → `aws s3 sync out/ s3://lorenzo-portfolio-493735739644 --delete` → invalidación de CloudFront.
 
-The current SAM file is a deployment starting point, not a fully verified production deploy artifact yet.
+**Recursos AWS:**
+- S3: `lorenzo-portfolio-493735739644`
+- CloudFront: `E4X6I2HDSWCGA`
 
-## Project Notes
+## Proyectos
 
-- Server components are the default.
-- The project repository is designed around real CV context from Lorenzo Graizzaro.
-- Public academic repositories may be private by university policy and can be labeled accordingly in project cards.
+Los proyectos se cargan desde `src/lib/projects/seed-projects.ts`. Para agregar uno nuevo: agregar una entrada al array `seedProjects` y correr `pnpm deploy`.
+
+La capa de base de datos (PostgreSQL + admin form) está deshabilitada — los archivos se conservan en `_disabled_api/` y `database/` para referencia futura.
+
+## Notas
+
+- El portfolio usa exportación estática — no hay server components ni API routes activas en producción.
+- Los archivos de CV están en `public/` (`Lorenzo_Graizzaro_CV_ES.pdf`, `Lorenzo_Graizzaro_CV_EN.pdf`).
+- La fuente Material Symbols se carga vía `<link>` en `layout.tsx`, no con `@import` en CSS (Turbopack descarta el segundo `@import`).

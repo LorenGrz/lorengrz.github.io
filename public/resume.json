@@ -1,0 +1,139 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Lorenzo Graizzaro",
+    "label": "Desarrollador Full Stack",
+    "email": "lorenzograizzaro55@gmail.com",
+    "phone": "+54 11-6027-7080",
+    "summary": "Desarrollador Full Stack en formación con proyectos reales usando React, TypeScript, Kotlin/Spring Boot y NestJS, todos containerizados con Docker Compose. Experiencia laboral en entornos de alta demanda y gestión de datos con SQL aplicado en producción. Orientado al detalle, con capacidad para trabajar de forma autónoma e integrarme rápidamente a equipos ágiles.",
+    "location": {
+      "city": "Buenos Aires",
+      "countryCode": "AR",
+      "region": "Buenos Aires"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "LorenGrz",
+        "url": "https://github.com/LorenGrz"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "lorenzo-graizzaro",
+        "url": "https://linkedin.com/in/lorenzo-graizzaro"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "UNSAM",
+      "position": "Tutor de Algoritmos 3",
+      "startDate": "2026-01",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Tutoría práctica en la materia Algoritmos 3, orientada a interfaces de usuario con React. Acompaño a estudiantes en el razonamiento sobre problemas y la construcción de proyectos.",
+      "highlights": [
+        "Tutoría práctica con foco en interfaces con React",
+        "Debugging y revisión de proyectos académicos en equipo"
+      ]
+    },
+    {
+      "name": "FABRIC SRL",
+      "position": "Administrativo",
+      "startDate": "2024-12",
+      "endDate": "2025-12",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Consultas SQL sobre bases de datos de producción para búsqueda y visualización de información operativa. Gestión contable con Xubio: cheques, transferencias y control de stock.",
+      "highlights": [
+        "Consultas SQL reales sobre datos de producción para reporting operativo",
+        "Gestión contable con Xubio: cheques, transferencias y control de stock"
+      ]
+    },
+    {
+      "name": "Banco Nación",
+      "position": "Operador Remoto",
+      "startDate": "2024-01",
+      "endDate": "2024-12",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Resolución de consultas en entorno de alta demanda usando máquinas virtuales y herramientas internas.",
+      "highlights": [
+        "Atención de consultas de alto volumen con máquinas virtuales y sistemas internos"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional de San Martín",
+      "area": "Programación Informática",
+      "studyType": "Tecnicatura",
+      "startDate": "2022",
+      "endDate": "2026-07",
+      "location": "Buenos Aires, Argentina"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "Svelte", "HTML/CSS"]
+    },
+    {
+      "name": "Backend",
+      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Java", "REST APIs", "GraphQL"]
+    },
+    {
+      "name": "Bases de datos",
+      "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+    },
+    {
+      "name": "Infraestructura",
+      "keywords": ["Docker", "Docker Compose", "AWS Lambda", "AWS API Gateway", "AWS SAM"]
+    },
+    {
+      "name": "Herramientas",
+      "keywords": ["Git", "GitHub", "pnpm", "ESLint", "Linux"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "StudyQuest",
+      "description": "Plataforma de estudio full-stack con quizzes generados por IA y sistema de matching de usuarios. Backend modular con NestJS y PostgreSQL, entorno reproducible con Docker Compose.",
+      "highlights": [
+        "API modular con NestJS y PostgreSQL containerizada",
+        "Conversión de PDF/DOCX en quiz interactivo con IA",
+        "Sistema de matching de usuarios"
+      ],
+      "keywords": ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
+      "url": "https://github.com/LorenGrz/StudyQuest",
+      "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "BookLibre",
+      "description": "Sistema de reserva y alquiler de libros con gestión de disponibilidad y usuarios. Usa Chakra UI como sistema de diseño. Entorno completamente dockerizado.",
+      "highlights": [
+        "Stack full-stack dockerizado con Docker Compose",
+        "Persistencia políglota: PostgreSQL, MongoDB y Redis"
+      ],
+      "keywords": ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
+      "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "Algo Que Pedir",
+      "description": "Aplicación full-stack académica estilo PedidosYa con gestión de productos, órdenes y usuarios. Frontend SPA y backend REST containerizados. Proyecto grupal con flujo colaborativo en GitHub.",
+      "highlights": [
+        "Frontend SPA y backend REST containerizados",
+        "Flujo colaborativo: ramas, PRs y revisiones en GitHub",
+        "Arquitectura por capas"
+      ],
+      "keywords": ["React", "Svelte", "TypeScript", "Tailwind CSS", "Kotlin", "Spring Boot", "Docker Compose"],
+      "roles": ["Desarrollador Full Stack"]
+    }
+  ],
+  "languages": [
+    { "language": "Español", "fluency": "Nativo" },
+    { "language": "Inglés", "fluency": "Técnico — lectura y escritura" }
+  ],
+  "meta": {
+    "canonical": "https://yrfjdlphw3.execute-api.us-east-1.amazonaws.com/prod/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-08-02"
+  }
+}

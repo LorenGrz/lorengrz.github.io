@@ -12,6 +12,7 @@ export const seedProjects = [
       "Plataforma en desarrollo que convierte archivos PDF/DOCX en quizzes interactivos, con una API modular en NestJS, PostgreSQL, Redis y Docker Compose.",
     stack: ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
+    liveUrl: "https://studyquest-production-281a.up.railway.app/",
     status: "completed",
     featured: true,
     images: [

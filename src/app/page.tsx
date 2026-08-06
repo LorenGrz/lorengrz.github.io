@@ -166,17 +166,9 @@ export default function Home() {
               <h2 className="section-title">Desarrollo full-stack práctico con profundidad real en proyectos.</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Desarrollador Full Stack con proyectos reales usando React, TypeScript, Node.js/NestJS y Kotlin/Spring Boot, todos
-                  containerizados con Docker Compose. Me importan las interfaces claras, la lógica de backend mantenible y los entornos
-                  reproducibles.
-                </p>
-                <p>
-                  En UNSAM soy tutor de Algoritmos 3, materia enfocada en interfaces de usuario con React. Ese rol me mantiene cerca de los
-                  fundamentos: explicar decisiones, debuggear con otros y convertir problemas vagos en software que funciona.
-                </p>
-                <p>
-                  Mi experiencia laboral previa involucró consultas SQL sobre datos operativos y soporte remoto en entornos de alta demanda,
-                  lo que me dio práctica real con presión, precisión y comunicación.
+                  Soy Desarrollador Full Stack usando React, Next.js, TypeScript, Node.js/NestJS, Kotlin/Spring Boot y Docker.
+                  Me importan las interfaces claras, la lógica de backend mantenible y los entornos reproducibles. Me interesa el ecosistema
+                  de IA y Automatizaciones.
                 </p>
               </div>
               <div className="mt-6 rounded-lg border border-outline-variant bg-surface p-5">

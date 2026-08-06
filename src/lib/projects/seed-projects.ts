@@ -12,7 +12,6 @@ export const seedProjects = [
       "Plataforma en desarrollo que convierte archivos PDF/DOCX en quizzes interactivos, con una API modular en NestJS, PostgreSQL, Redis y Docker Compose.",
     stack: ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
-    liveUrl: "https://studyquest-production-281a.up.railway.app/",
     status: "completed",
     featured: true,
     images: [
@@ -33,6 +32,7 @@ export const seedProjects = [
       "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker Compose y persistencia políglota con PostgreSQL, MongoDB y Redis.",
     stack: ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/BookLibre",
+    liveUrl: "https://lorengrz.github.io/BookLibre/",
     status: "completed",
     featured: true,
     images: [
@@ -53,6 +53,7 @@ export const seedProjects = [
       "Proyecto académico grupal con frontends SPA, backend REST, arquitectura por capas, flujo de PRs en GitHub y Docker Compose.",
     stack: ["React", "Svelte", "TypeScript", "Tailwind", "Kotlin", "Spring Boot", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/AlgoQuePedir",
+    liveUrl: "https://lorengrz.github.io/AlgoQuePedir/",
     status: "completed",
     featured: true,
     images: [
@@ -73,7 +74,7 @@ export const seedProjects = [
       "API REST con FastAPI que aplica Isolation Forest, LOF y K-Means en paralelo para detectar anomalías en ~100.000 transacciones. Un cliente se reporta solo si ≥ 2 de los 3 modelos coinciden (consenso 2/3), lo que reduce falsos positivos en ~35% vs. modelo único. Tiempo de respuesta: 110–150 ms en análisis de clientes, 40–60 ms en transacciones individuales. Dashboard en HTML/JS con gráficos Plotly (scatter, boxplot) servidos como HTML desde el backend.",
     stack: ["Python", "FastAPI", "scikit-learn", "SQLite", "SQLAlchemy", "Plotly", "Bootstrap"],
     githubUrl: "https://github.com/LorenGrz/FraudDetector",
-    liveUrl: "https://idljw8bb01.execute-api.us-east-1.amazonaws.com/prod/",
+    liveUrl: "https://lorengrz.github.io/FraudDetector/",
     status: "completed",
     featured: true,
     images: [

@@ -34,6 +34,7 @@ export const seedProjects = [
     stack: ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/BookLibre",
     liveUrl: "https://lorengrz.github.io/BookLibre/",
+    repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
     images: [
@@ -55,6 +56,7 @@ export const seedProjects = [
     stack: ["React", "Svelte", "TypeScript", "Tailwind", "Kotlin", "Spring Boot", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/AlgoQuePedir",
     liveUrl: "https://lorengrz.github.io/AlgoQuePedir/",
+    repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
     images: [
@@ -96,7 +98,7 @@ export const seedProjects = [
       "API en FastAPI que analiza templates de CloudFormation e identifica recursos (EC2, RDS, ECS, etc.) que pueden migrarse a Lambda, Aurora Serverless, DynamoDB y otros servicios serverless, estimando el ahorro de costos potencial.",
     stack: ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
     githubUrl: "https://github.com/LorenGrz/ServerlessScanner",
-    liveUrl: "https://o5t5ellgkf.execute-api.us-east-1.amazonaws.com/prod/",
+    liveUrl: "https://lorengrz.github.io/ServerlessScanner/",
     status: "in_progress",
     featured: true,
     images: [
@@ -131,7 +133,7 @@ export const seedProjects = [
       "Next.js",
     ],
     githubUrl: "https://github.com/LorenGrz/Prioria",
-    liveUrl: "https://d1c6xk2jegfebf.cloudfront.net",
+    liveUrl: "https://lorengrz.github.io/landing-prioria/",
     status: "in_progress",
     featured: true,
     images: [

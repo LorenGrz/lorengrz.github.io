@@ -63,6 +63,13 @@
   "education": [
     {
       "institution": "Universidad Nacional de San Martín",
+      "area": "Desarrollo de Software",
+      "studyType": "Licenciatura",
+      "startDate": "2026",
+      "location": "Buenos Aires, Argentina"
+    },
+    {
+      "institution": "Universidad Nacional de San Martín",
       "area": "Programación Informática",
       "studyType": "Tecnicatura",
       "startDate": "2022",
@@ -73,7 +80,7 @@
   "skills": [
     {
       "name": "Frontend",
-      "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "Svelte", "HTML/CSS"]
+      "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "HTML/CSS"]
     },
     {
       "name": "Mobile",
@@ -81,27 +88,19 @@
     },
     {
       "name": "Backend",
-      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Java", "Python", "FastAPI", "REST APIs", "GraphQL"]
-    },
-    {
-      "name": "Machine Learning",
-      "keywords": ["scikit-learn", "Isolation Forest", "LOF", "K-Means", "Plotly"]
+      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Python", "FastAPI", "REST APIs"]
     },
     {
       "name": "Bases de datos",
-      "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "SQLite"]
+      "keywords": ["PostgreSQL", "MongoDB", "Redis", "DynamoDB", "MySQL"]
     },
     {
-      "name": "AWS",
-      "keywords": ["Lambda", "API Gateway", "EC2", "RDS", "S3", "CloudFront", "DynamoDB", "SQS", "Amazon Cognito", "Amazon Bedrock", "Amazon Polly", "AWS SAM", "IAM"]
+      "name": "AWS & Cloud",
+      "keywords": ["Lambda", "API Gateway", "S3", "CloudFront", "Cognito", "Bedrock", "DynamoDB", "AWS SAM"]
     },
     {
       "name": "Infraestructura",
-      "keywords": ["Docker", "Docker Compose", "GitHub Actions", "Render", "GitHub Pages"]
-    },
-    {
-      "name": "Herramientas",
-      "keywords": ["Git", "GitHub", "pnpm", "ESLint", "Linux"]
+      "keywords": ["Docker", "Docker Compose", "GitHub Actions", "Git", "Linux"]
     }
   ],
   "projects": [
@@ -129,18 +128,6 @@
       ],
       "keywords": ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "PostgreSQL", "MongoDB", "Redis", "Docker Compose"],
       "url": "https://github.com/LorenGrz/BookLibre",
-      "roles": ["Desarrollador Full Stack"]
-    },
-    {
-      "name": "Algo Que Pedir",
-      "startDate": "2025",
-      "description": "Aplicación full-stack académica estilo PedidosYa con gestión de productos, órdenes y usuarios. Frontend SPA y backend REST containerizados. Proyecto grupal con flujo colaborativo en GitHub.",
-      "highlights": [
-        "Frontend SPA y backend REST containerizados",
-        "Flujo colaborativo: ramas, PRs y revisiones en GitHub",
-        "Arquitectura por capas"
-      ],
-      "keywords": ["React", "Svelte", "TypeScript", "Tailwind CSS", "Kotlin", "Spring Boot", "Docker Compose"],
       "roles": ["Desarrollador Full Stack"]
     },
     {
@@ -180,19 +167,6 @@
       "keywords": ["React Native", "Expo", "NativeWind", "TypeScript", "AWS Lambda", "Amazon Bedrock", "Amazon Cognito", "DynamoDB", "Amazon Polly", "Strands Agents", "AWS SAM"],
       "url": "https://github.com/LorenGrz/Prioria",
       "roles": ["Desarrollador Full Stack"]
-    },
-    {
-      "name": "AWS Cloud Foundations",
-      "startDate": "2026",
-      "description": "Exploración práctica de servicios core de AWS: Lambda, EC2, RDS, Amazon Bedrock, S3, CloudFront e IAM con principio de mínimo privilegio. Infraestructura como código con AWS SAM.",
-      "highlights": [
-        "Lambda (Node.js/Python), EC2, RDS (MySQL), S3 + CloudFront, Amazon Bedrock (Nova Micro), AWS Budgets",
-        "IAM con políticas de mínimo privilegio en todos los recursos",
-        "Todo desplegado en us-east-1 con clean-up automático de recursos tras los ejercicios"
-      ],
-      "keywords": ["AWS Lambda", "EC2", "RDS", "S3", "CloudFront", "Amazon Bedrock", "AWS SAM", "IAM", "AWS Budgets"],
-      "url": "https://github.com/LorenGrz/aws-skills",
-      "roles": ["Desarrollador"]
     }
   ],
   "languages": [

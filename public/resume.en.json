@@ -63,6 +63,13 @@
   "education": [
     {
       "institution": "Universidad Nacional de San Martín",
+      "area": "Software Development",
+      "studyType": "Bachelor's Degree (Licenciatura)",
+      "startDate": "2026",
+      "location": "Buenos Aires, Argentina"
+    },
+    {
+      "institution": "Universidad Nacional de San Martín",
       "area": "Computer Programming",
       "studyType": "Associate's Degree (Tecnicatura)",
       "startDate": "2022",
@@ -73,96 +80,27 @@
   "skills": [
     {
       "name": "Frontend",
-      "keywords": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Chakra UI",
-        "Svelte",
-        "HTML/CSS"
-      ]
+      "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "HTML/CSS"]
     },
     {
       "name": "Mobile",
-      "keywords": [
-        "React Native",
-        "Expo",
-        "NativeWind"
-      ]
+      "keywords": ["React Native", "Expo", "NativeWind"]
     },
     {
       "name": "Backend",
-      "keywords": [
-        "Node.js",
-        "NestJS",
-        "Kotlin",
-        "Spring Boot",
-        "Java",
-        "Python",
-        "FastAPI",
-        "REST APIs",
-        "GraphQL"
-      ]
-    },
-    {
-      "name": "Machine Learning",
-      "keywords": [
-        "scikit-learn",
-        "Isolation Forest",
-        "LOF",
-        "K-Means",
-        "Plotly"
-      ]
+      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Python", "FastAPI", "REST APIs"]
     },
     {
       "name": "Databases",
-      "keywords": [
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Redis",
-        "DynamoDB",
-        "SQLite"
-      ]
+      "keywords": ["PostgreSQL", "MongoDB", "Redis", "DynamoDB", "MySQL"]
     },
     {
-      "name": "AWS",
-      "keywords": [
-        "Lambda",
-        "API Gateway",
-        "EC2",
-        "RDS",
-        "S3",
-        "CloudFront",
-        "DynamoDB",
-        "SQS",
-        "Amazon Cognito",
-        "Amazon Bedrock",
-        "Amazon Polly",
-        "AWS SAM",
-        "IAM"
-      ]
+      "name": "AWS & Cloud",
+      "keywords": ["Lambda", "API Gateway", "S3", "CloudFront", "Cognito", "Bedrock", "DynamoDB", "AWS SAM"]
     },
     {
       "name": "Infrastructure",
-      "keywords": [
-        "Docker",
-        "Docker Compose",
-        "GitHub Actions",
-        "Render",
-        "GitHub Pages"
-      ]
-    },
-    {
-      "name": "Tools",
-      "keywords": [
-        "Git",
-        "GitHub",
-        "pnpm",
-        "ESLint",
-        "Linux"
-      ]
+      "keywords": ["Docker", "Docker Compose", "GitHub Actions", "Git", "Linux"]
     }
   ],
   "projects": [
@@ -213,28 +151,6 @@
         "Full Stack Developer"
       ],
       "startDate": "2026"
-    },
-    {
-      "name": "Algo Que Pedir",
-      "description": "Academic full-stack application in the style of PedidosYa, with product, order, and user management. Containerized SPA frontend and REST backend. Team project with collaborative GitHub workflow.",
-      "highlights": [
-        "Containerized SPA frontend and REST backend",
-        "Collaborative workflow: branches, PRs, and code reviews on GitHub",
-        "Layered architecture"
-      ],
-      "keywords": [
-        "React",
-        "Svelte",
-        "TypeScript",
-        "Tailwind CSS",
-        "Kotlin",
-        "Spring Boot",
-        "Docker Compose"
-      ],
-      "roles": [
-        "Full Stack Developer"
-      ],
-      "startDate": "2025"
     },
     {
       "name": "FraudDetector",
@@ -302,31 +218,6 @@
       "url": "https://github.com/LorenGrz/Prioria",
       "roles": [
         "Full Stack Developer"
-      ],
-      "startDate": "2026"
-    },
-    {
-      "name": "AWS Cloud Foundations",
-      "description": "Hands-on exploration of core AWS services: Lambda, EC2, RDS, Amazon Bedrock, S3, CloudFront, and IAM with least-privilege principles. Infrastructure as code with AWS SAM.",
-      "highlights": [
-        "Lambda (Node.js/Python), EC2, RDS (MySQL), S3 + CloudFront, Amazon Bedrock (Nova Micro), AWS Budgets",
-        "IAM with least-privilege policies across all resources",
-        "All deployed to us-east-1 with automatic resource cleanup after exercises"
-      ],
-      "keywords": [
-        "AWS Lambda",
-        "EC2",
-        "RDS",
-        "S3",
-        "CloudFront",
-        "Amazon Bedrock",
-        "AWS SAM",
-        "IAM",
-        "AWS Budgets"
-      ],
-      "url": "https://github.com/LorenGrz/aws-skills",
-      "roles": [
-        "Developer"
       ],
       "startDate": "2026"
     }

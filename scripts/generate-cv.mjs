@@ -137,7 +137,9 @@ function renderEducation(education, label, isEnglish = false) {
   if (!education || education.length === 0) return "";
   const items = education
     .map((e) => {
-      const date = formatDate(e.endDate, isEnglish);
+      const date = e.endDate
+        ? formatDate(e.endDate, isEnglish)
+        : isEnglish ? "In progress" : "En curso";
       return `
       <div class="entry">
         <div class="entry-header">

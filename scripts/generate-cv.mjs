@@ -341,7 +341,7 @@ const html = `<!DOCTYPE html>
 
   @page {
     size: A4;
-    margin: 0;
+    margin: 18mm 18mm 16mm 18mm;
   }
 </style>
 </head>
@@ -380,7 +380,7 @@ await page.pdf({
   path: resolve(outputPath),
   format: "A4",
   printBackground: true,
-  margin: { top: "18mm", right: "18mm", bottom: "16mm", left: "18mm" },
+  margin: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 
 await browser.close();

@@ -107,6 +107,7 @@
   "projects": [
     {
       "name": "StudyQuest",
+      "startDate": "2025",
       "description": "Plataforma de estudio full-stack con quizzes generados por IA y sistema de matching de usuarios. Backend modular con NestJS y PostgreSQL, entorno reproducible con Docker Compose.",
       "highlights": [
         "API modular con NestJS y PostgreSQL containerizada",
@@ -119,6 +120,7 @@
     },
     {
       "name": "BookLibre",
+      "startDate": "2026",
       "description": "Sistema de reserva y alquiler de libros con gestión de disponibilidad y usuarios. Stack full-stack dockerizado con persistencia políglota. Deploy en producción: API en Render, frontend en GitHub Pages.",
       "highlights": [
         "Stack full-stack dockerizado con Docker Compose (local) y Render + GitHub Pages (producción)",
@@ -131,6 +133,7 @@
     },
     {
       "name": "Algo Que Pedir",
+      "startDate": "2025",
       "description": "Aplicación full-stack académica estilo PedidosYa con gestión de productos, órdenes y usuarios. Frontend SPA y backend REST containerizados. Proyecto grupal con flujo colaborativo en GitHub.",
       "highlights": [
         "Frontend SPA y backend REST containerizados",
@@ -142,6 +145,7 @@
     },
     {
       "name": "FraudDetector",
+      "startDate": "2026",
       "description": "Herramienta de detección de fraude bancario que procesa 100k+ transacciones usando consenso de 3 modelos ML no supervisado y visualiza el riesgo en un dashboard interactivo.",
       "highlights": [
         "Ensemble de Isolation Forest, LOF y K-Means: un cliente se marca como riesgo solo si ≥ 2 modelos coinciden (~35% menos falsos positivos)",
@@ -154,6 +158,7 @@
     },
     {
       "name": "ServerlessScanner",
+      "startDate": "2026",
       "description": "Herramienta de análisis de arquitectura AWS que detecta oportunidades de migración serverless en templates de CloudFormation y estima el ahorro de costos potencial.",
       "highlights": [
         "Analiza recursos CloudFormation (EC2, RDS, ECS) y recomienda equivalentes serverless (Lambda, Aurora Serverless, DynamoDB)",
@@ -165,6 +170,7 @@
     },
     {
       "name": "Prioria",
+      "startDate": "2026",
       "description": "App Android que intercepta notificaciones del sistema, las prioriza con un agente de IA y las anuncia por voz vía Amazon Polly. Backend 100% serverless en AWS.",
       "highlights": [
         "Agente serverless con Strands Agents SDK + Amazon Bedrock: prioriza notificaciones según reglas y preferencias del usuario",
@@ -177,6 +183,7 @@
     },
     {
       "name": "AWS Cloud Foundations",
+      "startDate": "2026",
       "description": "Exploración práctica de servicios core de AWS: Lambda, EC2, RDS, Amazon Bedrock, S3, CloudFront e IAM con principio de mínimo privilegio. Infraestructura como código con AWS SAM.",
       "highlights": [
         "Lambda (Node.js/Python), EC2, RDS (MySQL), S3 + CloudFront, Amazon Bedrock (Nova Micro), AWS Budgets",
@@ -195,6 +202,10 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-08-11"
+    "lastModified": "2026-08-11",
+    "extra": {
+      "transport": "Movilidad propia · licencia vigente",
+      "availability": "Disponibilidad inmediata — presencial / híbrido / remoto"
+    }
   }
 }

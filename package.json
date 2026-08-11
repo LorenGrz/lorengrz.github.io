@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "deploy": "bash scripts/deploy.sh"
+    "deploy": "bash scripts/deploy.sh",
+    "cv:es": "node scripts/generate-cv.mjs public/resume.json public/Lorenzo_Graizzaro_CV_ES.pdf",
+    "cv:en": "node scripts/generate-cv.mjs public/resume.en.json public/Lorenzo_Graizzaro_CV_EN.pdf",
+    "cv": "pnpm cv:es && pnpm cv:en"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -25,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "puppeteer-core": "^24.43.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

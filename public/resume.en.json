@@ -1,0 +1,353 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Lorenzo Graizzaro",
+    "label": "Full Stack Developer",
+    "email": "lorenzograizzaro55@gmail.com",
+    "phone": "+54 11-6027-7080",
+    "summary": "Full Stack Developer with hands-on projects in React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI, and AWS serverless — all containerized or deployed in production. Work experience in high-demand environments and production SQL data management. Detail-oriented, capable of working autonomously and integrating quickly into agile teams.",
+    "location": {
+      "city": "Buenos Aires",
+      "countryCode": "AR",
+      "region": "Buenos Aires"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "LorenGrz",
+        "url": "https://github.com/LorenGrz"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "lorenzo-graizzaro",
+        "url": "https://linkedin.com/in/lorenzo-graizzaro"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "UNSAM",
+      "position": "Algorithms 3 Tutor",
+      "startDate": "2026-01",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Practical tutoring in Algorithms 3, a course focused on User Interfaces with emphasis on React. Supporting students in problem-solving and project development.",
+      "highlights": [
+        "Hands-on tutoring focused on React-based UI development",
+        "Debugging and code review of academic projects in team settings"
+      ]
+    },
+    {
+      "name": "FABRIC SRL",
+      "position": "Administrative",
+      "startDate": "2024-12",
+      "endDate": "2025-12",
+      "location": "Buenos Aires, Argentina",
+      "summary": "SQL queries on production databases for operational data search and reporting. Accounting management with Xubio: checks, transfers, and inventory control.",
+      "highlights": [
+        "SQL queries on production data for operational reporting",
+        "Accounting management with Xubio: checks, transfers, and inventory control"
+      ]
+    },
+    {
+      "name": "Banco Nación",
+      "position": "Remote Operator",
+      "startDate": "2024-01",
+      "endDate": "2024-12",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Resolved customer queries in a high-demand environment using virtual machines and internal tools.",
+      "highlights": [
+        "High-volume query resolution using virtual machines and internal systems"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional de San Martín",
+      "area": "Computer Programming",
+      "studyType": "Associate's Degree (Tecnicatura)",
+      "startDate": "2022",
+      "endDate": "2026-07",
+      "location": "Buenos Aires, Argentina"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Chakra UI",
+        "Svelte",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "name": "Mobile",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "NativeWind"
+      ]
+    },
+    {
+      "name": "Backend",
+      "keywords": [
+        "Node.js",
+        "NestJS",
+        "Kotlin",
+        "Spring Boot",
+        "Java",
+        "Python",
+        "FastAPI",
+        "REST APIs",
+        "GraphQL"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "scikit-learn",
+        "Isolation Forest",
+        "LOF",
+        "K-Means",
+        "Plotly"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "DynamoDB",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "AWS",
+      "keywords": [
+        "Lambda",
+        "API Gateway",
+        "EC2",
+        "RDS",
+        "S3",
+        "CloudFront",
+        "DynamoDB",
+        "SQS",
+        "Amazon Cognito",
+        "Amazon Bedrock",
+        "Amazon Polly",
+        "AWS SAM",
+        "IAM"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "keywords": [
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "Render",
+        "GitHub Pages"
+      ]
+    },
+    {
+      "name": "Tools",
+      "keywords": [
+        "Git",
+        "GitHub",
+        "pnpm",
+        "ESLint",
+        "Linux"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "StudyQuest",
+      "description": "Full-stack study platform with AI-generated quizzes and user matching system. Modular backend with NestJS and PostgreSQL, reproducible environment with Docker Compose.",
+      "highlights": [
+        "Modular NestJS API with containerized PostgreSQL/Redis",
+        "AI-powered PDF/DOCX to interactive quiz conversion",
+        "User matching system"
+      ],
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "NestJS",
+        "PostgreSQL",
+        "Redis",
+        "Docker Compose"
+      ],
+      "url": "https://github.com/LorenGrz/StudyQuest",
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2025"
+    },
+    {
+      "name": "BookLibre",
+      "description": "Book lending and reservation system with availability and user management. Fully Dockerized full-stack with polyglot persistence. Deployed to production: API on Render, frontend on GitHub Pages.",
+      "highlights": [
+        "Dockerized full-stack with Docker Compose (local) and Render + GitHub Pages (production)",
+        "Polyglot persistence: PostgreSQL, MongoDB, and Redis",
+        "JWT auth with HttpOnly cookies and SameSite=None for cross-origin auth between different domains"
+      ],
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Chakra UI",
+        "Kotlin",
+        "Spring Boot",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Docker Compose"
+      ],
+      "url": "https://github.com/LorenGrz/BookLibre",
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2026"
+    },
+    {
+      "name": "Algo Que Pedir",
+      "description": "Academic full-stack application in the style of PedidosYa, with product, order, and user management. Containerized SPA frontend and REST backend. Team project with collaborative GitHub workflow.",
+      "highlights": [
+        "Containerized SPA frontend and REST backend",
+        "Collaborative workflow: branches, PRs, and code reviews on GitHub",
+        "Layered architecture"
+      ],
+      "keywords": [
+        "React",
+        "Svelte",
+        "TypeScript",
+        "Tailwind CSS",
+        "Kotlin",
+        "Spring Boot",
+        "Docker Compose"
+      ],
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2025"
+    },
+    {
+      "name": "FraudDetector",
+      "description": "Banking fraud detection tool that processes 100k+ transactions using 3-model ML consensus and visualizes risk in an interactive dashboard.",
+      "highlights": [
+        "Ensemble of Isolation Forest, LOF, and K-Means: a client is flagged as risk only if ≥ 2 models agree (~35% fewer false positives)",
+        "Interactive Plotly dashboard: scatter plots and boxplots for per-client risk distribution",
+        "REST API with response times of 110–150 ms per client analysis and 40–60 ms per transaction"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "SQLite",
+        "SQLAlchemy",
+        "Plotly"
+      ],
+      "url": "https://github.com/LorenGrz/FraudDetector",
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2026"
+    },
+    {
+      "name": "ServerlessScanner",
+      "description": "AWS architecture analysis tool that detects serverless migration opportunities in CloudFormation templates and estimates potential cost savings.",
+      "highlights": [
+        "Analyzes CloudFormation resources (EC2, RDS, ECS) and recommends serverless equivalents (Lambda, Aurora Serverless, DynamoDB)",
+        "Deployed to AWS Lambda with API Gateway using AWS SAM"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "AWS Lambda",
+        "API Gateway",
+        "AWS SAM"
+      ],
+      "url": "https://github.com/LorenGrz/ServerlessScanner",
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2026"
+    },
+    {
+      "name": "Prioria",
+      "description": "Android app that intercepts system notifications, prioritizes them with an AI agent, and announces them via voice through Amazon Polly. 100% serverless AWS backend.",
+      "highlights": [
+        "Serverless agent with Strands Agents SDK + Amazon Bedrock: prioritizes notifications based on user rules and preferences",
+        "AWS serverless backend: Lambda, API Gateway, Cognito, DynamoDB, SQS — infrastructure as code with AWS SAM",
+        "Automatic TTS via Amazon Polly and native Android widget with explicit feedback for agent refinement"
+      ],
+      "keywords": [
+        "React Native",
+        "Expo",
+        "NativeWind",
+        "TypeScript",
+        "AWS Lambda",
+        "Amazon Bedrock",
+        "Amazon Cognito",
+        "DynamoDB",
+        "Amazon Polly",
+        "Strands Agents",
+        "AWS SAM"
+      ],
+      "url": "https://github.com/LorenGrz/Prioria",
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "startDate": "2026"
+    },
+    {
+      "name": "AWS Cloud Foundations",
+      "description": "Hands-on exploration of core AWS services: Lambda, EC2, RDS, Amazon Bedrock, S3, CloudFront, and IAM with least-privilege principles. Infrastructure as code with AWS SAM.",
+      "highlights": [
+        "Lambda (Node.js/Python), EC2, RDS (MySQL), S3 + CloudFront, Amazon Bedrock (Nova Micro), AWS Budgets",
+        "IAM with least-privilege policies across all resources",
+        "All deployed to us-east-1 with automatic resource cleanup after exercises"
+      ],
+      "keywords": [
+        "AWS Lambda",
+        "EC2",
+        "RDS",
+        "S3",
+        "CloudFront",
+        "Amazon Bedrock",
+        "AWS SAM",
+        "IAM",
+        "AWS Budgets"
+      ],
+      "url": "https://github.com/LorenGrz/aws-skills",
+      "roles": [
+        "Developer"
+      ],
+      "startDate": "2026"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Technical — reading & writing"
+    }
+  ],
+  "meta": {
+    "canonical": "https://lorengrz.github.io/resume.en.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-08-11",
+    "extra": {
+      "transport": "Own transportation · valid license",
+      "availability": "Immediate availability — on-site / hybrid / remote"
+    }
+  }
+}

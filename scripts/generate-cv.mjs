@@ -247,6 +247,8 @@ const html = `<!DOCTYPE html>
     border-bottom: 1.2pt solid #111;
     padding-bottom: 2pt;
     margin-bottom: 6pt;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   /* Skills grid */
@@ -265,6 +267,8 @@ const html = `<!DOCTYPE html>
   /* Entries (projects, work, education) */
   .entry {
     margin-bottom: 7pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .entry-header {

@@ -210,6 +210,17 @@ body {
   }
 }
 
+/* ── CV modal ── */
+@keyframes modal-backdrop-in  { from { opacity: 0; }                                    to { opacity: 1; } }
+@keyframes modal-backdrop-out { from { opacity: 1; }                                    to { opacity: 0; } }
+@keyframes modal-card-in      { from { opacity: 0; transform: scale(0.95) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes modal-card-out     { from { opacity: 1; transform: scale(1) translateY(0); } to { opacity: 0; transform: scale(0.95) translateY(8px); } }
+
+.modal-entering .modal-backdrop { animation: modal-backdrop-in  0.2s ease both; }
+.modal-leaving  .modal-backdrop { animation: modal-backdrop-out 0.2s ease both; }
+.modal-entering .modal-card     { animation: modal-card-in      0.2s ease both; }
+.modal-leaving  .modal-card     { animation: modal-card-out     0.2s ease both; }
+
 /* ── Intro overlay ── */
 @keyframes intro-name-in {
   from { opacity: 0; transform: translateY(10px); }

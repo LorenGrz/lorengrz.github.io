@@ -3,39 +3,46 @@
 import { useCallback, useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 
+type Phase = "closed" | "open" | "closing"
+
 interface Props {
   variant?: "nav" | "hero"
 }
 
 export function CVDownloadModal({ variant = "hero" }: Props) {
-  const [open, setOpen] = useState(false)
+  const [phase, setPhase] = useState<Phase>("closed")
   const [mounted, setMounted] = useState(false)
-  const close = useCallback(() => setOpen(false), [])
+
+  const handleOpen = useCallback(() => setPhase("open"), [])
+  const handleClose = useCallback(() => {
+    setPhase("closing")
+    setTimeout(() => setPhase("closed"), 200)
+  }, [])
 
   useEffect(() => { setMounted(true) }, [])
 
   useEffect(() => {
-    if (!open) return
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close()
+    if (phase !== "open") return
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && handleClose()
     document.addEventListener("keydown", onKey)
     return () => document.removeEventListener("keydown", onKey)
-  }, [open, close])
+  }, [phase, handleClose])
 
   const modal = (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+      className={`fixed inset-0 z-[200] flex items-center justify-center p-4 ${phase === "closing" ? "modal-leaving" : "modal-entering"}`}
       role="dialog"
       aria-modal="true"
       aria-label="Ver CV"
     >
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={close} />
-      <div className="relative w-full max-w-xs rounded-2xl border border-outline-variant bg-surface p-6 shadow-2xl">
+      <div className="modal-backdrop absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={handleClose} />
+      <div className="modal-card relative w-full max-w-xs rounded-2xl border border-outline-variant bg-surface p-6 shadow-2xl">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-base font-semibold text-on-surface">Ver CV</h2>
           <button
             aria-label="Cerrar"
             className="text-on-surface-variant transition hover:text-on-surface"
-            onClick={close}
+            onClick={handleClose}
           >
             <span className="material-symbols-outlined text-xl leading-none">close</span>
           </button>
@@ -47,7 +54,7 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
             href="/Lorenzo_Graizzaro_CV_ES.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={close}
+            onClick={handleClose}
           >
             <span className="material-symbols-outlined text-base leading-none">open_in_new</span>
             Español
@@ -57,7 +64,7 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
             href="/Lorenzo_Graizzaro_CV_EN.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={close}
+            onClick={handleClose}
           >
             <span className="material-symbols-outlined text-base leading-none">open_in_new</span>
             English
@@ -72,18 +79,18 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
       {variant === "nav" ? (
         <button
           className="cursor-pointer rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-dark"
-          onClick={() => setOpen(true)}
+          onClick={handleOpen}
         >
           CV
         </button>
       ) : (
-        <button className="button-secondary cursor-pointer gap-2" onClick={() => setOpen(true)}>
+        <button className="button-secondary cursor-pointer gap-2" onClick={handleOpen}>
           <span className="material-symbols-outlined text-base leading-none">description</span>
           Ver CV
         </button>
       )}
 
-      {mounted && open && createPortal(modal, document.body)}
+      {mounted && phase !== "closed" && createPortal(modal, document.body)}
     </>
   )
 }

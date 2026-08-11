@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ScrollReveal } from "@/components/scroll-reveal";
+import { ScrollReveal } from "@/components/scroll-reveal"
+import { IntroOverlay } from "@/components/intro-overlay";
 
 export const metadata: Metadata = {
   title: "Lorenzo Graizzaro | Desarrollador Full Stack",
@@ -40,6 +41,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-background text-on-surface">
+        <IntroOverlay />
         {children}
         <ScrollReveal />
       </body>

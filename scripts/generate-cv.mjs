@@ -197,10 +197,9 @@ const contactParts = [
   b.email,
   b.phone?.replace("+54 ", ""),
   b.location ? `${b.location.city}, ${b.location.countryCode}` : null,
+  b.profiles?.find((p) => p.network === "Portfolio")?.url?.replace("https://", ""),
   b.profiles?.find((p) => p.network === "GitHub")?.url?.replace("https://", ""),
-  b.profiles
-    ?.find((p) => p.network === "LinkedIn")
-    ?.url?.replace("https://", ""),
+  b.profiles?.find((p) => p.network === "LinkedIn")?.url?.replace("https://", ""),
 ].filter(Boolean);
 
 const html = `<!DOCTYPE html>

@@ -5,7 +5,7 @@
     "label": "Desarrollador Full Stack",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11-6027-7080",
-    "summary": "Desarrollador Full Stack en formación con proyectos reales usando React, TypeScript, Kotlin/Spring Boot y NestJS, todos containerizados con Docker Compose. Experiencia laboral en entornos de alta demanda y gestión de datos con SQL aplicado en producción. Orientado al detalle, con capacidad para trabajar de forma autónoma e integrarme rápidamente a equipos ágiles.",
+    "summary": "Desarrollador Full Stack con proyectos reales en React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI y AWS serverless. Todos containerizados o desplegados en producción. Experiencia laboral en entornos de alta demanda y gestión de datos con SQL aplicado en producción. Orientado al detalle, con capacidad para trabajar de forma autónoma e integrarme rápidamente a equipos ágiles.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -76,16 +76,28 @@
       "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "Svelte", "HTML/CSS"]
     },
     {
+      "name": "Mobile",
+      "keywords": ["React Native", "Expo", "NativeWind"]
+    },
+    {
       "name": "Backend",
-      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Java", "REST APIs", "GraphQL"]
+      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Java", "Python", "FastAPI", "REST APIs", "GraphQL"]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": ["scikit-learn", "Isolation Forest", "LOF", "K-Means", "Plotly"]
     },
     {
       "name": "Bases de datos",
-      "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      "keywords": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "SQLite"]
+    },
+    {
+      "name": "AWS",
+      "keywords": ["Lambda", "API Gateway", "EC2", "RDS", "S3", "CloudFront", "DynamoDB", "SQS", "Amazon Cognito", "Amazon Bedrock", "Amazon Polly", "AWS SAM", "IAM"]
     },
     {
       "name": "Infraestructura",
-      "keywords": ["Docker", "Docker Compose", "AWS Lambda", "AWS API Gateway", "AWS SAM"]
+      "keywords": ["Docker", "Docker Compose", "GitHub Actions", "Render", "GitHub Pages"]
     },
     {
       "name": "Herramientas",
@@ -107,12 +119,14 @@
     },
     {
       "name": "BookLibre",
-      "description": "Sistema de reserva y alquiler de libros con gestión de disponibilidad y usuarios. Usa Chakra UI como sistema de diseño. Entorno completamente dockerizado.",
+      "description": "Sistema de reserva y alquiler de libros con gestión de disponibilidad y usuarios. Stack full-stack dockerizado con persistencia políglota. Deploy en producción: API en Render, frontend en GitHub Pages.",
       "highlights": [
-        "Stack full-stack dockerizado con Docker Compose",
-        "Persistencia políglota: PostgreSQL, MongoDB y Redis"
+        "Stack full-stack dockerizado con Docker Compose (local) y Render + GitHub Pages (producción)",
+        "Persistencia políglota: PostgreSQL, MongoDB y Redis",
+        "Auth JWT con cookies HttpOnly y SameSite=None para cross-origin entre dominios distintos"
       ],
-      "keywords": ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
+      "keywords": ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "PostgreSQL", "MongoDB", "Redis", "Docker Compose"],
+      "url": "https://github.com/LorenGrz/BookLibre",
       "roles": ["Desarrollador Full Stack"]
     },
     {
@@ -125,6 +139,53 @@
       ],
       "keywords": ["React", "Svelte", "TypeScript", "Tailwind CSS", "Kotlin", "Spring Boot", "Docker Compose"],
       "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "FraudDetector",
+      "description": "Herramienta de detección de fraude bancario que procesa 100k+ transacciones usando consenso de 3 modelos ML no supervisado y visualiza el riesgo en un dashboard interactivo.",
+      "highlights": [
+        "Ensemble de Isolation Forest, LOF y K-Means: un cliente se marca como riesgo solo si ≥ 2 modelos coinciden (~35% menos falsos positivos)",
+        "Dashboard interactivo con Plotly: scatter plots y boxplots para explorar distribución de riesgo por cliente",
+        "API REST con tiempos de respuesta de 110–150 ms por análisis de cliente y 40–60 ms por transacción"
+      ],
+      "keywords": ["Python", "FastAPI", "scikit-learn", "SQLite", "SQLAlchemy", "Plotly"],
+      "url": "https://github.com/LorenGrz/FraudDetector",
+      "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "ServerlessScanner",
+      "description": "Herramienta de análisis de arquitectura AWS que detecta oportunidades de migración serverless en templates de CloudFormation y estima el ahorro de costos potencial.",
+      "highlights": [
+        "Analiza recursos CloudFormation (EC2, RDS, ECS) y recomienda equivalentes serverless (Lambda, Aurora Serverless, DynamoDB)",
+        "Deploy en AWS Lambda con API Gateway usando AWS SAM"
+      ],
+      "keywords": ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
+      "url": "https://github.com/LorenGrz/ServerlessScanner",
+      "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "Prioria",
+      "description": "App Android que intercepta notificaciones del sistema, las prioriza con un agente de IA y las anuncia por voz vía Amazon Polly. Backend 100% serverless en AWS.",
+      "highlights": [
+        "Agente serverless con Strands Agents SDK + Amazon Bedrock: prioriza notificaciones según reglas y preferencias del usuario",
+        "Backend AWS serverless: Lambda, API Gateway, Cognito, DynamoDB, SQS — infraestructura como código con AWS SAM",
+        "TTS automático vía Amazon Polly y widget nativo Android con feedback explícito para refinamiento del agente"
+      ],
+      "keywords": ["React Native", "Expo", "NativeWind", "TypeScript", "AWS Lambda", "Amazon Bedrock", "Amazon Cognito", "DynamoDB", "Amazon Polly", "Strands Agents", "AWS SAM"],
+      "url": "https://github.com/LorenGrz/Prioria",
+      "roles": ["Desarrollador Full Stack"]
+    },
+    {
+      "name": "AWS Cloud Foundations",
+      "description": "Exploración práctica de servicios core de AWS: Lambda, EC2, RDS, Amazon Bedrock, S3, CloudFront e IAM con principio de mínimo privilegio. Infraestructura como código con AWS SAM.",
+      "highlights": [
+        "Lambda (Node.js/Python), EC2, RDS (MySQL), S3 + CloudFront, Amazon Bedrock (Nova Micro), AWS Budgets",
+        "IAM con políticas de mínimo privilegio en todos los recursos",
+        "Todo desplegado en us-east-1 con clean-up automático de recursos tras los ejercicios"
+      ],
+      "keywords": ["AWS Lambda", "EC2", "RDS", "S3", "CloudFront", "Amazon Bedrock", "AWS SAM", "IAM", "AWS Budgets"],
+      "url": "https://github.com/LorenGrz/aws-skills",
+      "roles": ["Desarrollador"]
     }
   ],
   "languages": [
@@ -132,8 +193,8 @@
     { "language": "Inglés", "fluency": "Técnico — lectura y escritura" }
   ],
   "meta": {
-    "canonical": "https://yrfjdlphw3.execute-api.us-east-1.amazonaws.com/prod/resume.json",
+    "canonical": "https://lorengrz.github.io/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-08-02"
+    "lastModified": "2026-08-11"
   }
 }

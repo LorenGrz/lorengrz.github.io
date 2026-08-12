@@ -144,24 +144,4 @@ export const seedProjects = [
     createdAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
   }),
-  new Project({
-    id: "aws-cloud-foundations",
-    title: "AWS Cloud Foundations",
-    slug: "aws-cloud-foundations",
-    summary: "Exploración práctica de servicios core de AWS: Lambda, EC2, RDS, Bedrock, S3, CloudFront e IAM aplicando principio de mínimo privilegio.",
-    description:
-      "Ejercicios hands-on que cubren el ciclo completo de los servicios fundamentales de AWS. Incluye funciones Lambda (Node.js/Python), instancias EC2, bases de datos relacionales en RDS (MySQL), inferencia de IA con Amazon Bedrock (Nova Micro), hosting estático con S3 + CloudFront, control de costos con AWS Budgets e IAM con políticas de mínimo privilegio. Infraestructura definida como código con AWS SAM y CloudFormation. Todo desplegado en us-east-1 con clean-up automático de recursos tras los ejercicios.",
-    stack: ["AWS Lambda", "EC2", "RDS", "Amazon Bedrock", "S3", "CloudFront", "AWS SAM", "IAM", "AWS Budgets"],
-    githubUrl: "https://github.com/LorenGrz/aws-skills",
-    status: "completed",
-    featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
-        alt: "Cloud server infrastructure representing hands-on AWS service exploration.",
-      },
-    ],
-    createdAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
-    updatedAt: new Date("2026-08-11T00:00:00.000Z").toISOString(),
-  }),
 ] as const;

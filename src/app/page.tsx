@@ -18,7 +18,7 @@ const skills = [
   {
     title: "Datos e Infra",
     icon: "storage",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker", "Docker Compose"],
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker"],
     learning: false,
   },
   {

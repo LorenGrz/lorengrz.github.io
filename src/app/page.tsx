@@ -331,14 +331,16 @@ export default function Home() {
                 <span className="material-symbols-outlined">code</span>
                 LeetCode
               </a>
-              <a className="contact-link reveal reveal-up" href="https://linkedin.com/in/lorenzo-graizzaro" rel="noreferrer" target="_blank">
-                <span className="material-symbols-outlined">person</span>
-                LinkedIn
-              </a>
-              <a className="contact-link reveal reveal-up" href="https://wa.me/541160277080" rel="noreferrer" target="_blank">
-                <span className="material-symbols-outlined">chat</span>
-                WhatsApp
-              </a>
+              <div className="col-span-3 flex justify-center gap-3 sm:contents">
+                <a className="contact-link reveal reveal-up max-sm:w-[calc((100%-1.5rem)/3)] max-sm:shrink-0" href="https://linkedin.com/in/lorenzo-graizzaro" rel="noreferrer" target="_blank">
+                  <span className="material-symbols-outlined">person</span>
+                  LinkedIn
+                </a>
+                <a className="contact-link reveal reveal-up max-sm:w-[calc((100%-1.5rem)/3)] max-sm:shrink-0" href="https://wa.me/541160277080" rel="noreferrer" target="_blank">
+                  <span className="material-symbols-outlined">chat</span>
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </section>

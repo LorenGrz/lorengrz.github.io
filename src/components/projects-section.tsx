@@ -115,7 +115,10 @@ export function ProjectsSection() {
         {hasMore && (
           <div className="mt-10 flex justify-center">
             <button className="button-secondary" onClick={() => setPage((p) => p + 1)}>
-              Ver {Math.min(PAGE_SIZE, allProjects.length - visible.length)} proyectos más
+              {(() => {
+                const n = Math.min(PAGE_SIZE, allProjects.length - visible.length)
+                return `Ver ${n} ${n === 1 ? "proyecto" : "proyectos"} más`
+              })()}
             </button>
           </div>
         )}

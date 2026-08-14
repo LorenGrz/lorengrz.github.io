@@ -318,7 +318,7 @@ export default function Home() {
                 Estoy disponible para roles full-stack, entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
               </p>
             </div>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 stagger-group">
+            <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5 stagger-group">
               <a className="contact-link reveal reveal-up" href="mailto:lorenzograizzaro55@gmail.com">
                 <span className="material-symbols-outlined">alternate_email</span>
                 Email
@@ -326,6 +326,10 @@ export default function Home() {
               <a className="contact-link reveal reveal-up" href="https://github.com/LorenGrz" rel="noreferrer" target="_blank">
                 <span className="material-symbols-outlined">terminal</span>
                 GitHub
+              </a>
+              <a className="contact-link reveal reveal-up" href="https://leetcode.com/u/LorenGrz/" rel="noreferrer" target="_blank">
+                <span className="material-symbols-outlined">code</span>
+                LeetCode
               </a>
               <a className="contact-link reveal reveal-up" href="https://linkedin.com/in/lorenzo-graizzaro" rel="noreferrer" target="_blank">
                 <span className="material-symbols-outlined">person</span>

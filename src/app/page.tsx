@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CVDownloadModal } from "@/components/cv-download-modal";
-import { seedProjects } from "@/lib/projects/seed-projects";
+import { ProjectsSection } from "@/components/projects-section";
 
 const skills = [
   {
@@ -64,14 +64,7 @@ const experience = [
   },
 ] as const;
 
-const statusLabel: Record<string, string> = {
-  in_progress: "en progreso",
-  completed: "completado",
-  private: "privado",
-};
-
 export default function Home() {
-  const projects = seedProjects;
 
   return (
     <>
@@ -232,65 +225,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-surface-container-low py-section" id="projects">
-          <div className="mx-auto max-w-container px-page">
-            <div className="reveal reveal-left">
-              <p className="section-kicker">Proyectos</p>
-              <h2 className="section-title">Proyectos full-stack destacados.</h2>
-            </div>
-
-            <div className="mt-10 grid gap-6 lg:grid-cols-3 stagger-group">
-              {projects.map((project) => (
-                <article className="group flex flex-col overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm transition hover:shadow-md reveal reveal-up" key={project.id}>
-                  {project.primaryImage ? (
-                    <div className="relative h-48 overflow-hidden border-b border-outline-variant bg-surface-variant">
-                      <Image
-                        alt={project.primaryImage.alt}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        fill
-                        sizes="(min-width: 1024px) 360px, 100vw"
-                        src={project.primaryImage.url}
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex h-48 items-center justify-center border-b border-outline-variant bg-surface-variant">
-                      <span className="font-mono text-sm text-on-surface-variant">captura pendiente</span>
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col p-5">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="min-w-0 text-xl font-semibold">{project.title}</h3>
-                      <span className="shrink-0 rounded bg-primary-soft px-2 py-1 font-mono text-xs text-primary">{statusLabel[project.status] ?? project.status.replace("_", " ")}</span>
-                    </div>
-                    <p className="mt-3 min-h-20 text-sm leading-6 text-on-surface-variant">{project.summary}</p>
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {project.stack.slice(0, 6).map((item) => (
-                        <span className="rounded bg-background px-2 py-1 font-mono text-xs text-on-surface-variant" key={item}>
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                    {project.repositoryNote ? <p className="mt-4 text-xs leading-5 text-on-surface-variant">{project.repositoryNote}</p> : null}
-                    <div className="mt-auto flex gap-4 pt-6">
-                      {project.links.length > 0 ? (
-                        project.links.map((link) => (
-                          <a className="inline-flex items-center gap-1 font-mono text-sm font-semibold text-primary" href={link.url} key={link.label} rel="noreferrer" target="_blank">
-                            <span className="material-symbols-outlined text-base leading-none">
-                              {link.label.toLowerCase().includes("live") || link.label.toLowerCase().includes("demo") ? "open_in_new" : "code"}
-                            </span>
-                            <span className="hover:underline underline-offset-2">{link.label}</span>
-                          </a>
-                        ))
-                      ) : (
-                        <span className="font-mono text-sm text-on-surface-variant">Repositorio privado</span>
-                      )}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection />
 
         <section className="mx-auto max-w-container px-page py-section">
           <div className="reveal reveal-up">

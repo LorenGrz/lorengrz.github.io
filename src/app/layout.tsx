@@ -4,16 +4,16 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { IntroOverlay } from "@/components/intro-overlay";
 
 export const metadata: Metadata = {
-  title: "Lorenzo Graizzaro | Desarrollador Full Stack",
+  title: "Lorenzo Graizzaro | Software Developer",
   description:
-    "Portfolio de Lorenzo Graizzaro, desarrollador full-stack con proyectos en React, TypeScript, NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.",
+    "Portfolio de Lorenzo Graizzaro, Software Developer con proyectos en React, TypeScript, NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.",
   icons: {
     icon: "/favicon.ico",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Lorenzo Graizzaro | Desarrollador Full Stack",
-    description: "Portfolio de Lorenzo Graizzaro, desarrollador full-stack con proyectos en React, TypeScript, NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.",
+    title: "Lorenzo Graizzaro | Software Developer",
+    description: "Portfolio de Lorenzo Graizzaro, Software Developer con proyectos en React, TypeScript, NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.",
     url: "https://d3q8bee4t9y11e.cloudfront.net",
     images: [{ url: "https://d3q8bee4t9y11e.cloudfront.net/me.jpg", width: 1080, height: 1080 }],
     type: "website",

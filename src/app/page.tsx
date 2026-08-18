@@ -108,14 +108,14 @@ export default function Home() {
           <div className="relative mx-auto grid w-full max-w-container gap-10 px-page py-section lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl order-2 lg:order-1">
               <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
-                Disponible para roles full-stack
+                Disponible para nuevas oportunidades
               </p>
               <h1 className="text-3xl font-bold leading-tight tracking-normal text-white sm:text-4xl lg:text-5xl">
                 Lorenzo Graizzaro
               </h1>
-              <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Desarrollador Full Stack</p>
+              <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Software Developer</p>
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-                Construyo aplicaciones web full-stack con React, TypeScript, NestJS, Kotlin/Spring Boot, bases de datos SQL y entornos de
+                Construyo aplicaciones con React, TypeScript, NestJS, Kotlin/Spring Boot, bases de datos SQL y entornos de
                 desarrollo basados en Docker.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -156,10 +156,10 @@ export default function Home() {
           <div className="mx-auto grid max-w-container gap-10 px-page lg:grid-cols-12 lg:items-center">
             <div className="order-2 lg:order-1 lg:col-span-7 reveal reveal-left">
               <p className="section-kicker">Sobre mí</p>
-              <h2 className="section-title">Desarrollo full-stack práctico con profundidad real en proyectos.</h2>
+              <h2 className="section-title">Desarrollo de software práctico con profundidad real en proyectos.</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Desarrollador Full Stack usando React, Next.js, TypeScript, Node.js/NestJS, Kotlin/Spring Boot y Docker.
+                  Soy Software Developer usando React, Next.js, TypeScript, Node.js/NestJS, Kotlin/Spring Boot y Docker.
                   Me importan las interfaces claras, la lógica de backend mantenible y los entornos reproducibles. Me interesa el ecosistema
                   de IA y Automatizaciones.
                 </p>
@@ -250,7 +250,7 @@ export default function Home() {
               <p className="section-kicker">Contacto</p>
               <h2 className="section-title">Conectemos.</h2>
               <p className="mt-4 text-base leading-7 text-on-surface-variant">
-                Estoy disponible para roles full-stack, entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
+                Estoy disponible para entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
               </p>
             </div>
             <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5 stagger-group">

@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Lorenzo Graizzaro",
-    "label": "Desarrollador Full Stack",
+    "label": "Software Developer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11-6027-7080",
-    "summary": "Desarrollador Full Stack con proyectos reales en React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI y AWS serverless. Todos containerizados o desplegados en producción. Experiencia laboral en entornos de alta demanda y gestión de datos con SQL aplicado en producción. Orientado al detalle, con capacidad para trabajar de forma autónoma e integrarme rápidamente a equipos ágiles.",
+    "summary": "Software Developer con proyectos reales en React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI y AWS serverless. Todos containerizados o desplegados en producción. Experiencia laboral en entornos de alta demanda y gestión de datos con SQL aplicado en producción. Orientado al detalle, con capacidad para trabajar de forma autónoma e integrarme rápidamente a equipos ágiles.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -120,7 +120,7 @@
       ],
       "keywords": ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
       "url": "https://github.com/LorenGrz/StudyQuest",
-      "roles": ["Desarrollador Full Stack"]
+      "roles": ["Software Developer"]
     },
     {
       "name": "BookLibre",
@@ -133,7 +133,7 @@
       ],
       "keywords": ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "PostgreSQL", "MongoDB", "Redis", "Docker Compose"],
       "url": "https://github.com/LorenGrz/BookLibre",
-      "roles": ["Desarrollador Full Stack"]
+      "roles": ["Software Developer"]
     },
     {
       "name": "FraudDetector",
@@ -146,7 +146,7 @@
       ],
       "keywords": ["Python", "FastAPI", "scikit-learn", "SQLite", "SQLAlchemy", "Plotly"],
       "url": "https://github.com/LorenGrz/FraudDetector",
-      "roles": ["Desarrollador Full Stack"]
+      "roles": ["Software Developer"]
     },
     {
       "name": "ServerlessScanner",
@@ -158,7 +158,7 @@
       ],
       "keywords": ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
       "url": "https://github.com/LorenGrz/ServerlessScanner",
-      "roles": ["Desarrollador Full Stack"]
+      "roles": ["Software Developer"]
     },
     {
       "name": "Prioria",
@@ -171,7 +171,7 @@
       ],
       "keywords": ["React Native", "Expo", "NativeWind", "TypeScript", "AWS Lambda", "Amazon Bedrock", "Amazon Cognito", "DynamoDB", "Amazon Polly", "Strands Agents", "AWS SAM"],
       "url": "https://github.com/LorenGrz/Prioria",
-      "roles": ["Desarrollador Full Stack"]
+      "roles": ["Software Developer"]
     }
   ],
   "languages": [

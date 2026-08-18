@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Lorenzo Graizzaro",
-    "label": "Full Stack Developer",
+    "label": "Software Developer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11-6027-7080",
-    "summary": "Full Stack Developer with hands-on projects in React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI, and AWS serverless — all containerized or deployed in production. Work experience in high-demand environments and production SQL data management. Detail-oriented, capable of working autonomously and integrating quickly into agile teams.",
+    "summary": "Software Developer with hands-on projects in React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI, and AWS serverless — all containerized or deployed in production. Work experience in high-demand environments and production SQL data management. Detail-oriented, capable of working autonomously and integrating quickly into agile teams.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -128,7 +128,7 @@
       ],
       "url": "https://github.com/LorenGrz/StudyQuest",
       "roles": [
-        "Full Stack Developer"
+        "Software Developer"
       ],
       "startDate": "2025"
     },
@@ -153,7 +153,7 @@
       ],
       "url": "https://github.com/LorenGrz/BookLibre",
       "roles": [
-        "Full Stack Developer"
+        "Software Developer"
       ],
       "startDate": "2026"
     },
@@ -175,7 +175,7 @@
       ],
       "url": "https://github.com/LorenGrz/FraudDetector",
       "roles": [
-        "Full Stack Developer"
+        "Software Developer"
       ],
       "startDate": "2026"
     },
@@ -195,7 +195,7 @@
       ],
       "url": "https://github.com/LorenGrz/ServerlessScanner",
       "roles": [
-        "Full Stack Developer"
+        "Software Developer"
       ],
       "startDate": "2026"
     },
@@ -222,7 +222,7 @@
       ],
       "url": "https://github.com/LorenGrz/Prioria",
       "roles": [
-        "Full Stack Developer"
+        "Software Developer"
       ],
       "startDate": "2026"
     }

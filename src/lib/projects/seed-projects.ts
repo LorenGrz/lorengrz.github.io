@@ -45,7 +45,7 @@ export const seedProjects = [
       "API en FastAPI que analiza templates de CloudFormation e identifica recursos (EC2, RDS, ECS, etc.) que pueden migrarse a Lambda, Aurora Serverless, DynamoDB y otros servicios serverless, estimando el ahorro de costos potencial.",
     stack: ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
     githubUrl: "https://github.com/LorenGrz/ServerlessScanner",
-    liveUrl: "https://lorengrz.github.io/ServerlessScanner/",
+    liveUrl: "https://lorengrz.github.io/landing-serverlessscanner/",
     status: "in_progress",
     featured: true,
     images: [
@@ -66,7 +66,7 @@ export const seedProjects = [
       "Plataforma en desarrollo que convierte archivos PDF/DOCX en quizzes interactivos, con una API modular en NestJS, PostgreSQL, Redis y Docker Compose.",
     stack: ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
-    liveUrl: "https://lorengrz.github.io/StudyQuest/",
+    liveUrl: "https://lorengrz.github.io/landing-studyquest/",
     status: "completed",
     featured: true,
     images: [
@@ -87,7 +87,7 @@ export const seedProjects = [
       "Procesa datasets de 100k+ transacciones bancarias para identificar clientes y operaciones sospechosas. Tres modelos de ML no supervisado (Isolation Forest, LOF, K-Means) analizan cada caso en paralelo: un cliente se marca como riesgo solo cuando ≥ 2 modelos coinciden, lo que reduce falsos positivos un ~35% frente a un modelo único. El dashboard interactivo (Plotly) muestra la distribución de riesgo por cliente, compara perfiles y permite inspeccionar transacciones individuales con scatter plots y boxplots. API REST con tiempos de respuesta de 110–150 ms por análisis de cliente y 40–60 ms por transacción.",
     stack: ["Python", "FastAPI", "scikit-learn", "SQLite", "SQLAlchemy", "Plotly", "Bootstrap"],
     githubUrl: "https://github.com/LorenGrz/FraudDetector",
-    liveUrl: "https://lorengrz.github.io/FraudDetector/",
+    liveUrl: "https://lorengrz.github.io/landing-frauddetector/",
     status: "completed",
     featured: true,
     images: [
@@ -108,7 +108,7 @@ export const seedProjects = [
       "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker Compose y persistencia políglota con PostgreSQL, MongoDB y Redis.",
     stack: ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/BookLibre",
-    liveUrl: "https://lorengrz.github.io/BookLibre/",
+    liveUrl: "https://lorengrz.github.io/landing-booklibre/",
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,

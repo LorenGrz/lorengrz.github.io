@@ -237,6 +237,8 @@ body {
   inset: 0;
   z-index: 9999;
   pointer-events: none;
+  isolation: isolate;
+  contain: layout paint;
 }
 
 .intro-panel {
@@ -246,6 +248,7 @@ body {
   height: 50%;
   background: #0d1117;
   transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
 }
 
 .intro-panel-top    { top: 0; }
@@ -259,6 +262,7 @@ body {
   text-align: center;
   white-space: nowrap;
   z-index: 1;
+  will-change: opacity;
 }
 
 .intro-name {

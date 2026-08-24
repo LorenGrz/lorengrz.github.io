@@ -19,7 +19,7 @@ export function IntroOverlay() {
     const t2 = setTimeout(() => {
       setPhase("hidden")
       sessionStorage.setItem("intro-done", "1")
-    }, 1900)
+    }, 2050)
 
     return () => {
       clearTimeout(t1)

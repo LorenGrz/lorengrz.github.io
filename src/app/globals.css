@@ -281,6 +281,6 @@ body {
   animation: intro-line-in 0.4s ease 0.5s both;
 }
 
-.intro-leaving .intro-panel-top    { transform: translateY(-100%); }
-.intro-leaving .intro-panel-bottom { transform: translateY(100%); }
-.intro-leaving .intro-center       { opacity: 0; transition: opacity 0.25s ease; }
+.intro-leaving .intro-panel-top    { transform: translateY(-100%); transition-delay: 0.15s; }
+.intro-leaving .intro-panel-bottom { transform: translateY(100%); transition-delay: 0.15s; }
+.intro-leaving .intro-center       { opacity: 0; transition: opacity 0.15s ease; }

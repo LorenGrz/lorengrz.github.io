@@ -2,6 +2,35 @@ import { Project } from "./project";
 
 export const seedProjects = [
   new Project({
+    id: "humandetector",
+    title: "HumanDetector",
+    slug: "humandetector",
+    summary: "Instalación satírica de \"verificación de humanidad\": pide gestos por cámara, escala los pedidos hasta lo imposible y nunca aprueba.",
+    description:
+      "Verificador de humanidad para una antihackathon. El frontend (Next.js export estático en GitHub Pages) captura la cámara y la manda por WebSocket a un backend FastAPI que hace detección real de gestos con MediaPipe (parpadeo, giro de cabeza, inclinación, boca) y corre una máquina de estados de 10 pasos que escala la exigencia hasta pedidos absurdos. Backend contenerizado en EC2 con Caddy y TLS automático de Let's Encrypt; imagen construida en AWS CodeBuild y publicada en ECR. Sin base de datos: todo el estado vive en memoria por conexión.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Python",
+      "FastAPI",
+      "MediaPipe",
+      "WebSockets",
+      "Docker",
+      "AWS EC2",
+      "AWS ECR",
+      "Caddy",
+    ],
+    githubUrl: "https://github.com/LorenGrz/HumanDetector",
+    liveUrl: "https://lorengrz.github.io/HumanDetector/",
+    repositoryNote: "Backend on-demand: se enciende para demos y eventos.",
+    status: "completed",
+    featured: true,
+    images: [],
+    createdAt: new Date("2026-08-29T00:00:00.000Z").toISOString(),
+    updatedAt: new Date("2026-08-29T00:00:00.000Z").toISOString(),
+  }),
+  new Project({
     id: "prioria",
     title: "Prioria",
     slug: "prioria",

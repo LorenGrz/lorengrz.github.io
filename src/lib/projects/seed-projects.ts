@@ -26,7 +26,12 @@ export const seedProjects = [
     repositoryNote: "Backend on-demand: se enciende para demos y eventos.",
     status: "completed",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/humandetector.png",
+        alt: "Pantalla de inicio de HumanDetector con el mensaje \"¿Sos humano?\" y el botón Comenzar verificación.",
+      },
+    ],
     createdAt: new Date("2026-08-29T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-08-29T00:00:00.000Z").toISOString(),
   }),

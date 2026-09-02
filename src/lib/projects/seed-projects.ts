@@ -111,7 +111,7 @@ export const seedProjects = [
     stack: ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
     githubUrl: "https://github.com/LorenGrz/ServerlessScanner",
     liveUrl: "https://lorengrz.github.io/landing-serverlessscanner/",
-    status: "in_progress",
+    status: "completed",
     featured: true,
     images: [
       {

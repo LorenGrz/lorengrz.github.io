@@ -92,7 +92,12 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-prioria/",
     status: "in_progress",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/prioria.jpg",
+        alt: "Landing de Prioria: \"Atención blindada para quien no puede mirar el celular todo el día\" con botón Descargar APK.",
+      },
+    ],
     createdAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
   }),
@@ -108,7 +113,12 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-serverlessscanner/",
     status: "completed",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/serverlessscanner.jpg",
+        alt: "Landing de ServerlessScanner: \"Convertí tu infraestructura en un roadmap serverless accionable, en minutos\".",
+      },
+    ],
     createdAt: new Date("2026-07-10T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-07-10T00:00:00.000Z").toISOString(),
   }),
@@ -124,7 +134,12 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-studyquest/",
     status: "in_progress",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/studyquest.jpg",
+        alt: "Landing de StudyQuest: \"Estudia. Compite. Gana.\" sobre matchmaking de estudio en tiempo real con IA.",
+      },
+    ],
     createdAt: new Date("2026-06-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-06-01T00:00:00.000Z").toISOString(),
   }),
@@ -140,7 +155,12 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-frauddetector/",
     status: "completed",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/frauddetector.jpg",
+        alt: "Landing de FraudDetector: \"Detección de fraude bancario sin depender de un dataset etiquetado\".",
+      },
+    ],
     createdAt: new Date("2026-04-15T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-04-15T00:00:00.000Z").toISOString(),
   }),
@@ -157,7 +177,12 @@ export const seedProjects = [
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "/booklibre.jpg",
+        alt: "Landing de BookLibre: \"Una comunidad para prestar, reservar y descubrir tu próxima lectura\".",
+      },
+    ],
     createdAt: new Date("2026-02-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-02-01T00:00:00.000Z").toISOString(),
   }),
@@ -173,7 +198,12 @@ export const seedProjects = [
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
-    images: [],
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
+        alt: "Pantalla de pedido de comida representando una aplicación estilo PedidosYa.",
+      },
+    ],
     createdAt: new Date("2025-11-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2025-11-01T00:00:00.000Z").toISOString(),
   }),

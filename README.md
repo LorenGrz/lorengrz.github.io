@@ -43,8 +43,7 @@ Automático vía GitHub Actions al hacer push a `master`.
 
 Se cargan desde `src/lib/projects/seed-projects.ts`. Para agregar uno: sumar una entrada al array `seedProjects` y hacer push a `master`.
 
-- `images: []` muestra un placeholder con el nombre del proyecto. Para una captura real, poné el archivo en `public/` y referencialo con una ruta relativa (`/mi-proyecto.png`).
-- No se usan imágenes externas.
+- Las capturas de proyecto viven en `public/` (`<slug>.jpg` / `.png`) y son screenshots de las landings. `images: []` cae a un placeholder con el nombre del proyecto.
 
 ## CV / Resume
 

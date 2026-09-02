@@ -22,7 +22,7 @@ export const seedProjects = [
       "Caddy",
     ],
     githubUrl: "https://github.com/LorenGrz/HumanDetector",
-    liveUrl: "https://lorengrz.github.io/HumanDetector/",
+    liveUrl: "https://lorengrz.github.io/landing-humandetector/",
     repositoryNote: "Backend on-demand: se enciende para demos y eventos.",
     status: "completed",
     featured: true,

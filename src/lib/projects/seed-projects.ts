@@ -2,6 +2,37 @@ import { Project } from "./project";
 
 export const seedProjects = [
   new Project({
+    id: "contentcreator",
+    title: "ContentCreator",
+    slug: "contentcreator",
+    summary: "Bot serverless que cada día lee mi actividad real (GitHub, Hacker News, cuentas de X) y redacta borradores de tweets y posts de LinkedIn para que los apruebe por Telegram. No publica solo.",
+    description:
+      "Una función Lambda (FastAPI + Mangum) que una vez al día ingiere señales de fuentes reales: eventos de GitHub (commits, PRs, repos nuevos), Hacker News y, opcionalmente, tweets de cuentas seguidas vía un puente RSS de Nitter. Un modelo de Amazon Bedrock (Strands Agents SDK) redacta tweets cortos y, solo cuando una compuerta de significancia basada en reglas lo justifica, un post de LinkedIn. Todo se guarda en una única tabla de DynamoDB y se envía a Telegram con botones Aprobar / Descartar / Editar; editar abre un loop de reescritura conversacional. Si un borrador nace de un tweet de una cuenta seguida, propone un quote tweet con mi ángulo en vez de un post original. Publicar siempre es manual. Secretos en SSM Parameter Store, despliegue con AWS SAM, corrida diaria por EventBridge Scheduler. 63 tests unitarios.",
+    stack: [
+      "Python",
+      "FastAPI",
+      "AWS Lambda",
+      "Amazon Bedrock",
+      "Strands Agents",
+      "DynamoDB",
+      "AWS SAM",
+      "EventBridge",
+      "Telegram Bot API",
+    ],
+    githubUrl: "https://github.com/LorenGrz/ContentCreator",
+    repositoryNote: "Bot personal: corre en mi cuenta de AWS, sin publicación automática.",
+    status: "completed",
+    featured: true,
+    images: [
+      {
+        url: "/contentcreator.png",
+        alt: "Conversación de Telegram con el bot: un borrador de tweet con botones Aprobar y Descartar.",
+      },
+    ],
+    createdAt: new Date("2026-09-02T00:00:00.000Z").toISOString(),
+    updatedAt: new Date("2026-09-02T00:00:00.000Z").toISOString(),
+  }),
+  new Project({
     id: "humandetector",
     title: "HumanDetector",
     slug: "humandetector",

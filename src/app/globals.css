@@ -49,19 +49,6 @@ body {
   border-radius: 0.25rem;
 }
 
-/* Subtle dot grid used behind the hero (no image dependency). */
-.hero-grid {
-  background-color: var(--background);
-  background-image:
-    radial-gradient(60% 60% at 15% 0%, rgba(249, 115, 22, 0.14), transparent 70%),
-    radial-gradient(50% 50% at 100% 100%, rgba(34, 197, 94, 0.08), transparent 70%),
-    radial-gradient(circle at center, var(--outline-variant) 1px, transparent 1.4px);
-  background-size:
-    100% 100%,
-    100% 100%,
-    28px 28px;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }

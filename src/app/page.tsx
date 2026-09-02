@@ -78,19 +78,30 @@ export default function Home() {
       <SiteHeader />
 
       <main id="top" className="pt-16">
-        <section className="hero-grid relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden">
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
+        <section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              alt=""
+              aria-hidden
+              className="object-cover brightness-[0.35]"
+              fill
+              priority
+              sizes="100vw"
+              src="/hero-bg.jpg"
+            />
+            <div className="absolute inset-0 bg-black/50 lg:bg-gradient-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent" />
+          </div>
           <div className="relative mx-auto grid w-full max-w-container gap-10 px-page py-section lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl order-2 lg:order-1">
               <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
                 Disponible para nuevas oportunidades
               </p>
-              <h1 className="text-3xl font-bold leading-tight tracking-normal text-on-surface sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-bold leading-tight tracking-normal text-white sm:text-4xl lg:text-5xl">
                 Lorenzo Graizzaro
                 <span className="sr-only"> — Software Developer</span>
               </h1>
-              <p className="mt-3 text-xl font-semibold text-on-surface-variant sm:text-2xl">Software Developer</p>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
+              <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Software Developer</p>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
                 Construyo aplicaciones con React, TypeScript, NestJS, Kotlin/Spring Boot, bases de datos SQL y entornos de
                 desarrollo basados en Docker.
               </p>
@@ -106,20 +117,20 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:flex flex-col items-center gap-5 order-1 lg:order-2">
-              <div className="hidden w-full rounded-lg border border-outline-variant bg-surface/70 p-5 shadow-sm backdrop-blur-sm lg:block">
+              <div className="hidden w-full rounded-lg border border-white/20 bg-white/10 p-5 shadow-sm backdrop-blur-sm lg:block">
                 <p className="font-mono text-sm font-semibold text-primary">stack-actual.ts</p>
                 <dl className="mt-5 space-y-4 text-sm">
                   <div>
-                    <dt className="text-on-surface-variant">Frontend</dt>
-                    <dd className="mt-1 font-semibold text-on-surface">React, Next.js, TypeScript, Tailwind</dd>
+                    <dt className="text-white/60">Frontend</dt>
+                    <dd className="mt-1 font-semibold text-white">React, Next.js, TypeScript, Tailwind</dd>
                   </div>
                   <div>
-                    <dt className="text-on-surface-variant">Backend</dt>
-                    <dd className="mt-1 font-semibold text-on-surface">Node.js, NestJS, Kotlin, Spring Boot</dd>
+                    <dt className="text-white/60">Backend</dt>
+                    <dd className="mt-1 font-semibold text-white">Node.js, NestJS, Kotlin, Spring Boot</dd>
                   </div>
                   <div>
-                    <dt className="text-on-surface-variant">Persistencia</dt>
-                    <dd className="mt-1 font-semibold text-on-surface">PostgreSQL, MySQL, MongoDB, Redis</dd>
+                    <dt className="text-white/60">Persistencia</dt>
+                    <dd className="mt-1 font-semibold text-white">PostgreSQL, MySQL, MongoDB, Redis</dd>
                   </div>
                 </dl>
               </div>

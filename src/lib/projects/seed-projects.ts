@@ -92,12 +92,7 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-prioria/",
     status: "in_progress",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
-        alt: "Smartphone screen with notification bubbles representing an AI-powered notification prioritization app.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
   }),
@@ -113,12 +108,7 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-serverlessscanner/",
     status: "completed",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
-        alt: "Cloud infrastructure diagram representing serverless architecture analysis.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2026-07-10T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-07-10T00:00:00.000Z").toISOString(),
   }),
@@ -132,14 +122,9 @@ export const seedProjects = [
     stack: ["React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL", "Redis", "Docker Compose"],
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
     liveUrl: "https://lorengrz.github.io/landing-studyquest/",
-    status: "completed",
+    status: "in_progress",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-        alt: "Laptop showing a learning interface for an online study platform.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2026-06-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-06-01T00:00:00.000Z").toISOString(),
   }),
@@ -155,12 +140,7 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-frauddetector/",
     status: "completed",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
-        alt: "Abstract data visualization representing fraud detection analytics.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2026-04-15T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-04-15T00:00:00.000Z").toISOString(),
   }),
@@ -177,12 +157,7 @@ export const seedProjects = [
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80",
-        alt: "Library shelves representing a book reservation platform.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2026-02-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2026-02-01T00:00:00.000Z").toISOString(),
   }),
@@ -198,12 +173,7 @@ export const seedProjects = [
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
     featured: true,
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
-        alt: "Food delivery order screen representing a PedidosYa-style application.",
-      },
-    ],
+    images: [],
     createdAt: new Date("2025-11-01T00:00:00.000Z").toISOString(),
     updatedAt: new Date("2025-11-01T00:00:00.000Z").toISOString(),
   }),

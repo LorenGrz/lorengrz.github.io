@@ -13,13 +13,16 @@ export function IntroOverlay() {
       return
     }
 
+    // Kick off the entrance animation on mount. This is a deliberate one-shot
+    // animation trigger, not derived state — the lint rule is a false positive here.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPhase("visible")
 
-    const t1 = setTimeout(() => setPhase("leaving"), 1200)
+    const t1 = setTimeout(() => setPhase("leaving"), 650)
     const t2 = setTimeout(() => {
       setPhase("hidden")
       sessionStorage.setItem("intro-done", "1")
-    }, 2050)
+    }, 1150)
 
     return () => {
       clearTimeout(t1)

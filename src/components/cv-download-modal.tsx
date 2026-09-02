@@ -19,7 +19,11 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
     setTimeout(() => setPhase("closed"), 200)
   }, [])
 
-  useEffect(() => { setMounted(true) }, [])
+  useEffect(() => {
+    // Client-only flag so the portal can target document.body after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     if (phase !== "open") return

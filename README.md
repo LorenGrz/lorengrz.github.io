@@ -1,16 +1,18 @@
 # Lorenzo Graizzaro — Portfolio
 
-Portfolio personal desplegado como sitio estático en GitHub Pages.
+Portfolio personal desplegado como sitio 100% estático en GitHub Pages.
 
 **URL en vivo:** https://lorengrz.github.io/
 
 ## Stack
 
-- Next.js 16 (App Router, `output: 'export'` — sitio 100% estático)
+- Next.js 16 (App Router, `output: 'export'`)
 - React 19
 - TypeScript 5
 - Tailwind CSS 4
 - pnpm 11
+
+Fuentes (Geist, JetBrains Mono) vía `next/font` (self-host). Los iconos usan Material Symbols cargados por `<link>` con `icon_names=` para subsetear solo los glifos usados.
 
 ## Setup local
 
@@ -27,29 +29,31 @@ pnpm dev          # servidor de desarrollo
 pnpm build        # build estático → ./out
 pnpm lint
 pnpm typecheck
+pnpm cv           # regenera los PDFs de CV desde resume.json
 ```
 
 ## Deploy
 
-El deploy es automático vía GitHub Actions al hacer push a `master`.
+Automático vía GitHub Actions al hacer push a `master`.
 
 **Repo:** `LorenGrz/lorengrz.github.io`
-**Workflow:** `.github/workflows/deploy-pages.yml`
-**Pasos internos:** `pnpm build` → sube `./out` como artefacto → GitHub Pages publica en `https://lorengrz.github.io/`
+**Workflow:** `.github/workflows/deploy-pages.yml` — `pnpm lint` → `pnpm typecheck` → `pnpm build` → publica `./out` en GitHub Pages.
 
 ## Proyectos
 
-Los proyectos se cargan desde `src/lib/projects/seed-projects.ts`. Para agregar uno nuevo: agregar una entrada al array `seedProjects` y hacer push a `master`.
+Se cargan desde `src/lib/projects/seed-projects.ts`. Para agregar uno: sumar una entrada al array `seedProjects` y hacer push a `master`.
 
-La capa de base de datos (PostgreSQL + admin form) está deshabilitada — los archivos se conservan en `_disabled_api/` y `database/` para referencia futura.
+- `images: []` muestra un placeholder con el nombre del proyecto. Para una captura real, poné el archivo en `public/` y referencialo con una ruta relativa (`/mi-proyecto.png`).
+- No se usan imágenes externas.
 
 ## CV / Resume
 
-- Los archivos de CV están en `public/` (`Lorenzo_Graizzaro_CV_ES.pdf`, `Lorenzo_Graizzaro_CV_EN.pdf`).
-- La fuente de verdad de los datos del CV es `public/resume.json` (formato JSON Resume).
-- Los PDFs se generan manualmente a partir de `resume.json` — al actualizar proyectos o skills, regenerar los PDFs.
+- Los PDFs están en `public/` (`Lorenzo_Graizzaro_CV_ES.pdf`, `Lorenzo_Graizzaro_CV_EN.pdf`).
+- Fuente de verdad: `public/resume.json` / `public/resume.en.json` (formato JSON Resume).
+- Los PDFs se generan con `pnpm cv` a partir de esos JSON — al tocar proyectos o skills, regenerarlos.
 
 ## Notas
 
-- El portfolio usa exportación estática — no hay server components ni API routes activas en producción.
-- La fuente Material Symbols se carga vía `<link>` en `layout.tsx`, no con `@import` en CSS (Turbopack descarta el segundo `@import`).
+- Exportación estática: sin server components ni API routes activas en producción.
+- `src/app/robots.ts` y `src/app/sitemap.ts` generan `robots.txt` y `sitemap.xml` en el build.
+- El scroll-reveal solo oculta contenido cuando hay JS (`html.js`); sin JS todo se ve igual.

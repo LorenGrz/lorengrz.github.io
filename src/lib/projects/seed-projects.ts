@@ -94,8 +94,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/prioria.jpg",
-        alt: "Landing de Prioria: \"Atención blindada para quien no puede mirar el celular todo el día\" con botón Descargar APK.",
+        url: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+        alt: "Pantalla de smartphone con burbujas de notificación, representando una app de priorización de notificaciones con IA.",
       },
     ],
     createdAt: new Date("2026-08-04T00:00:00.000Z").toISOString(),
@@ -115,8 +115,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/serverlessscanner.jpg",
-        alt: "Landing de ServerlessScanner: \"Convertí tu infraestructura en un roadmap serverless accionable, en minutos\".",
+        url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        alt: "Diagrama de infraestructura en la nube, representando el análisis de arquitectura serverless.",
       },
     ],
     createdAt: new Date("2026-07-10T00:00:00.000Z").toISOString(),
@@ -136,8 +136,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/studyquest.jpg",
-        alt: "Landing de StudyQuest: \"Estudia. Compite. Gana.\" sobre matchmaking de estudio en tiempo real con IA.",
+        url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        alt: "Laptop mostrando una interfaz de aprendizaje para una plataforma de estudio online.",
       },
     ],
     createdAt: new Date("2026-06-01T00:00:00.000Z").toISOString(),
@@ -157,8 +157,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/frauddetector.jpg",
-        alt: "Landing de FraudDetector: \"Detección de fraude bancario sin depender de un dataset etiquetado\".",
+        url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        alt: "Visualización de datos abstracta, representando analítica de detección de fraude.",
       },
     ],
     createdAt: new Date("2026-04-15T00:00:00.000Z").toISOString(),
@@ -179,8 +179,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/booklibre.jpg",
-        alt: "Landing de BookLibre: \"Una comunidad para prestar, reservar y descubrir tu próxima lectura\".",
+        url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80",
+        alt: "Estanterías de biblioteca, representando una plataforma de reserva de libros.",
       },
     ],
     createdAt: new Date("2026-02-01T00:00:00.000Z").toISOString(),

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { CVDownloadModal } from "@/components/cv-download-modal";
+import { SiteHeader } from "@/components/site-header";
 import { ProjectsSection } from "@/components/projects-section";
 
 const skills = [
   {
     title: "Frontend",
     icon: "terminal",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "HTML/CSS"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
     learning: false,
   },
   {
@@ -36,7 +37,7 @@ const skills = [
   {
     title: "Aprendiendo",
     icon: "auto_stories",
-    items: ["NestJS", "Supabase", "WebSockets", "Next.js", "React Native"],
+    items: ["Supabase", "WebSockets", "React Native"],
     learning: true,
   },
 ];
@@ -64,57 +65,32 @@ const experience = [
   },
 ] as const;
 
-export default function Home() {
+const contactLinks = [
+  { label: "Email", icon: "alternate_email", href: "mailto:lorenzograizzaro55@gmail.com", external: false },
+  { label: "GitHub", icon: "terminal", href: "https://github.com/LorenGrz", external: true },
+  { label: "LeetCode", icon: "code", href: "https://leetcode.com/u/LorenGrz/", external: true },
+  { label: "LinkedIn", icon: "person", href: "https://linkedin.com/in/lorenzo-graizzaro", external: true },
+] as const;
 
+export default function Home() {
   return (
     <>
-      <header className="fixed top-0 z-50 w-full border-b border-outline-variant bg-surface/90 backdrop-blur-md">
-        <nav className="mx-auto flex h-16 max-w-container items-center justify-between px-page">
-          <a className="text-base font-bold text-on-surface sm:text-lg" href="#top">
-            Lorenzo Graizzaro
-          </a>
-          <div className="hidden items-center gap-7 md:flex">
-            <a className="nav-link" href="#about">
-              Sobre mí
-            </a>
-            <a className="nav-link" href="#skills">
-              Habilidades
-            </a>
-            <a className="nav-link" href="#projects">
-              Proyectos
-            </a>
-            <a className="nav-link" href="#contact">
-              Contacto
-            </a>
-          </div>
-          <CVDownloadModal variant="nav" />
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main id="top" className="pt-16">
-        <section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              alt=""
-              aria-hidden
-              className="object-cover brightness-[0.35]"
-              fill
-              priority
-              sizes="100vw"
-              src="/hero-bg.jpg"
-            />
-            <div className="absolute inset-0 bg-black/50 lg:bg-gradient-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent" />
-          </div>
+        <section className="hero-grid relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
           <div className="relative mx-auto grid w-full max-w-container gap-10 px-page py-section lg:grid-cols-[1fr_420px] lg:items-center">
             <div className="max-w-3xl order-2 lg:order-1">
               <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
                 Disponible para nuevas oportunidades
               </p>
-              <h1 className="text-3xl font-bold leading-tight tracking-normal text-white sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-bold leading-tight tracking-normal text-on-surface sm:text-4xl lg:text-5xl">
                 Lorenzo Graizzaro
+                <span className="sr-only"> — Software Developer</span>
               </h1>
-              <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Software Developer</p>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+              <p className="mt-3 text-xl font-semibold text-on-surface-variant sm:text-2xl">Software Developer</p>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-on-surface-variant sm:text-lg sm:leading-8">
                 Construyo aplicaciones con React, TypeScript, NestJS, Kotlin/Spring Boot, bases de datos SQL y entornos de
                 desarrollo basados en Docker.
               </p>
@@ -130,26 +106,25 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:flex flex-col items-center gap-5 order-1 lg:order-2">
-              <div className="hidden lg:block w-full rounded-lg border border-white/20 bg-white/10 p-5 shadow-sm backdrop-blur-sm">
-              <p className="font-mono text-sm font-semibold text-primary">stack-actual.ts</p>
-              <dl className="mt-5 space-y-4 text-sm">
-                <div>
-                  <dt className="text-white/60">Frontend</dt>
-                  <dd className="mt-1 font-semibold text-white">React, Next.js, TypeScript, Tailwind</dd>
-                </div>
-                <div>
-                  <dt className="text-white/60">Backend</dt>
-                  <dd className="mt-1 font-semibold text-white">Node.js, NestJS, Kotlin, Spring Boot</dd>
-                </div>
-                <div>
-                  <dt className="text-white/60">Persistencia</dt>
-                  <dd className="mt-1 font-semibold text-white">PostgreSQL, MySQL, MongoDB, Redis</dd>
-                </div>
-
-              </dl>
+              <div className="hidden w-full rounded-lg border border-outline-variant bg-surface/70 p-5 shadow-sm backdrop-blur-sm lg:block">
+                <p className="font-mono text-sm font-semibold text-primary">stack-actual.ts</p>
+                <dl className="mt-5 space-y-4 text-sm">
+                  <div>
+                    <dt className="text-on-surface-variant">Frontend</dt>
+                    <dd className="mt-1 font-semibold text-on-surface">React, Next.js, TypeScript, Tailwind</dd>
+                  </div>
+                  <div>
+                    <dt className="text-on-surface-variant">Backend</dt>
+                    <dd className="mt-1 font-semibold text-on-surface">Node.js, NestJS, Kotlin, Spring Boot</dd>
+                  </div>
+                  <div>
+                    <dt className="text-on-surface-variant">Persistencia</dt>
+                    <dd className="mt-1 font-semibold text-on-surface">PostgreSQL, MySQL, MongoDB, Redis</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
-        </div>
         </section>
 
         <section className="bg-surface-container-low py-section" id="about">
@@ -187,7 +162,7 @@ export default function Home() {
                   alt="Lorenzo Graizzaro"
                   className="object-cover"
                   fill
-                  sizes="320px"
+                  sizes="(min-width: 640px) 320px, 192px"
                   src="/me.jpg"
                 />
               </div>
@@ -253,39 +228,27 @@ export default function Home() {
                 Estoy disponible para entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
               </p>
             </div>
-            <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5 stagger-group">
-              <a className="contact-link reveal reveal-up" href="mailto:lorenzograizzaro55@gmail.com">
-                <span className="material-symbols-outlined">alternate_email</span>
-                Email
-              </a>
-              <a className="contact-link reveal reveal-up" href="https://github.com/LorenGrz" rel="noreferrer" target="_blank">
-                <span className="material-symbols-outlined">terminal</span>
-                GitHub
-              </a>
-              <a className="contact-link reveal reveal-up" href="https://leetcode.com/u/LorenGrz/" rel="noreferrer" target="_blank">
-                <span className="material-symbols-outlined">code</span>
-                LeetCode
-              </a>
-              <div className="col-span-3 flex justify-center gap-3 sm:contents">
-                <a className="contact-link reveal reveal-up max-sm:w-[calc((100%-1.5rem)/3)] max-sm:shrink-0" href="https://linkedin.com/in/lorenzo-graizzaro" rel="noreferrer" target="_blank">
-                  <span className="material-symbols-outlined">person</span>
-                  LinkedIn
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 stagger-group">
+              {contactLinks.map((link) => (
+                <a
+                  className="contact-link reveal reveal-up"
+                  href={link.href}
+                  key={link.label}
+                  {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                >
+                  <span className="material-symbols-outlined">{link.icon}</span>
+                  {link.label}
                 </a>
-                <a className="contact-link reveal reveal-up max-sm:w-[calc((100%-1.5rem)/3)] max-sm:shrink-0" href="https://wa.me/541160277080" rel="noreferrer" target="_blank">
-                  <span className="material-symbols-outlined">chat</span>
-                  WhatsApp
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </section>
-
       </main>
 
       <footer className="border-t border-outline-variant bg-surface py-8">
         <div className="mx-auto flex max-w-container flex-col items-center justify-between gap-4 px-page text-center md:flex-row md:text-left">
           <p className="font-semibold">Lorenzo Graizzaro</p>
-          <p className="text-sm text-on-surface-variant">Construido con Next.js, TypeScript, PostgreSQL y arquitectura serverless en AWS.</p>
+          <p className="text-sm text-on-surface-variant">Construido con Next.js, TypeScript y Tailwind CSS. Desplegado como sitio estático en GitHub Pages.</p>
         </div>
       </footer>
     </>

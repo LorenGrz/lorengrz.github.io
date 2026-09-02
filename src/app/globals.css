@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -27,8 +26,8 @@
   --color-primary-dark: var(--primary-dark);
   --color-primary-soft: var(--primary-soft);
   --color-secondary: var(--secondary);
-  --font-sans: "Geist", Arial, Helvetica, sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-sans: var(--font-geist), "Geist", Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --container-container: 1120px;
   --spacing-page: clamp(1rem, 4vw, 2.5rem);
   --spacing-section: clamp(4.5rem, 8vw, 6rem);
@@ -41,6 +40,26 @@
 body {
   font-family: var(--font-sans);
   letter-spacing: 0;
+}
+
+/* Visible keyboard focus for every interactive element. */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Subtle dot grid used behind the hero (no image dependency). */
+.hero-grid {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(60% 60% at 15% 0%, rgba(249, 115, 22, 0.14), transparent 70%),
+    radial-gradient(50% 50% at 100% 100%, rgba(34, 197, 94, 0.08), transparent 70%),
+    radial-gradient(circle at center, var(--outline-variant) 1px, transparent 1.4px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    28px 28px;
 }
 
 ::-webkit-scrollbar {
@@ -176,34 +195,38 @@ body {
   vertical-align: middle;
 }
 
-/* ── Scroll reveal animations ── */
+/* ── Scroll reveal animations ──
+   Content is visible by default; it only starts hidden when JS is available
+   (html.js), so a failed/slow script never leaves a blank section. */
 .reveal {
-  opacity: 0;
-  will-change: transform, opacity;
   transition:
-    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
 }
 
-.reveal-left {
-  transform: perspective(700px) translateX(-60px) rotateY(7deg);
+html.js .reveal {
+  opacity: 0;
 }
 
-.reveal-right {
-  transform: perspective(700px) translateX(60px) rotateY(-7deg);
+html.js .reveal-left {
+  transform: translateX(-24px);
 }
 
-.reveal-up {
-  transform: translateY(48px) scale(0.96);
+html.js .reveal-right {
+  transform: translateX(24px);
 }
 
-.reveal.is-visible {
+html.js .reveal-up {
+  transform: translateY(20px);
+}
+
+html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  html.js .reveal {
     transition: none;
     opacity: 1;
     transform: none;
@@ -247,7 +270,7 @@ body {
   right: 0;
   height: 50%;
   background: #0d1117;
-  transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
   will-change: transform;
 }
 

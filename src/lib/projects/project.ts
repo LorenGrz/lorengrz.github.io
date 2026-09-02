@@ -67,7 +67,7 @@ export class Project {
   get links(): readonly ProjectLink[] {
     return [
       this.githubUrl ? { label: "GitHub", url: this.githubUrl } : undefined,
-      this.liveUrl ? { label: "Live", url: this.liveUrl } : undefined,
+      this.liveUrl ? { label: "Landing", url: this.liveUrl } : undefined,
     ].filter((link): link is ProjectLink => Boolean(link));
   }
 }

@@ -13,7 +13,7 @@ const skills = [
   {
     title: "Backend",
     icon: "dns",
-    items: ["Node.js", "NestJS", "Kotlin", "Java", "Spring Boot", "REST APIs", "GraphQL"],
+    items: ["Node.js", "NestJS", "Kotlin", "Java", "Spring Boot", "FastAPI", "REST APIs", "GraphQL"],
     learning: false,
   },
   {
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/50 lg:bg-gradient-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent" />
           </div>
           <div className="relative mx-auto grid w-full max-w-container gap-10 px-page py-section lg:grid-cols-[1fr_420px] lg:items-center">
-            <div className="max-w-3xl order-2 lg:order-1">
+            <div className="hero-intro max-w-3xl order-2 lg:order-1">
               <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary sm:text-sm">
                 Disponible para nuevas oportunidades
               </p>
@@ -101,9 +101,9 @@ export default function Home() {
                 <span className="sr-only"> — Software Developer</span>
               </h1>
               <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Software Developer</p>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-                Construyo aplicaciones con React, TypeScript, NestJS, Kotlin/Spring Boot, bases de datos SQL y entornos de
-                desarrollo basados en Docker.
+              <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+                Construyo aplicaciones con IA: React, TypeScript, Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot, con
+                bases relacionales y no relacionales, desplegadas en la Nube.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a className="button-primary" href="#projects">
@@ -116,7 +116,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col items-center gap-5 order-1 lg:order-2">
+            <div className="hero-aside hidden lg:flex flex-col items-center gap-5 order-1 lg:order-2">
               <div className="hidden w-full rounded-lg border border-white/20 bg-white/10 p-5 shadow-sm backdrop-blur-sm lg:block">
                 <p className="font-mono text-sm font-semibold text-primary">stack-actual.ts</p>
                 <dl className="mt-5 space-y-4 text-sm">
@@ -142,11 +142,11 @@ export default function Home() {
           <div className="mx-auto grid max-w-container gap-10 px-page lg:grid-cols-12 lg:items-center">
             <div className="order-2 lg:order-1 lg:col-span-7 reveal reveal-left">
               <p className="section-kicker">Sobre mí</p>
-              <h2 className="section-title">Desarrollo de software práctico con profundidad real en proyectos.</h2>
+              <h2 className="section-title">Desarrollador de software especializado en aplicaciones impulsadas por IA</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Software Developer usando React, Next.js, TypeScript, Node.js/NestJS, Kotlin/Spring Boot y Docker.
-                  Me importan las interfaces claras, la lógica de backend mantenible y los entornos reproducibles. Me interesa el ecosistema
+                  Soy Software Developer usando React, Next.js, TypeScript, Node.js/NestJS, Python/FastAPI, Kotlin/Spring Boot
+                  y Docker. Me importan las interfaces claras y un backend claro y mantenible. Me interesa el ecosistema
                   de IA y Automatizaciones.
                 </p>
               </div>

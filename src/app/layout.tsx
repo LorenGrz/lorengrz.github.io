@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { IntroOverlay } from "@/components/intro-overlay";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -105,6 +104,7 @@ export default function RootLayout({
     <html
       lang="es"
       className={`h-full scroll-smooth antialiased ${geist.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
       <head>
         {/* Progressive enhancement flag: scroll-reveal only hides content when JS is available. */}
@@ -125,8 +125,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-background text-on-surface">
-        <IntroOverlay />
+      <body className="min-h-full bg-background text-on-surface" suppressHydrationWarning>
         {children}
         <ScrollReveal />
       </body>

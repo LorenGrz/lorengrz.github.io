@@ -231,70 +231,36 @@ html.js .reveal.is-visible {
 .modal-entering .modal-card     { animation: modal-card-in      0.2s ease both; }
 .modal-leaving  .modal-card     { animation: modal-card-out     0.2s ease both; }
 
-/* ── Intro overlay ── */
-@keyframes intro-name-in {
-  from { opacity: 0; transform: translateY(10px); }
+/* ── Hero intro ──
+   Staggered entrance for the hero content on first paint. Same html.js gate as
+   .reveal so a missing/slow script never leaves content hidden, and fully
+   disabled under prefers-reduced-motion. Pure CSS: the SSR markup and the first
+   client render are identical, so this can never cause a hydration mismatch. */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes intro-line-in {
-  from { opacity: 0; transform: scaleX(0); }
-  to   { opacity: 1; transform: scaleX(1); }
+html.js .hero-intro > * {
+  opacity: 0;
+  animation: hero-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.intro-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  isolation: isolate;
-  contain: layout paint;
+html.js .hero-intro > *:nth-child(1) { animation-delay: 0.05s; }
+html.js .hero-intro > *:nth-child(2) { animation-delay: 0.14s; }
+html.js .hero-intro > *:nth-child(3) { animation-delay: 0.23s; }
+html.js .hero-intro > *:nth-child(4) { animation-delay: 0.32s; }
+html.js .hero-intro > *:nth-child(5) { animation-delay: 0.41s; }
+
+html.js .hero-aside {
+  opacity: 0;
+  animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.34s both;
 }
 
-.intro-panel {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: #0d1117;
-  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
-  will-change: transform;
+@media (prefers-reduced-motion: reduce) {
+  html.js .hero-intro > *,
+  html.js .hero-aside {
+    animation: none;
+    opacity: 1;
+  }
 }
-
-.intro-panel-top    { top: 0; }
-.intro-panel-bottom { bottom: 0; }
-
-.intro-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  white-space: nowrap;
-  z-index: 1;
-  will-change: opacity;
-}
-
-.intro-name {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: #e6ecf4;
-  letter-spacing: 0.06em;
-  animation: intro-name-in 0.5s ease 0.2s both;
-}
-
-.intro-line {
-  display: block;
-  width: 3rem;
-  height: 2px;
-  background: #f97316;
-  margin: 0.75rem auto 0;
-  transform-origin: left;
-  animation: intro-line-in 0.4s ease 0.5s both;
-}
-
-.intro-leaving .intro-panel-top    { transform: translateY(-100%); transition-delay: 0.15s; }
-.intro-leaving .intro-panel-bottom { transform: translateY(100%); transition-delay: 0.15s; }
-.intro-leaving .intro-center       { opacity: 0; transition: opacity 0.15s ease; }

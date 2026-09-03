@@ -47,7 +47,7 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-container px-page">
         <div className="reveal reveal-left">
           <p className="section-kicker">Proyectos</p>
-          <h2 className="section-title">Proyectos full-stack destacados.</h2>
+          <h2 className="section-title">Proyectos destacados.</h2>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3 stagger-group">

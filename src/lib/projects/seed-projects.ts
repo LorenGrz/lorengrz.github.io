@@ -24,8 +24,8 @@ export const seedProjects = [
     featured: true,
     images: [
       {
-        url: "/openruleta.png",
-        alt: "Rueda de sorteo de OpenRuleta: un segmento por participante, con la lista de inscriptos en vivo al costado y placeholders de sponsors.",
+        url: "https://images.unsplash.com/photo-1625888791210-40ea41c1d0f3?auto=format&fit=crop&w=1200&q=80",
+        alt: "Rueda de ruleta clásica de madera con fichas de casino al fondo.",
       },
     ],
     createdAt: new Date("2026-09-06T00:00:00.000Z").toISOString(),

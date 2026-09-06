@@ -122,7 +122,7 @@ export default function Home() {
                 <dl className="mt-5 space-y-4 text-sm">
                   <div>
                     <dt className="text-white/60">Frontend</dt>
-                    <dd className="mt-1 font-semibold text-white">React, Next.js, TypeScript, Tailwind</dd>
+                    <dd className="mt-1 font-semibold text-white">React, Next.js, TypeScript, HTML/CSS</dd>
                   </div>
                   <div>
                     <dt className="text-white/60">Backend</dt>

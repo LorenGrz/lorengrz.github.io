@@ -2,6 +2,36 @@ import { Project } from "./project";
 
 export const seedProjects = [
   new Project({
+    id: "openruleta",
+    title: "OpenRuleta",
+    slug: "openruleta",
+    summary:
+      "Toolkit de sorteo para eventos, self-hostable: un formulario público de inscripción (deployable) y una rueda de ganadores para el operador (local o detrás de una contraseña). Usado en vivo en Data Saturday LATAM Argentina 2026 con ~300 inscripciones en simultáneo.",
+    description:
+      "Monorepo pnpm con dos apps Next.js 16 sobre una sola tabla de Supabase. apps/form es la parte pública (Next estático deployable en Vercel): usa la anon key, que por RLS solo puede INSERT en participants, con honeypot anti-bot e índice único por email que rechaza duplicados con 409. apps/ruleta es la rueda que se proyecta en el evento: usa la service_role key (SELECT/UPDATE/DELETE), así que corre local — o hosteada detrás de HTTP Basic Auth activado con una sola variable de entorno. Tres paquetes compartidos (config, core, ui): TODO lo configurable — nombre del evento, textos, reglas del campo de documento, sponsors, tiempos de la rueda, colores del confeti, columnas del CSV — vive en un único archivo. El ganador se saca del bombo con won_at y el premio del modal se pre-carga con el título del sorteo. Se usó en el evento real con ~300 asistentes inscribiéndose desde el celular en simultáneo, todo sobre un proyecto de Supabase del plan gratuito.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "PostgreSQL",
+      "pnpm workspaces",
+    ],
+    githubUrl: "https://github.com/LorenGrz/OpenRuleta",
+    liveUrl: "https://lorengrz.github.io/landing-openruleta/",
+    status: "completed",
+    featured: true,
+    images: [
+      {
+        url: "/openruleta.png",
+        alt: "Rueda de sorteo de OpenRuleta: un segmento por participante, con la lista de inscriptos en vivo al costado y placeholders de sponsors.",
+      },
+    ],
+    createdAt: new Date("2026-09-06T00:00:00.000Z").toISOString(),
+    updatedAt: new Date("2026-09-06T00:00:00.000Z").toISOString(),
+  }),
+  new Project({
     id: "contentcreator",
     title: "ContentCreator",
     slug: "contentcreator",

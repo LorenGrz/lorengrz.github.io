@@ -13,7 +13,7 @@ const skills = [
   {
     title: "Backend",
     icon: "dns",
-    items: ["Node.js", "NestJS", "Kotlin", "Java", "Spring Boot", "FastAPI", "REST APIs", "GraphQL"],
+    items: ["Node.js", "Next.js", "Kotlin", "Spring Boot", "FastAPI", "REST APIs", "GraphQL"],
     learning: false,
   },
   {
@@ -37,7 +37,7 @@ const skills = [
   {
     title: "Aprendiendo",
     icon: "auto_stories",
-    items: ["Supabase", "WebSockets", "React Native"],
+    items: ["NestJS", "WebSockets", "React Native"],
     learning: true,
   },
 ];
@@ -126,7 +126,7 @@ export default function Home() {
                   </div>
                   <div>
                     <dt className="text-white/60">Backend</dt>
-                    <dd className="mt-1 font-semibold text-white">Node.js, NestJS, Kotlin, Spring Boot</dd>
+                    <dd className="mt-1 font-semibold text-white">Node.js/NestJS, Python/FastAPI, Kotlin/Spring Boot</dd>
                   </div>
                   <div>
                     <dt className="text-white/60">Persistencia</dt>

@@ -102,8 +102,10 @@ export default function Home() {
               </h1>
               <p className="mt-3 text-xl font-semibold text-white/80 sm:text-2xl">Software Developer</p>
               <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-                Construyo aplicaciones con IA: React, TypeScript, Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot, con
-                bases relacionales y no relacionales, desplegadas en la Nube.
+                Construyo aplicaciones con IA integrada en su flujo. Trabajo como AI Engineer: defino la arquitectura con
+                criterio propio y me armo mis entornos agénticos para gestionar el contexto. Stack: React, TypeScript,
+                Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot, con bases relacionales y no relacionales, desplegadas
+                en la Nube.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a className="button-primary" href="#projects">

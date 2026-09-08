@@ -64,5 +64,12 @@ pnpm cv   # regenera los dos PDFs desde resume.json/resume.en.json
 
 ## Última revisión
 
+2026-09-07 — se borró el stack de AWS `lorenzo-portfolio` (S3 + CloudFront +
+OAC), un duplicado estático sin dominio propio que servía una copia vieja del
+sitio. El único deploy vivo es GitHub Pages. No queda nada de AWS: el repo ya
+no tenía `template.yaml` (el `.aws-sam/` local era cruft de agosto) y se quitó
+`/.aws-sam/` del `.gitignore`. Sigue pendiente el código muerto de la etapa
+"dinámica" (`pg`, `zod`, `repository.ts`, `AdminProjectForm.tsx`).
+
 2026-09-04 — primera vez que se documenta en CLAUDE.md (antes solo existía
 `.agents/CONTEXT.md`, parcialmente desactualizado).

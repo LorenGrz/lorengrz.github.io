@@ -201,7 +201,17 @@ export const seedProjects = [
     summary: "Sistema de reserva y alquiler de libros con stack full-stack completamente dockerizado.",
     description:
       "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker Compose y persistencia políglota con PostgreSQL, MongoDB y Redis.",
-    stack: ["React", "TypeScript", "Chakra UI", "Kotlin", "Spring Boot", "Docker Compose"],
+    stack: [
+      "React",
+      "Kotlin",
+      "Spring Boot",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "TypeScript",
+      "Chakra UI",
+      "Docker Compose",
+    ],
     githubUrl: "https://github.com/LorenGrz/BookLibre",
     liveUrl: "https://lorengrz.github.io/landing-booklibre/",
     repositoryNote: "Proyecto académico grupal — UNSAM.",

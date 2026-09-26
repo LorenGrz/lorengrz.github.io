@@ -35,6 +35,7 @@ const MATERIAL_SYMBOLS = [
   "description",
   "open_in_new",
   "menu",
+  "smart_toy",
 ].join(",");
 
 const description =

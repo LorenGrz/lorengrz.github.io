@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Lorenzo Graizzaro",
-    "label": "Software Developer",
+    "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
-    "phone": "+54 11-6027-7080",
-    "summary": "Software Developer with hands-on projects in React, TypeScript, React Native, Kotlin/Spring Boot, NestJS, Python/FastAPI, and AWS serverless — all containerized or deployed in production. Work experience in high-demand environments and production SQL data management. Detail-oriented, capable of working autonomously and integrating quickly into agile teams.",
+    "phone": "+54 11 6027-7080",
+    "summary": "Software Developer focused on AI Engineering. I build full-stack applications with built-in AI: agents with Amazon Bedrock and Strands Agents, LLM generation, RAG, and MCP servers. Core stack: React, TypeScript, NestJS, Python/FastAPI, and Kotlin/Spring Boot, with SQL and NoSQL databases and serverless deployment on AWS. I work with Spec-Driven Development and agentic environments (Claude Code with subagents) to own architecture decisions.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -31,30 +31,30 @@
   },
   "work": [
     {
-      "name": "UNSAM",
-      "position": "Algorithms 3 Tutor",
+      "name": "Universidad Nacional de San Martín",
+      "position": "Algorithms 3 Teaching Assistant",
       "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
-      "summary": "Practical tutoring in Algorithms 3, a course focused on User Interfaces with emphasis on React. Supporting students in problem-solving and project development.",
+      "summary": "Practical tutoring in Algorithms 3, a course focused on user interfaces with React. Supporting students in problem-solving and project development.",
       "highlights": [
-        "Hands-on tutoring focused on React-based UI development",
-        "Debugging and code review of academic projects in team settings"
+        "Hands-on tutoring on user interface development with React and TypeScript",
+        "Debugging and code review of team-built academic projects"
       ]
     },
     {
-      "name": "FABRIC SRL",
-      "position": "Administrative",
+      "name": "Fabric SRL",
+      "position": "Administrative Assistant",
       "startDate": "2024-12",
       "endDate": "2025-12",
       "location": "Buenos Aires, Argentina",
       "summary": "SQL queries on production databases for operational data search and reporting. Accounting management with Xubio: checks, transfers, and inventory control.",
       "highlights": [
-        "SQL queries on production data for operational reporting",
+        "SQL queries on the production database for operational reporting",
         "Accounting management with Xubio: checks, transfers, and inventory control"
       ]
     },
     {
-      "name": "Banco Nación",
+      "name": "Banco de la Nación Argentina",
       "position": "Remote Operator",
       "startDate": "2024-01",
       "endDate": "2024-12",
@@ -69,14 +69,14 @@
     {
       "institution": "Universidad Nacional de San Martín",
       "area": "Software Development",
-      "studyType": "Bachelor's Degree (Licenciatura)",
+      "studyType": "Bachelor's Degree in Software Development (Licenciatura)",
       "startDate": "2026",
       "location": "Buenos Aires, Argentina"
     },
     {
       "institution": "Universidad Nacional de San Martín",
       "area": "Computer Programming",
-      "studyType": "Associate's Degree (Tecnicatura)",
+      "studyType": "Associate Degree in Computer Programming (Tecnicatura)",
       "startDate": "2022",
       "endDate": "2026-07",
       "location": "Buenos Aires, Argentina"
@@ -84,66 +84,169 @@
   ],
   "skills": [
     {
+      "name": "AI and Agents",
+      "keywords": [
+        "Large Language Models (LLMs)",
+        "Retrieval-Augmented Generation (RAG)",
+        "Model Context Protocol (MCP)",
+        "AI agents and subagents",
+        "Spec-Driven Development (SDD)",
+        "Amazon Bedrock",
+        "Strands Agents",
+        "Google Gemini API",
+        "Claude Code"
+      ]
+    },
+    {
       "name": "Frontend",
-      "keywords": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "HTML/CSS"]
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+        "HTML",
+        "CSS"
+      ]
     },
     {
       "name": "Mobile",
-      "keywords": ["React Native", "Expo", "NativeWind"]
+      "keywords": [
+        "React Native",
+        "Expo"
+      ]
     },
     {
       "name": "Backend",
-      "keywords": ["Node.js", "NestJS", "Kotlin", "Spring Boot", "Python", "FastAPI", "REST APIs"]
+      "keywords": [
+        "Node.js",
+        "NestJS",
+        "Python",
+        "FastAPI",
+        "Kotlin",
+        "Spring Boot",
+        "REST APIs",
+        "WebSockets (Socket.IO)"
+      ]
     },
     {
       "name": "Databases",
-      "keywords": ["PostgreSQL", "MongoDB", "Redis", "DynamoDB", "MySQL"]
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "DynamoDB",
+        "Supabase",
+        "SQLite",
+        "SQL"
+      ]
     },
     {
-      "name": "AWS & Cloud",
-      "keywords": ["Lambda", "API Gateway", "S3", "CloudFront", "Cognito", "Bedrock", "DynamoDB", "AWS SAM"]
+      "name": "Cloud",
+      "keywords": [
+        "AWS (Lambda, API Gateway, Cognito, DynamoDB, SQS, Polly, AWS SAM)",
+        "Google Cloud (Gemini API)"
+      ]
     },
     {
-      "name": "Infrastructure",
-      "keywords": ["Docker", "Docker Compose", "GitHub Actions", "Git", "Linux"]
+      "name": "DevOps and Tools",
+      "keywords": [
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "CI/CD",
+        "Git",
+        "Linux"
+      ]
     }
   ],
   "projects": [
     {
-      "name": "StudyQuest",
-      "description": "Full-stack study platform with AI-generated quizzes and user matching system. Modular backend with NestJS and PostgreSQL, reproducible environment with Docker Compose.",
+      "name": "Prioria",
+      "description": "Android app that intercepts notifications, prioritizes them with an AI agent, and reads critical ones aloud. 100% serverless AWS backend.",
       "highlights": [
-        "Modular NestJS API with containerized PostgreSQL/Redis",
-        "AI-powered PDF/DOCX to interactive quiz conversion",
-        "User matching system"
+        "Agent built with Strands Agents SDK and Amazon Bedrock that scores each notification against user rules and preferences, and learns from explicit feedback",
+        "Serverless backend on AWS Lambda, API Gateway, Cognito, DynamoDB, and SQS, defined as infrastructure as code with AWS SAM",
+        "Text-to-speech for critical notifications with Amazon Polly and a native Android widget"
+      ],
+      "keywords": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Amazon Bedrock",
+        "Strands Agents",
+        "AWS Lambda",
+        "DynamoDB",
+        "AWS SAM"
+      ],
+      "url": "https://github.com/LorenGrz/Prioria"
+    },
+    {
+      "name": "StudyQuest",
+      "description": "Collaborative study platform with real-time matchmaking and AI-generated quizzes from notes and PDF files.",
+      "highlights": [
+        "Quiz generation with Google Gemini from PDF and DOCX files, converted to Markdown by a Python microservice (MarkItDown)",
+        "Real-time matchmaking, study rooms, and chat over WebSockets (Socket.IO) on NestJS and PostgreSQL with TypeORM",
+        "Changes specified with OpenSpec before implementation (Spec-Driven Development)"
       ],
       "keywords": [
         "React",
         "TypeScript",
-        "Tailwind",
         "NestJS",
         "PostgreSQL",
-        "Redis",
+        "TypeORM",
+        "Socket.IO",
+        "Google Gemini API",
         "Docker Compose"
       ],
-      "url": "https://github.com/LorenGrz/StudyQuest",
-      "roles": [
-        "Software Developer"
+      "url": "https://github.com/LorenGrz/StudyQuest"
+    },
+    {
+      "name": "OpenRuleta",
+      "description": "Self-hostable raffle toolkit for events: public sign-up form and an operator-facing winner wheel, built on Supabase.",
+      "highlights": [
+        "Used live at Data Saturday LATAM Argentina 2026 with ~300 concurrent mobile sign-ups on Supabase's free tier",
+        "Security through Row Level Security: the public app can only insert; the operator wheel uses the service key behind HTTP Basic Auth"
       ],
-      "startDate": "2025"
+      "keywords": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "pnpm workspaces"
+      ],
+      "url": "https://github.com/LorenGrz/OpenRuleta"
+    },
+    {
+      "name": "FraudDetector",
+      "description": "Bank fraud detection over 100k+ transactions using a consensus of 3 unsupervised ML models and an interactive dashboard.",
+      "highlights": [
+        "Ensemble of Isolation Forest, LOF, and K-Means: a client is flagged only when at least 2 models agree (~35% fewer false positives than a single model)",
+        "REST API with FastAPI: 110–150 ms per client analysis and 40–60 ms per transaction"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "SQLAlchemy",
+        "SQLite",
+        "Plotly"
+      ],
+      "url": "https://github.com/LorenGrz/FraudDetector"
     },
     {
       "name": "BookLibre",
-      "description": "Book lending and reservation system with availability and user management. Fully Dockerized full-stack with polyglot persistence. Deployed to production: API on Render, frontend on GitHub Pages.",
+      "description": "Full-stack book reservation and rental system, group academic project (UNSAM).",
       "highlights": [
-        "Dockerized full-stack with Docker Compose (local) and Render + GitHub Pages (production)",
-        "Polyglot persistence: PostgreSQL, MongoDB, and Redis",
-        "JWT auth with HttpOnly cookies and SameSite=None for cross-origin auth between different domains"
+        "Polyglot persistence with PostgreSQL, MongoDB, and Redis behind a Kotlin + Spring Boot backend",
+        "JWT authentication with HttpOnly cookies and SameSite=None for cross-origin sessions"
       ],
       "keywords": [
         "React",
         "TypeScript",
-        "Chakra UI",
         "Kotlin",
         "Spring Boot",
         "PostgreSQL",
@@ -151,99 +254,26 @@
         "Redis",
         "Docker Compose"
       ],
-      "url": "https://github.com/LorenGrz/BookLibre",
-      "roles": [
-        "Software Developer"
-      ],
-      "startDate": "2026"
-    },
-    {
-      "name": "FraudDetector",
-      "description": "Banking fraud detection tool that processes 100k+ transactions using 3-model ML consensus and visualizes risk in an interactive dashboard.",
-      "highlights": [
-        "Ensemble of Isolation Forest, LOF, and K-Means: a client is flagged as risk only if ≥ 2 models agree (~35% fewer false positives)",
-        "Interactive Plotly dashboard: scatter plots and boxplots for per-client risk distribution",
-        "REST API with response times of 110–150 ms per client analysis and 40–60 ms per transaction"
-      ],
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "scikit-learn",
-        "SQLite",
-        "SQLAlchemy",
-        "Plotly"
-      ],
-      "url": "https://github.com/LorenGrz/FraudDetector",
-      "roles": [
-        "Software Developer"
-      ],
-      "startDate": "2026"
-    },
-    {
-      "name": "ServerlessScanner",
-      "description": "AWS architecture analysis tool that detects serverless migration opportunities in CloudFormation templates and estimates potential cost savings.",
-      "highlights": [
-        "Analyzes CloudFormation resources (EC2, RDS, ECS) and recommends serverless equivalents (Lambda, Aurora Serverless, DynamoDB)",
-        "Deployed to AWS Lambda with API Gateway using AWS SAM"
-      ],
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "AWS Lambda",
-        "API Gateway",
-        "AWS SAM"
-      ],
-      "url": "https://github.com/LorenGrz/ServerlessScanner",
-      "roles": [
-        "Software Developer"
-      ],
-      "startDate": "2026"
-    },
-    {
-      "name": "Prioria",
-      "description": "Android app that intercepts system notifications, prioritizes them with an AI agent, and announces them via voice through Amazon Polly. 100% serverless AWS backend.",
-      "highlights": [
-        "Serverless agent with Strands Agents SDK + Amazon Bedrock: prioritizes notifications based on user rules and preferences",
-        "AWS serverless backend: Lambda, API Gateway, Cognito, DynamoDB, SQS — infrastructure as code with AWS SAM",
-        "Automatic TTS via Amazon Polly and native Android widget with explicit feedback for agent refinement"
-      ],
-      "keywords": [
-        "React Native",
-        "Expo",
-        "NativeWind",
-        "TypeScript",
-        "AWS Lambda",
-        "Amazon Bedrock",
-        "Amazon Cognito",
-        "DynamoDB",
-        "Amazon Polly",
-        "Strands Agents",
-        "AWS SAM"
-      ],
-      "url": "https://github.com/LorenGrz/Prioria",
-      "roles": [
-        "Software Developer"
-      ],
-      "startDate": "2026"
+      "url": "https://github.com/LorenGrz/BookLibre"
     }
   ],
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native"
+      "fluency": "native"
     },
     {
       "language": "English",
-      "fluency": "Technical — reading & writing"
+      "fluency": "technical, reading and writing"
     }
   ],
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.en.json",
     "version": "v1.0.0",
-    "lastModified": "2026-08-11",
+    "lastModified": "2026-09-26",
     "extra": {
-      "transport": "Own transportation · valid license",
-      "availability": "Immediate availability — on-site / hybrid / remote"
+      "transport": "Own vehicle and valid driver's license",
+      "availability": "Immediately available: on-site, hybrid, or remote"
     }
   }
 }

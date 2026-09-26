@@ -44,6 +44,13 @@ client-side sobre HTML/JS estáticos.
 - Los PDFs (`public/Lorenzo_Graizzaro_CV_ES.pdf` / `_EN.pdf`) se generan con
   `pnpm cv` (usa `puppeteer-core`, de ahí esa dependencia) a partir de esos
   JSON. Si se tocan proyectos o skills del resume, hay que regenerarlos.
+- `scripts/generate-cv.mjs` sigue reglas ATS (basadas en
+  `msdanyg/ats-resume-skill`): una sola columna, sin tablas, skills como líneas
+  `Categoría: a, b, c`, experiencia apilada Título / Empresa / Fechas, fechas
+  `Mon YYYY`, bullets `•` como texto. No reintroducir columnas ni tablas.
+  Verificar con `pdftotext public/Lorenzo_Graizzaro_CV_ES.pdf -` que el texto
+  salga en orden. `description` de cada proyecto no se imprime (solo stack +
+  highlights) para no pasar de 2 páginas.
 
 ## Comandos
 

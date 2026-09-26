@@ -68,7 +68,7 @@ export const seedProjects = [
     slug: "humandetector",
     summary: "Instalación satírica de \"verificación de humanidad\": pide gestos por cámara, escala los pedidos hasta lo imposible y nunca aprueba.",
     description:
-      "Verificador de humanidad para una antihackathon. El frontend (Next.js export estático en GitHub Pages) captura la cámara y la manda por WebSocket a un backend FastAPI que hace detección real de gestos con MediaPipe (parpadeo, giro de cabeza, inclinación, boca) y corre una máquina de estados de 10 pasos que escala la exigencia hasta pedidos absurdos. Backend contenerizado en EC2 con Caddy y TLS automático de Let's Encrypt; imagen construida en AWS CodeBuild y publicada en ECR. Sin base de datos: todo el estado vive en memoria por conexión.",
+      "Verificador de humanidad para una antihackathon. El frontend (Next.js export estático) captura la cámara y la manda por WebSocket a un backend FastAPI que hace detección real de gestos con MediaPipe (parpadeo, giro de cabeza, inclinación, boca) y corre una máquina de estados de 10 pasos que escala la exigencia hasta pedidos absurdos. Backend contenerizado en EC2 (ya dado de baja) con Caddy y TLS automático de Let's Encrypt; imagen construida en AWS CodeBuild y publicada en ECR. Sin base de datos: todo el estado vive en memoria por conexión.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -84,7 +84,7 @@ export const seedProjects = [
     ],
     githubUrl: "https://github.com/LorenGrz/HumanDetector",
     liveUrl: "https://lorengrz.github.io/landing-humandetector/",
-    repositoryNote: "Backend on-demand: se enciende para demos y eventos.",
+    repositoryNote: "App fuera de línea: el código está en GitHub.",
     status: "completed",
     featured: true,
     images: [

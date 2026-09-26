@@ -19,7 +19,7 @@ const skills = [
   {
     title: "Datos e Infra",
     icon: "storage",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker"],
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker", "AWS", "GCP"],
     learning: false,
   },
   {
@@ -32,6 +32,21 @@ const skills = [
     title: "Datos & ML",
     icon: "query_stats",
     items: ["Python", "pandas", "scikit-learn", "Análisis de datos", "Redes neuronales"],
+    learning: false,
+  },
+  {
+    title: "IA y Agentes",
+    icon: "smart_toy",
+    items: [
+      "LLMs",
+      "RAG",
+      "MCP",
+      "Agentes y subagentes",
+      "Spec-Driven Development",
+      "Amazon Bedrock",
+      "Strands Agents",
+      "Claude Code",
+    ],
     learning: false,
   },
   {
@@ -191,7 +206,7 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6 stagger-group">
             {skills.map((group) => (
               <article
-                className={`rounded-xl border bg-surface p-3 lg:p-5 reveal reveal-up ${group.learning ? "border-dashed border-primary/40" : "border-outline-variant"}`}
+                className={`rounded-xl border bg-surface p-3 lg:p-5 reveal reveal-up ${group.learning ? "col-span-2 border-dashed border-primary/40 lg:col-span-3" : "border-outline-variant"}`}
                 key={group.title}
               >
                 <div className="mb-3 flex items-center gap-2 lg:mb-5 lg:gap-3">

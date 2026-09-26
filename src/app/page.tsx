@@ -37,7 +37,7 @@ const skills = [
   {
     title: "Aprendiendo",
     icon: "auto_stories",
-    items: ["NestJS", "WebSockets", "React Native"],
+    items: ["NestJS", "WebSockets", "Next.js", "React Native"],
     learning: true,
   },
 ];

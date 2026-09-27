@@ -145,7 +145,7 @@
     {
       "name": "Cloud",
       "keywords": [
-        "AWS (Lambda, API Gateway, Cognito, DynamoDB, SQS, Polly, AWS SAM)",
+        "AWS (Lambda, API Gateway, Bedrock, DynamoDB, S3, SQS, Cognito, Polly, Lightsail, AWS SAM)",
         "Google Cloud (Gemini API)"
       ]
     },
@@ -184,20 +184,23 @@
     },
     {
       "name": "StudyQuest",
-      "description": "Plataforma de estudio colaborativo con matchmaking en tiempo real y quizzes generados por IA a partir de apuntes y archivos PDF.",
+      "description": "Plataforma de estudio colaborativo con matchmaking en tiempo real y quizzes generados por IA a partir de apuntes y PDFs. En producción en AWS.",
       "highlights": [
-        "Generación de quizzes con Google Gemini a partir de PDF y DOCX, convertidos a Markdown por un microservicio Python (MarkItDown)",
-        "Matchmaking, salas de estudio y chat en tiempo real con WebSockets (Socket.IO) sobre NestJS y PostgreSQL con TypeORM",
+        "Generación de quizzes con LLMs a partir de PDF y DOCX: conversión a Markdown con un microservicio Python (MarkItDown) y proveedor de IA intercambiable (Amazon Bedrock por defecto, Google Gemini como alternativa)",
+        "Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos",
+        "Matchmaking, salas de estudio y chat en tiempo real con WebSockets (Socket.IO); API NestJS en AWS Lightsail con Docker Compose, Caddy (TLS) e IAM de mínimo privilegio",
         "Cambios especificados con OpenSpec antes de implementarlos (Spec-Driven Development)"
       ],
       "keywords": [
         "React",
         "TypeScript",
         "NestJS",
-        "PostgreSQL",
-        "TypeORM",
         "Socket.IO",
-        "Google Gemini API",
+        "Amazon Bedrock",
+        "PostgreSQL",
+        "DynamoDB",
+        "AWS S3",
+        "AWS Lightsail",
         "Docker Compose"
       ],
       "url": "https://github.com/LorenGrz/StudyQuest"
@@ -270,7 +273,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-26",
+    "lastModified": "2026-09-27",
     "extra": {
       "transport": "Movilidad propia y licencia de conducir vigente",
       "availability": "Disponibilidad inmediata: presencial, híbrido o remoto"

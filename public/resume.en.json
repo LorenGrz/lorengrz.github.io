@@ -145,7 +145,7 @@
     {
       "name": "Cloud",
       "keywords": [
-        "AWS (Lambda, API Gateway, Cognito, DynamoDB, SQS, Polly, AWS SAM)",
+        "AWS (Lambda, API Gateway, Bedrock, DynamoDB, S3, SQS, Cognito, Polly, Lightsail, AWS SAM)",
         "Google Cloud (Gemini API)"
       ]
     },
@@ -184,20 +184,23 @@
     },
     {
       "name": "StudyQuest",
-      "description": "Collaborative study platform with real-time matchmaking and AI-generated quizzes from notes and PDF files.",
+      "description": "Collaborative study platform with real-time matchmaking and AI-generated quizzes from notes and PDFs. Running in production on AWS.",
       "highlights": [
-        "Quiz generation with Google Gemini from PDF and DOCX files, converted to Markdown by a Python microservice (MarkItDown)",
-        "Real-time matchmaking, study rooms, and chat over WebSockets (Socket.IO) on NestJS and PostgreSQL with TypeORM",
+        "LLM-powered quiz generation from PDF and DOCX files: Markdown conversion through a Python microservice (MarkItDown) and a pluggable AI provider (Amazon Bedrock by default, Google Gemini as fallback)",
+        "Hybrid persistence: PostgreSQL with TypeORM for metadata and results, DynamoDB with TTL for quiz content, and S3 with presigned URLs for files",
+        "Real-time matchmaking, study rooms, and chat over WebSockets (Socket.IO); NestJS API on AWS Lightsail with Docker Compose, Caddy (TLS), and least-privilege IAM",
         "Changes specified with OpenSpec before implementation (Spec-Driven Development)"
       ],
       "keywords": [
         "React",
         "TypeScript",
         "NestJS",
-        "PostgreSQL",
-        "TypeORM",
         "Socket.IO",
-        "Google Gemini API",
+        "Amazon Bedrock",
+        "PostgreSQL",
+        "DynamoDB",
+        "AWS S3",
+        "AWS Lightsail",
         "Docker Compose"
       ],
       "url": "https://github.com/LorenGrz/StudyQuest"
@@ -270,7 +273,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.en.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-26",
+    "lastModified": "2026-09-27",
     "extra": {
       "transport": "Own vehicle and valid driver's license",
       "availability": "Immediately available: on-site, hybrid, or remote"

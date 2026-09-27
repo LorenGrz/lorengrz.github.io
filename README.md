@@ -47,7 +47,7 @@ Se cargan desde `src/lib/projects/seed-projects.ts`. Para agregar uno: sumar una
 
 ## CV / Resume
 
-- Los PDFs están en `public/` (`Lorenzo_Graizzaro_CV_ES.pdf`, `Lorenzo_Graizzaro_CV_EN.pdf`).
+- Los PDFs están en `public/` (`Lorenzo-Graizzaro-CV-ES.pdf`, `Lorenzo-Graizzaro-CV-EN.pdf`).
 - Fuente de verdad: `public/resume.json` / `public/resume.en.json` (formato JSON Resume).
 - Los PDFs se generan con `pnpm cv` a partir de esos JSON — al tocar proyectos o skills, regenerarlos.
 

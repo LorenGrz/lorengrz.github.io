@@ -55,7 +55,7 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
         <div className="flex flex-col gap-3">
           <a
             className="flex items-center gap-3 rounded-lg border border-outline-variant bg-surface-variant px-4 py-3 text-sm font-semibold text-on-surface transition hover:border-primary hover:text-primary"
-            href="/Lorenzo_Graizzaro_CV_ES.pdf"
+            href="/Lorenzo-Graizzaro-CV-ES.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleClose}
@@ -65,7 +65,7 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
           </a>
           <a
             className="flex items-center gap-3 rounded-lg border border-outline-variant bg-surface-variant px-4 py-3 text-sm font-semibold text-on-surface transition hover:border-primary hover:text-primary"
-            href="/Lorenzo_Graizzaro_CV_EN.pdf"
+            href="/Lorenzo-Graizzaro-CV-EN.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleClose}

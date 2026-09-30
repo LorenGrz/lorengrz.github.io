@@ -2,12 +2,13 @@ import Image from "next/image";
 import { CVDownloadModal } from "@/components/cv-download-modal";
 import { SiteHeader } from "@/components/site-header";
 import { ProjectsSection } from "@/components/projects-section";
+import { contactLinks } from "@/lib/contact-links";
 
 const skills = [
   {
     title: "Frontend",
     icon: "terminal",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+    items: ["React/Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
     learning: false,
   },
   {
@@ -59,35 +60,37 @@ const skills = [
 
 const experience = [
   {
-    role: "Tutor de Algoritmos 3",
+    role: "Ayudante de Cátedra",
     company: "UNSAM",
-    period: "2026 - Presente",
+    period: "Jun 2026 - Presente",
     current: true,
     description:
-      "Tutoría práctica en la materia Algoritmos 3, orientada a interfaces de usuario con React. Acompaño a estudiantes en el razonamiento sobre problemas y la construcción de proyectos.",
+      "Tutor en las materias Algoritmos 3 y PHM: acompaño a alumnos avanzados en el desarrollo de interfaces con React y en la aplicación de buenas prácticas de ingeniería de software. Los guío en la selección de tecnologías de almacenamiento (PostgreSQL, MongoDB, Redis) y en diseñar arquitecturas que puedan evolucionar hacia microservicios.",
   },
   {
-    role: "Administrativo",
+    role: "Software Developer",
+    company: "Freelance",
+    period: "Ene 2026 - Presente",
+    current: true,
+    description:
+      "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con proyectos propios que integran IA y automatizaciones al flujo de la aplicación: no como una funcionalidad aislada, sino como parte de procesos que automatizan tareas y mejoran la experiencia de usuario.",
+  },
+  {
+    role: "Especialista Administrativo",
     company: "FABRIC SRL",
-    period: "Dic 2024 - Dic 2025",
+    period: "Ene 2025 - Dic 2025",
     current: false,
     description:
-      "Consultas SQL sobre datos de producción para reporting operativo y gestión contable con Xubio: cheques, transferencias y control de stock.",
+      "Procesos administrativos y operativos: facturación, pagos, impuestos, sueldos, control de stock y manejo de información con distintos sistemas digitales. Consultas SQL sobre datos de producción para reporting operativo y gestión contable con Xubio.",
   },
   {
-    role: "Operador Remoto",
+    role: "Servicio de Atención al Cliente",
     company: "Banco Nación",
-    period: "Ene 2024 - Dic 2024",
+    period: "Feb 2024 - Ago 2025",
     current: false,
-    description: "Resolución de consultas en entorno de alta demanda usando máquinas virtuales y herramientas internas.",
+    description:
+      "Atención y soporte a clientes por canales remotos: resolución de consultas y gestión de solicitudes con sistemas internos, priorizando precisión y seguridad en el manejo de datos.",
   },
-] as const;
-
-const contactLinks = [
-  { label: "Email", icon: "alternate_email", href: "mailto:lorenzograizzaro55@gmail.com", external: false },
-  { label: "GitHub", icon: "terminal", href: "https://github.com/LorenGrz", external: true },
-  { label: "LeetCode", icon: "code", href: "https://leetcode.com/u/LorenGrz/", external: true },
-  { label: "LinkedIn", icon: "person", href: "https://linkedin.com/in/lorenzo-graizzaro", external: true },
 ] as const;
 
 export default function Home() {
@@ -117,10 +120,10 @@ export default function Home() {
                 Graizzaro
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-7 text-on-surface-variant sm:text-xl sm:leading-8">
-                <span className="font-semibold text-on-surface">Software developer.</span> Construyo aplicaciones con
-                IA integrada en su flujo: defino la arquitectura con criterio propio y armo mis propios entornos
-                agénticos para gestionar el contexto. Stack principal: React, TypeScript, Node.js/NestJS,
-                Python/FastAPI y Kotlin/Spring Boot.
+                <span className="font-semibold text-on-surface">Software developer y AI Engineer.</span> Construyo
+                aplicaciones con IA integrada en su flujo: defino la arquitectura con criterio propio y armo mis
+                propios entornos agénticos para gestionar el contexto. Stack principal: React/Next.js, TypeScript,
+                Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a className="button-primary" href="#projects">
@@ -179,9 +182,9 @@ export default function Home() {
               <h2 className="section-title">Desarrollador de software especializado en aplicaciones impulsadas por IA</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Software Developer usando React, Next.js, TypeScript, Node.js/NestJS, Python/FastAPI, Kotlin/Spring Boot
-                  y Docker. Me importan las interfaces claras y un backend claro y mantenible. Me interesa el ecosistema
-                  de IA y Automatizaciones.
+                  Soy Software Developer y AI Engineer usando React/Next.js, TypeScript, Node.js/NestJS, Python/FastAPI,
+                  Kotlin/Spring Boot y Docker. Me importan las interfaces claras y un backend claro y mantenible. Me
+                  interesa el ecosistema de IA y Automatizaciones.
                 </p>
               </div>
               <div className="mt-6 rounded-xl border border-outline-variant bg-surface p-5">
@@ -202,14 +205,20 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 flex justify-center lg:order-2 lg:col-span-5 reveal reveal-right">
-              <div className="relative aspect-square w-48 overflow-hidden rounded-2xl border-4 border-surface shadow-md sm:w-full sm:max-w-xs sm:border-8">
-                <Image
-                  alt="Lorenzo Graizzaro"
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 640px) 320px, 192px"
-                  src="/me.jpg"
+              <div className="relative w-64 sm:w-full sm:max-w-xs">
+                <div
+                  className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-primary/35 via-primary/5 to-transparent blur-xl"
+                  aria-hidden
                 />
+                <div className="relative aspect-square overflow-hidden rounded-2xl border border-outline shadow-2xl">
+                  <Image
+                    alt="Lorenzo Graizzaro"
+                    className="object-cover"
+                    fill
+                    sizes="(min-width: 640px) 320px, 256px"
+                    src="/me.jpg"
+                  />
+                </div>
               </div>
             </div>
           </div>

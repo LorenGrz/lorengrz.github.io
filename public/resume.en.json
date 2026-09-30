@@ -32,22 +32,32 @@
   "work": [
     {
       "name": "Universidad Nacional de San Martín",
-      "position": "Algorithms 3 Teaching Assistant",
+      "position": "Teaching Assistant",
+      "startDate": "2026-06",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Teaching assistant for Algorithms 3 and PHM: I support advanced students building interfaces with React and applying solid software engineering practices.",
+      "highlights": [
+        "Guide the selection of storage technologies (PostgreSQL, MongoDB, Redis) based on each application's use case",
+        "Teach separation of concerns and low coupling to design architectures that can evolve toward microservices"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Software Developer",
       "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
-      "summary": "Practical tutoring in Algorithms 3, a course focused on user interfaces with React. Supporting students in problem-solving and project development.",
+      "summary": "Custom application development for clients on freelance platforms, alongside personal projects integrating AI and automation into the application flow.",
       "highlights": [
-        "Hands-on tutoring on user interface development with React and TypeScript",
-        "Debugging and code review of team-built academic projects"
+        "AI as part of the process, not an isolated feature: automating tasks and optimizing workflows while prioritizing secure, scalable solutions"
       ]
     },
     {
       "name": "Fabric SRL",
-      "position": "Administrative Assistant",
-      "startDate": "2024-12",
+      "position": "Administrative Specialist",
+      "startDate": "2025-01",
       "endDate": "2025-12",
       "location": "Buenos Aires, Argentina",
-      "summary": "SQL queries on production databases for operational data search and reporting. Accounting management with Xubio: checks, transfers, and inventory control.",
+      "summary": "Administrative and operational processes: invoicing, payments, taxes, payroll, inventory control, and information management across several digital systems.",
       "highlights": [
         "SQL queries on the production database for operational reporting",
         "Accounting management with Xubio: checks, transfers, and inventory control"
@@ -55,13 +65,13 @@
     },
     {
       "name": "Banco de la Nación Argentina",
-      "position": "Remote Operator",
-      "startDate": "2024-01",
-      "endDate": "2024-12",
+      "position": "Customer Service Representative",
+      "startDate": "2024-02",
+      "endDate": "2025-08",
       "location": "Buenos Aires, Argentina",
-      "summary": "Resolved customer queries in a high-demand environment using virtual machines and internal tools.",
+      "summary": "Customer support over remote channels: resolving queries and managing requests through internal systems, prioritizing accuracy and data security.",
       "highlights": [
-        "High-volume query resolution using virtual machines and internal systems"
+        "High-volume query resolution using internal systems, following established procedures"
       ]
     }
   ],
@@ -273,7 +283,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.en.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-27",
+    "lastModified": "2026-09-30",
     "extra": {
       "transport": "Own vehicle and valid driver's license",
       "availability": "Immediately available: on-site, hybrid, or remote"

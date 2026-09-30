@@ -83,7 +83,7 @@ export function CVDownloadModal({ variant = "hero" }: Props) {
       {variant === "nav" ? (
         <button className="nav-cv-link cursor-pointer" onClick={handleOpen}>
           <span className="material-symbols-outlined text-base leading-none">description</span>
-          Descargar CV
+          CV
         </button>
       ) : (
         <button className="button-secondary cursor-pointer gap-2" onClick={handleOpen}>

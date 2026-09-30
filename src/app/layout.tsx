@@ -41,11 +41,11 @@ const MATERIAL_SYMBOLS = [
 ].join(",");
 
 const description =
-  "Portfolio de Lorenzo Graizzaro, Software Developer con proyectos en React, TypeScript, Node.js/NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.";
+  "Portfolio de Lorenzo Graizzaro, Software Developer & AI Engineer con proyectos en React/Next.js, TypeScript, Node.js/NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Lorenzo Graizzaro | Software Developer",
+  title: "Lorenzo Graizzaro | Software Developer & AI Engineer",
   description,
   alternates: {
     canonical: "/",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Lorenzo Graizzaro | Software Developer",
+    title: "Lorenzo Graizzaro | Software Developer & AI Engineer",
     description,
     url: "/",
     siteName: "Lorenzo Graizzaro",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lorenzo Graizzaro | Software Developer",
+    title: "Lorenzo Graizzaro | Software Developer & AI Engineer",
     description,
     images: ["/me.jpg"],
   },
@@ -75,7 +75,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Lorenzo Graizzaro",
-  jobTitle: "Software Developer",
+  jobTitle: "Software Developer & AI Engineer",
   url: SITE_URL,
   image: `${SITE_URL}/me.jpg`,
   email: "mailto:lorenzograizzaro55@gmail.com",

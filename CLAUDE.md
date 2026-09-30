@@ -69,6 +69,41 @@ pnpm cv   # regenera los dos PDFs desde resume.json/resume.en.json
   carpetas (quedó desactualizado en la parte de arquitectura/DB — este
   CLAUDE.md es la versión al día).
 
+## Diseño
+
+Rediseño "premium" (2026-09-30, rama `feature/premium-redesign`), aplicado
+siguiendo la skill `frontend-design` (`anthropics/skills`, instalada en el hub
+de skills en `~/.agents/skills/development/frontend-design/`). Mockup previo
+en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
+
+- Tipografía: `Mona Sans` (variable, eje `wdth`) vía `next/font/google` en vez
+  de Geist. JetBrains Mono se mantiene para código/tags.
+- Navbar (`site-header.tsx`): ya no muestra el nombre — monograma `lg_` a la
+  izquierda, píldora flotante centrada con indicador que se desliza según la
+  sección visible (scrollspy con `IntersectionObserver`), botón CV a la
+  derecha. Menú mobile a pantalla completa con el mismo `open`/Escape de antes.
+- Hero: sin imagen de fondo (se borró `public/hero-bg.jpg`) — grid CSS con
+  fade, dos blobs de aurora animados y grano SVG inline, todo en
+  `globals.css`. Sin librería de animación: motion es CSS + React state
+  (se evaluó `motion`/framer-motion pero no se usó, para no sumar una
+  dependencia sin justificar peso de bundle).
+- Proyectos (`projects-section.tsx` + `project-carousel.tsx`): los destacados
+  ahora son los 5 que aparecen en el CV (`public/resume.json`), en ese mismo
+  orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre — en un
+  carrusel horizontal (`scroll-snap`, sin JS sigue siendo navegable a mano).
+  El resto de proyectos quedó abajo en la grilla con paginación "ver más" que
+  ya existía. `Project.featured` ahora refleja "está en el CV", no todos
+  `true` como antes.
+- Skills: mantiene la organización en categorías de antes (no bento), solo
+  restyle.
+- Siempre "Node.js/NestJS", nunca "NestJS" solo, en todo texto visible del
+  sitio.
+- CSS: las clases propias (`.nav-mark`, `.button-primary`, `.card-outline`,
+  etc.) viven dentro de `@layer components` en `globals.css` — si quedan
+  fuera de ese layer, ganan por orden de cascada sobre utilities de Tailwind
+  con el mismo selector (ej. `md:hidden` dejaba de aplicar). Si se agregan
+  clases nuevas ahí, van dentro del mismo `@layer components`.
+
 ## Última revisión
 
 2026-09-07 — se borró el stack de AWS `lorenzo-portfolio` (S3 + CloudFront +

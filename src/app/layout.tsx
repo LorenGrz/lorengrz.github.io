@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, JetBrains_Mono } from "next/font/google";
+import { Mona_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-const geist = Geist({
+const monaSans = Mona_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-geist",
+  axes: ["wdth"],
+  variable: "--font-mona-sans",
   display: "swap",
 });
 
@@ -36,10 +36,12 @@ const MATERIAL_SYMBOLS = [
   "open_in_new",
   "menu",
   "smart_toy",
+  "chevron_left",
+  "chevron_right",
 ].join(",");
 
 const description =
-  "Portfolio de Lorenzo Graizzaro, Software Developer con proyectos en React, TypeScript, NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.";
+  "Portfolio de Lorenzo Graizzaro, Software Developer con proyectos en React, TypeScript, Node.js/NestJS, Kotlin, Spring Boot, Docker y bases de datos SQL.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -86,8 +88,8 @@ const personJsonLd = {
     "React",
     "Next.js",
     "TypeScript",
-    "NestJS",
     "Node.js",
+    "NestJS",
     "Kotlin",
     "Spring Boot",
     "PostgreSQL",
@@ -104,7 +106,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`h-full scroll-smooth antialiased ${geist.variable} ${jetbrainsMono.variable}`}
+      className={`h-full scroll-smooth antialiased ${monaSans.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>

@@ -21,7 +21,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/OpenRuleta",
     liveUrl: "https://lorengrz.github.io/landing-openruleta/",
     status: "completed",
-    featured: true,
+    featured: true, // destacado en el CV
     images: [
       {
         url: "https://images.unsplash.com/photo-1625888791210-40ea41c1d0f3?auto=format&fit=crop&w=1200&q=80",
@@ -52,7 +52,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/ContentCreator",
     repositoryNote: "Bot personal: corre en mi cuenta de AWS, sin publicación automática.",
     status: "completed",
-    featured: true,
+    featured: false,
     images: [
       {
         url: "/contentcreator.png",
@@ -86,7 +86,7 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-humandetector/",
     repositoryNote: "App fuera de línea: el código está en GitHub.",
     status: "completed",
-    featured: true,
+    featured: false,
     images: [
       {
         url: "/humandetector.png",
@@ -121,7 +121,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/Prioria",
     liveUrl: "https://lorengrz.github.io/landing-prioria/",
     status: "in_progress",
-    featured: true,
+    featured: true, // destacado en el CV
     images: [
       {
         url: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
@@ -142,7 +142,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/ServerlessScanner",
     liveUrl: "https://lorengrz.github.io/landing-serverlessscanner/",
     status: "completed",
-    featured: true,
+    featured: false,
     images: [
       {
         url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
@@ -161,7 +161,7 @@ export const seedProjects = [
       "Frontend React 19 + Vite (Zustand, Tailwind, Socket.IO client) en GitHub Pages y API NestJS 11 en AWS Lightsail, con Docker Compose y Caddy para TLS automático. Los apuntes (PDF/DOCX) pasan por un microservicio Python (MarkItDown) y un LLM genera el quiz detrás de un proveedor intercambiable: Amazon Bedrock por defecto (Nova Lite en el plan free, Claude Haiku en Pro), con Gemini, OpenAI y otros como alternativa. Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos. Matchmaking, salas de estudio y chat en tiempo real sobre Socket.IO, y un study bot que responde con el historial del usuario como contexto. IAM de mínimo privilegio y backups a S3.",
     stack: [
       "React",
-      "NestJS",
+      "Node.js/NestJS",
       "Amazon Bedrock",
       "PostgreSQL",
       "DynamoDB",
@@ -175,7 +175,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
     liveUrl: "https://lorengrz.github.io/landing-studyquest/",
     status: "in_progress",
-    featured: true,
+    featured: true, // destacado en el CV
     images: [
       {
         url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
@@ -196,7 +196,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/FraudDetector",
     liveUrl: "https://lorengrz.github.io/landing-frauddetector/",
     status: "completed",
-    featured: true,
+    featured: true, // destacado en el CV
     images: [
       {
         url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
@@ -228,7 +228,7 @@ export const seedProjects = [
     liveUrl: "https://lorengrz.github.io/landing-booklibre/",
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
-    featured: true,
+    featured: true, // destacado en el CV
     images: [
       {
         url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80",
@@ -249,7 +249,7 @@ export const seedProjects = [
     githubUrl: "https://github.com/LorenGrz/AlgoQuePedir",
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",
-    featured: true,
+    featured: false,
     images: [
       {
         url: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",

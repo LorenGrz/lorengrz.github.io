@@ -10,8 +10,7 @@ export const seedProjects = [
     description:
       "Monorepo pnpm con dos apps Next.js 16 sobre una sola tabla de Supabase. apps/form es la parte pública (Next estático deployable en Vercel): usa la anon key, que por RLS solo puede INSERT en participants, con honeypot anti-bot e índice único por email que rechaza duplicados con 409. apps/ruleta es la rueda que se proyecta en el evento: usa la service_role key (SELECT/UPDATE/DELETE), así que corre local — o hosteada detrás de HTTP Basic Auth activado con una sola variable de entorno. Tres paquetes compartidos (config, core, ui): TODO lo configurable — nombre del evento, textos, reglas del campo de documento, sponsors, tiempos de la rueda, colores del confeti, columnas del CSV — vive en un único archivo. El ganador se saca del bombo con won_at y el premio del modal se pre-carga con el título del sorteo. Se usó en el evento real con ~300 asistentes inscribiéndose desde el celular en simultáneo, todo sobre un proyecto de Supabase del plan gratuito.",
     stack: [
-      "Next.js",
-      "React",
+      "React/Next.js",
       "TypeScript",
       "Tailwind",
       "Supabase",

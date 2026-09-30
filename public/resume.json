@@ -32,22 +32,32 @@
   "work": [
     {
       "name": "Universidad Nacional de San Martín",
-      "position": "Tutor de Algoritmos 3",
+      "position": "Ayudante de Cátedra",
+      "startDate": "2026-06",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Tutor en las materias Algoritmos 3 y PHM: acompaño a alumnos avanzados en el desarrollo de interfaces con React y en la aplicación de buenas prácticas de ingeniería de software.",
+      "highlights": [
+        "Guío la selección de tecnologías de almacenamiento (PostgreSQL, MongoDB, Redis) según el caso de uso de cada aplicación",
+        "Enseño a separar responsabilidades y reducir el acoplamiento para diseñar arquitecturas que puedan evolucionar hacia microservicios"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Software Developer",
       "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
-      "summary": "Tutoría práctica en la materia Algoritmos 3, orientada a interfaces de usuario con React. Acompaño a estudiantes en el razonamiento sobre problemas y la construcción de proyectos.",
+      "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con proyectos propios que integran IA y automatizaciones al flujo de la aplicación.",
       "highlights": [
-        "Tutoría práctica sobre desarrollo de interfaces de usuario con React y TypeScript",
-        "Debugging y code review de proyectos académicos desarrollados en equipo"
+        "IA como parte del proceso (no una funcionalidad aislada): automatización de tareas y optimización de workflows priorizando soluciones seguras y escalables"
       ]
     },
     {
       "name": "Fabric SRL",
-      "position": "Administrativo",
-      "startDate": "2024-12",
+      "position": "Especialista Administrativo",
+      "startDate": "2025-01",
       "endDate": "2025-12",
       "location": "Buenos Aires, Argentina",
-      "summary": "Consultas SQL sobre bases de datos de producción para búsqueda y visualización de información operativa. Gestión contable con Xubio: cheques, transferencias y control de stock.",
+      "summary": "Procesos administrativos y operativos: facturación, pagos, impuestos, sueldos, control de stock y manejo de información con distintos sistemas digitales.",
       "highlights": [
         "Consultas SQL sobre la base de datos de producción para reporting operativo",
         "Gestión contable con Xubio: cheques, transferencias y control de stock"
@@ -55,13 +65,13 @@
     },
     {
       "name": "Banco de la Nación Argentina",
-      "position": "Operador Remoto",
-      "startDate": "2024-01",
-      "endDate": "2024-12",
+      "position": "Servicio de Atención al Cliente",
+      "startDate": "2024-02",
+      "endDate": "2025-08",
       "location": "Buenos Aires, Argentina",
-      "summary": "Resolución de consultas en entorno de alta demanda usando máquinas virtuales y herramientas internas.",
+      "summary": "Atención y soporte a clientes por canales remotos: resolución de consultas y gestión de solicitudes con sistemas internos, priorizando precisión y seguridad en el manejo de datos.",
       "highlights": [
-        "Resolución de consultas de alto volumen con máquinas virtuales y sistemas internos"
+        "Resolución de consultas de alto volumen con sistemas internos, siguiendo procedimientos establecidos"
       ]
     }
   ],
@@ -273,7 +283,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-27",
+    "lastModified": "2026-09-30",
     "extra": {
       "transport": "Movilidad propia y licencia de conducir vigente",
       "availability": "Disponibilidad inmediata: presencial, híbrido o remoto"

@@ -55,7 +55,7 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-container px-page">
         <div className="reveal reveal-left">
           <p className="section-kicker">Proyectos</p>
-          <h2 className="section-title">Los que están en mi CV.</h2>
+          <h2 className="section-title">Proyectos destacados.</h2>
         </div>
       </div>
 

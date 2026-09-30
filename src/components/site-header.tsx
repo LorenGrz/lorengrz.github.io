@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { CVDownloadModal } from "@/components/cv-download-modal"
+import { contactLinks } from "@/lib/contact-links"
 
 const links = [
   { href: "#about", label: "Sobre mí" },
@@ -78,12 +79,8 @@ export function SiteHeader() {
         Saltar al contenido
       </a>
 
-      <div className="relative z-10 mx-auto flex max-w-container items-center justify-between gap-3 px-page py-4">
-        <a className="nav-mark" href="#top" aria-label="Inicio">
-          lg<span className="text-primary">_</span>
-        </a>
-
-        <nav aria-label="Principal" className="nav-pill relative hidden md:flex" ref={navRef}>
+      <div className="relative z-10 mx-auto flex max-w-container items-center gap-3 px-page py-4">
+        <nav aria-label="Principal" className="nav-pill relative hidden lg:flex" ref={navRef}>
           {indicator && (
             <span
               aria-hidden
@@ -106,7 +103,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2">
           <div className="hidden sm:block">
             <CVDownloadModal variant="nav" />
           </div>
@@ -114,7 +111,7 @@ export function SiteHeader() {
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            className="nav-mark md:hidden"
+            className="nav-mark lg:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             <span className="material-symbols-outlined text-xl leading-none">
@@ -127,12 +124,12 @@ export function SiteHeader() {
       {open && (
         <div
           id="mobile-menu"
-          className="fixed inset-0 top-0 flex flex-col justify-between bg-background px-page pb-10 pt-24 md:hidden"
+          className="fixed inset-0 top-0 flex flex-col justify-between overflow-y-auto bg-background px-page pb-10 pt-24 lg:hidden"
         >
           <nav aria-label="Principal" className="flex flex-col">
             {links.map((link) => (
               <a
-                className="border-b border-outline-variant py-4 text-3xl font-semibold tracking-tight text-on-surface"
+                className="border-b border-outline-variant py-3.5 text-2xl font-semibold tracking-tight text-on-surface sm:py-4 sm:text-3xl"
                 style={{ fontVariationSettings: "'wdth' 112" }}
                 href={link.href}
                 key={link.href}
@@ -142,15 +139,23 @@ export function SiteHeader() {
               </a>
             ))}
           </nav>
-          <div className="flex flex-col gap-4">
+          <div className="mt-8 flex flex-col gap-4">
             <div className="sm:hidden">
               <CVDownloadModal variant="hero" />
             </div>
-            <div className="flex justify-between text-sm text-on-surface-variant">
-              <a href="https://github.com/LorenGrz" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://linkedin.com/in/lorenzo-graizzaro" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://leetcode.com/u/LorenGrz/" target="_blank" rel="noreferrer">LeetCode</a>
-              <a href="mailto:lorenzograizzaro55@gmail.com">Email</a>
+            <div className="grid grid-cols-2 gap-3">
+              {contactLinks.map((link) => (
+                <a
+                  className="contact-link"
+                  href={link.href}
+                  key={link.label}
+                  onClick={() => setOpen(false)}
+                  {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                >
+                  <span className="material-symbols-outlined">{link.icon}</span>
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

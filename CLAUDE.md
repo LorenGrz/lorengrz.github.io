@@ -78,10 +78,16 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
 
 - Tipografía: `Mona Sans` (variable, eje `wdth`) vía `next/font/google` en vez
   de Geist. JetBrains Mono se mantiene para código/tags.
-- Navbar (`site-header.tsx`): ya no muestra el nombre — monograma `lg_` a la
-  izquierda, píldora flotante centrada con indicador que se desliza según la
-  sección visible (scrollspy con `IntersectionObserver`), botón CV a la
-  derecha. Menú mobile a pantalla completa con el mismo `open`/Escape de antes.
+- Navbar (`site-header.tsx`): ya no muestra el nombre ni ningún monograma —
+  solo la píldora de links (izquierda, visible desde `lg`) con indicador que
+  se desliza según la sección visible (scrollspy con `IntersectionObserver`),
+  y el botón "CV" a la derecha (`ml-auto`, sin `justify-between`: con un solo
+  hijo visible en mobile ese `justify-between` lo mandaba a la izquierda).
+  El toggle mobile/pill es a `lg` (1024px), no `md` — a 768-1024 la píldora
+  con 5 links + CV quedaba apretada. Menú mobile a pantalla completa con el
+  mismo `open`/Escape de antes; los links de redes del menú mobile reusan la
+  clase `.contact-link` (vía `src/lib/contact-links.ts`, compartido con la
+  sección Contacto) en vez de texto plano.
 - Hero: sin imagen de fondo (se borró `public/hero-bg.jpg`) — grid CSS con
   fade, dos blobs de aurora animados y grano SVG inline, todo en
   `globals.css`. Sin librería de animación: motion es CSS + React state
@@ -103,6 +109,21 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   fuera de ese layer, ganan por orden de cascada sobre utilities de Tailwind
   con el mismo selector (ej. `md:hidden` dejaba de aplicar). Si se agregan
   clases nuevas ahí, van dentro del mismo `@layer components`.
+- About: la foto (`me.jpg`) tiene un halo con gradiente/blur detrás en vez del
+  borde grueso de antes, y es más grande en mobile (`w-64` vs `w-48`).
+- Título "Software Developer & AI Engineer" (no solo "Software Developer") en
+  `<title>`, OpenGraph, Twitter card y JSON-LD (`layout.tsx`), y "Software
+  developer y AI Engineer" en el hero/About. Siempre "React/Next.js" en texto
+  genérico sobre el stack propio (hero, About, categoría Frontend de Skills);
+  en el stack de un proyecto puntual solo si ese proyecto usa Next.js de
+  verdad (ver OpenRuleta) — no se fuerza en proyectos que son Vite/CRA.
+- Proyectos: el heading de la sección dice "Proyectos destacados." (no "Los
+  que están en mi CV.").
+- Experiencia (`page.tsx` + `public/resume.json`/`resume.en.json`): las 4
+  entradas (UNSAM, Freelance, FABRIC SRL, Banco Nación) están sincronizadas
+  con el LinkedIn de Loren (títulos, fechas y bullets), no son texto libre.
+  Si cambia el LinkedIn, hay que volver a pasarlo a mano (no hay scraping
+  automático) y correr `pnpm cv` de nuevo para regenerar los PDFs.
 
 ## Última revisión
 

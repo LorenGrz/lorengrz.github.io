@@ -363,23 +363,67 @@ body {
 }
 
 /* ── Project carousel ── */
-.carousel-track {
-  display: flex;
-  gap: 1.25rem;
+/* No JS: a native scroll-snap strip, one slide per view.
+   With JS (html.js): the viewport clips and the track moves via transform, so
+   the slide animation doesn't depend on the browser's smooth-scroll setting. */
+.carousel-viewport {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: var(--spacing-page);
-  padding-bottom: 0.5rem;
 }
 
-.carousel-card {
+.carousel-track {
+  display: flex;
+  gap: 1.5rem; /* keep in sync with TRACK_GAP in project-carousel.tsx */
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
   scroll-snap-align: start;
-  flex: 0 0 min(88vw, 420px);
 }
 
-@media (min-width: 1024px) {
-  .carousel-card {
-    flex-basis: 560px;
+html.js .carousel-viewport {
+  overflow: hidden;
+}
+
+html.js .carousel-track {
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js .carousel-track[data-dragging="true"] {
+  cursor: grabbing;
+  transition: none;
+}
+
+html.js .carousel-slide {
+  transition:
+    opacity 500ms ease,
+    border-color 200ms ease;
+}
+
+html.js .carousel-slide[data-active="false"] {
+  opacity: 0.35;
+}
+
+html:not(.js) .carousel-controls {
+  display: none;
+}
+
+/* Reduced motion: no sliding — the track jumps and the new slide fades in. */
+@media (prefers-reduced-motion: reduce) {
+  html.js .carousel-track {
+    transition: none;
+  }
+
+  html.js .carousel-slide {
+    transition: opacity 280ms ease;
+  }
+
+  html.js .carousel-slide[data-active="false"] {
+    opacity: 0;
   }
 }
 

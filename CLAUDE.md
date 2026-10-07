@@ -96,7 +96,12 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
 - Proyectos (`projects-section.tsx` + `project-carousel.tsx`): los destacados
   ahora son los 5 que aparecen en el CV (`public/resume.json`), en ese mismo
   orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre — en un
-  carrusel horizontal (`scroll-snap`, sin JS sigue siendo navegable a mano).
+  carrusel de a uno (2026-10-07): con JS el track se mueve con `transform` +
+  transición CSS (no `scrollIntoView` smooth, que se ignora si el SO/navegador
+  tiene animaciones desactivadas), con drag/swipe por pointer events y ←/→;
+  bajo `prefers-reduced-motion` hace crossfade en vez de deslizar. Sin JS
+  (`html:not(.js)`) cae a una tira `scroll-snap` nativa. El `gap` del track
+  en CSS tiene que coincidir con `TRACK_GAP` en `project-carousel.tsx`.
   El resto de proyectos quedó abajo en la grilla con paginación "ver más" que
   ya existía. `Project.featured` ahora refleja "está en el CV", no todos
   `true` como antes.

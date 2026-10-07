@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState, useSyncExternalStore } from "react"
 import Image from "next/image"
 import type { Project } from "@/lib/projects/project"
 
@@ -17,128 +17,181 @@ const placeholderStyle: React.CSSProperties = {
   backgroundSize: "100% 100%, 22px 22px",
 }
 
+// Horizontal distance (px) a drag/swipe must travel to change slide.
+const SWIPE_THRESHOLD = 50
+// Below this, a pointer interaction still counts as a click on a link.
+const DRAG_SLOP = 8
+// Must match `.carousel-track { gap }` in globals.css.
+const TRACK_GAP = "1.5rem"
+
+const noopSubscribe = () => () => {}
+
 interface Props {
   projects: readonly Project[]
 }
 
 /**
- * Featured projects — the ones that also appear in the CV — shown as a
- * horizontally scrolling carousel. Native scroll-snap does the work, so the
- * cards stay reachable by touch/trackpad/keyboard with no JS at all; the
- * arrow buttons and dots are a progressive-enhancement layer on top.
+ * Featured projects — the ones that also appear in the CV — shown one at a
+ * time. Without JS it degrades to a native scroll-snap strip (see the
+ * `html.js` rules in globals.css). With JS the track moves with a CSS
+ * transform transition, so the motion is the same regardless of the browser's
+ * smooth-scroll setting; under prefers-reduced-motion it crossfades instead.
  */
 export function ProjectCarousel({ projects }: Props) {
   const trackRef = useRef<HTMLDivElement>(null)
-  const cardRefs = useRef<Array<HTMLElement | null>>([])
+  const drag = useRef<{ x: number; y: number; dx: number; active: boolean; id: number } | null>(null)
+  const suppressClick = useRef(false)
   const [index, setIndex] = useState(0)
+  // false on the server and during hydration, true after: inactive slides are
+  // only made inert once JS owns the carousel, so the no-JS strip stays usable.
+  const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false)
 
-  useEffect(() => {
+  const last = projects.length - 1
+  const goTo = (i: number) => setIndex(Math.max(0, Math.min(last, i)))
+  const baseTransform = `translateX(calc(${-index} * (100% + ${TRACK_GAP})))`
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0) return
+    drag.current = { x: e.clientX, y: e.clientY, dx: 0, active: false, id: e.pointerId }
+    suppressClick.current = false
+  }
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const d = drag.current
     const track = trackRef.current
-    if (!track) return
+    if (!d || !track || d.id !== e.pointerId) return
+    const dx = e.clientX - d.x
+    if (!d.active) {
+      // Let vertical scrolling win when the gesture is mostly vertical.
+      if (Math.abs(e.clientY - d.y) > Math.abs(dx)) {
+        drag.current = null
+        return
+      }
+      if (Math.abs(dx) < DRAG_SLOP) return
+      d.active = true
+      track.setPointerCapture(e.pointerId)
+      track.dataset.dragging = "true"
+    }
+    // Resist at the ends so it's clear there's nothing more that way.
+    const atEdge = (index === 0 && dx > 0) || (index === last && dx < 0)
+    d.dx = atEdge ? dx / 3 : dx
+    track.style.transform = `${baseTransform} translateX(${d.dx}px)`
+  }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const mostVisible = entries
-          .filter((entry) => entry.isIntersecting)
-          .reduce<IntersectionObserverEntry | null>(
-            (best, entry) => (!best || entry.intersectionRatio > best.intersectionRatio ? entry : best),
-            null,
-          )
-        if (!mostVisible) return
-        const i = cardRefs.current.findIndex((el) => el === mostVisible.target)
-        if (i !== -1) setIndex(i)
-      },
-      { root: track, threshold: [0.5, 0.75, 1] },
-    )
-    cardRefs.current.forEach((el) => el && observer.observe(el))
-    return () => observer.disconnect()
-  }, [projects.length])
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    const d = drag.current
+    const track = trackRef.current
+    drag.current = null
+    if (!d || !track || !d.active) return
+    if (track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId)
+    delete track.dataset.dragging
+    track.style.transform = ""
+    suppressClick.current = true
+    if (d.dx <= -SWIPE_THRESHOLD) goTo(index + 1)
+    else if (d.dx >= SWIPE_THRESHOLD) goTo(index - 1)
+  }
 
-  const scrollToIndex = (i: number) => {
-    const card = cardRefs.current[i]
-    card?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" })
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowRight") goTo(index + 1)
+    else if (e.key === "ArrowLeft") goTo(index - 1)
   }
 
   return (
-    <div>
-      <div
-        className="carousel-track scrollbar-none"
-        ref={trackRef}
-        role="group"
-        aria-roledescription="carousel"
-        aria-label="Proyectos destacados"
-      >
-        {projects.map((project, i) => (
-          <article
-            className="carousel-card card-outline flex flex-col overflow-hidden rounded-2xl"
-            key={project.id}
-            ref={(el) => {
-              cardRefs.current[i] = el
-            }}
-          >
-            {project.primaryImage ? (
-              <div className="relative h-56 overflow-hidden border-b border-outline-variant bg-surface-variant">
-                <Image
-                  alt={project.primaryImage.alt}
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 1024px) 560px, 88vw"
-                  src={project.primaryImage.url}
-                />
-              </div>
-            ) : (
-              <div className="flex h-56 items-center justify-center border-b border-outline-variant" style={placeholderStyle}>
-                <span className="font-mono text-lg font-semibold text-on-surface">{project.title}</span>
-              </div>
-            )}
-            <div className="flex flex-1 flex-col gap-4 p-6 lg:p-7">
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-baseline gap-2">
+    <div onKeyDown={onKeyDown}>
+      <div className="carousel-viewport scrollbar-none" role="group" aria-roledescription="carousel" aria-label="Proyectos destacados">
+        <div
+          className="carousel-track"
+          onClickCapture={(e) => {
+            if (suppressClick.current) {
+              e.preventDefault()
+              e.stopPropagation()
+              suppressClick.current = false
+            }
+          }}
+          onPointerCancel={endDrag}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endDrag}
+          ref={trackRef}
+          style={hydrated ? { transform: baseTransform } : undefined}
+        >
+          {projects.map((project, i) => (
+            <article
+              aria-label={`${i + 1} de ${projects.length}: ${project.title}`}
+              aria-roledescription="slide"
+              className="carousel-slide card-outline overflow-hidden rounded-2xl lg:grid lg:grid-cols-[1.15fr_1fr]"
+              data-active={index === i}
+              inert={hydrated && index !== i}
+              key={project.id}
+            >
+              {project.primaryImage ? (
+                <div className="relative h-56 overflow-hidden border-b border-outline-variant bg-surface-variant sm:h-72 lg:h-auto lg:min-h-96 lg:border-r lg:border-b-0">
+                  <Image
+                    alt={project.primaryImage.alt}
+                    className="object-cover"
+                    draggable={false}
+                    fill
+                    priority={i === 0}
+                    sizes="(min-width: 1024px) 640px, 92vw"
+                    src={project.primaryImage.url}
+                  />
+                </div>
+              ) : (
+                <div
+                  className="flex h-56 items-center justify-center border-b border-outline-variant sm:h-72 lg:h-auto lg:min-h-96 lg:border-r lg:border-b-0"
+                  style={placeholderStyle}
+                >
+                  <span className="font-mono text-lg font-semibold text-on-surface">{project.title}</span>
+                </div>
+              )}
+              <div className="flex flex-col gap-4 p-6 lg:p-9">
+                <div className="flex items-center justify-between gap-3">
                   <span className="font-mono text-xs text-on-surface-variant">
                     {String(i + 1).padStart(2, "0")}/{String(projects.length).padStart(2, "0")}
                   </span>
-                  <h3 className="text-2xl font-semibold tracking-tight" style={{ fontVariationSettings: "'wdth' 112" }}>
-                    {project.title}
-                  </h3>
-                </div>
-                <span className="shrink-0 rounded-full bg-primary-soft px-2.5 py-1 font-mono text-xs text-primary">
-                  {statusLabel[project.status] ?? project.status.replace("_", " ")}
-                </span>
-              </div>
-              <p className="min-h-20 text-sm leading-6 text-on-surface-variant">{project.summary}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.stack.slice(0, 6).map((item) => (
-                  <span className="rounded-full bg-surface-variant px-2.5 py-1 font-mono text-xs text-on-surface-variant" key={item}>
-                    {item}
+                  <span className="shrink-0 rounded-full bg-primary-soft px-2.5 py-1 font-mono text-xs text-primary">
+                    {statusLabel[project.status] ?? project.status.replace("_", " ")}
                   </span>
-                ))}
+                </div>
+                <h3 className="text-3xl font-semibold tracking-tight lg:text-4xl" style={{ fontVariationSettings: "'wdth' 112" }}>
+                  {project.title}
+                </h3>
+                <p className="text-sm leading-6 text-on-surface-variant lg:text-base lg:leading-7">{project.summary}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.slice(0, 6).map((item) => (
+                    <span className="rounded-full bg-surface-variant px-2.5 py-1 font-mono text-xs text-on-surface-variant" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-auto flex gap-5 pt-2">
+                  {project.links.length > 0 ? (
+                    project.links.map((link) => (
+                      <a
+                        className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline underline-offset-2"
+                        draggable={false}
+                        href={link.url}
+                        key={link.label}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span className="material-symbols-outlined text-base leading-none">
+                          {link.label === "GitHub" ? "code" : "open_in_new"}
+                        </span>
+                        {link.label}
+                      </a>
+                    ))
+                  ) : (
+                    <span className="font-mono text-sm text-on-surface-variant">Repositorio privado</span>
+                  )}
+                </div>
               </div>
-              <div className="mt-auto flex gap-5 pt-2">
-                {project.links.length > 0 ? (
-                  project.links.map((link) => (
-                    <a
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline underline-offset-2"
-                      href={link.url}
-                      key={link.label}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <span className="material-symbols-outlined text-base leading-none">
-                        {link.label === "GitHub" ? "code" : "open_in_new"}
-                      </span>
-                      {link.label}
-                    </a>
-                  ))
-                ) : (
-                  <span className="font-mono text-sm text-on-surface-variant">Repositorio privado</span>
-                )}
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-between">
+      <div className="carousel-controls mt-6 flex items-center justify-between">
         <div className="flex gap-2">
           {projects.map((project, i) => (
             <button
@@ -147,28 +200,16 @@ export function ProjectCarousel({ projects }: Props) {
               className="carousel-dot"
               data-active={index === i}
               key={project.id}
-              onClick={() => scrollToIndex(i)}
+              onClick={() => goTo(i)}
               type="button"
             />
           ))}
         </div>
         <div className="flex gap-2">
-          <button
-            aria-label="Proyecto anterior"
-            className="carousel-arrow"
-            disabled={index === 0}
-            onClick={() => scrollToIndex(index - 1)}
-            type="button"
-          >
+          <button aria-label="Proyecto anterior" className="carousel-arrow" disabled={index === 0} onClick={() => goTo(index - 1)} type="button">
             <span className="material-symbols-outlined text-xl leading-none">chevron_left</span>
           </button>
-          <button
-            aria-label="Siguiente proyecto"
-            className="carousel-arrow"
-            disabled={index === projects.length - 1}
-            onClick={() => scrollToIndex(index + 1)}
-            type="button"
-          >
+          <button aria-label="Siguiente proyecto" className="carousel-arrow" disabled={index === last} onClick={() => goTo(index + 1)} type="button">
             <span className="material-symbols-outlined text-xl leading-none">chevron_right</span>
           </button>
         </div>

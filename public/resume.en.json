@@ -5,7 +5,7 @@
     "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11 6027-7080",
-    "summary": "Software Developer focused on AI Engineering. I build full-stack applications with built-in AI: agents with Amazon Bedrock and Strands Agents, LLM generation, RAG, and MCP servers. Core stack: React, TypeScript, NestJS, Python/FastAPI, and Kotlin/Spring Boot, with SQL and NoSQL databases and serverless deployment on AWS. I work with Spec-Driven Development and agentic environments (Claude Code with subagents) to own architecture decisions.",
+    "summary": "Software Developer and AI Engineer. I build AI-powered products that solve concrete problems: filtering what's urgent out of hundreds of notifications, turning study notes into practice quizzes, detecting bank fraud with fewer false alarms. I took my project OpenRuleta to tech community events (KCD, Ekoparty, Data Saturday LATAM), where I presented and ran it live with hundreds of attendees. I also attend Nerdearla and talks by AWS, OpenAI Codex, and Microsoft (AI and GitHub Copilot), and take part in hackathons. As a teaching assistant at UNSAM I support student teams in their architecture decisions. I work full-stack (TypeScript and Python) with serverless deployment on AWS.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -35,10 +35,11 @@
       "position": "Teaching Assistant",
       "startDate": "2026-06",
       "location": "Buenos Aires, Argentina",
-      "summary": "Teaching assistant for Algorithms 3 and PHM: I support advanced students building interfaces with React and applying solid software engineering practices.",
+      "summary": "Teaching assistant for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
       "highlights": [
-        "Guide the selection of storage technologies (PostgreSQL, MongoDB, Redis) based on each application's use case",
-        "Teach separation of concerns and low coupling to design architectures that can evolve toward microservices"
+        "Help each team choose the right database for its problem (relational, document, or cache) and justify the decision",
+        "Guide students to keep their projects decoupled and maintainable, ready to grow toward microservices",
+        "Turn complex technical concepts into simple explanations adapted to each student's level"
       ]
     },
     {
@@ -46,9 +47,11 @@
       "position": "Software Developer",
       "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
-      "summary": "Custom application development for clients on freelance platforms, alongside personal projects integrating AI and automation into the application flow.",
+      "summary": "Custom application development for clients on freelance platforms, alongside my own products that embed AI into the workflow.",
       "highlights": [
-        "AI as part of the process, not an isolated feature: automating tasks and optimizing workflows while prioritizing secure, scalable solutions"
+        "Deliver custom solutions where AI is part of the process, not an add-on: it automates repetitive tasks and simplifies the user's work",
+        "Prioritize secure, scalable solutions with controlled infrastructure costs (serverless on AWS)",
+        "Take my own products from idea to real use: OpenRuleta ran live at events with hundreds of people"
       ]
     },
     {
@@ -59,8 +62,8 @@
       "location": "Buenos Aires, Argentina",
       "summary": "Administrative and operational processes: invoicing, payments, taxes, payroll, inventory control, and information management across several digital systems.",
       "highlights": [
-        "SQL queries on the production database for operational reporting",
-        "Accounting management with Xubio: checks, transfers, and inventory control"
+        "Built operational reports with direct SQL queries on the production database, keeping business data at hand for decision-making",
+        "Managed day-to-day accounting with Xubio (checks, transfers, and inventory), ensuring data accuracy"
       ]
     },
     {
@@ -69,9 +72,10 @@
       "startDate": "2024-02",
       "endDate": "2025-08",
       "location": "Buenos Aires, Argentina",
-      "summary": "Customer support over remote channels: resolving queries and managing requests through internal systems, prioritizing accuracy and data security.",
+      "summary": "Customer support over remote channels, prioritizing accuracy and data security.",
       "highlights": [
-        "High-volume query resolution using internal systems, following established procedures"
+        "Resolved high-volume queries with internal systems, explaining banking processes to non-technical customers",
+        "Handled sensitive customer information following strict security procedures"
       ]
     }
   ],
@@ -174,32 +178,29 @@
   "projects": [
     {
       "name": "Prioria",
-      "description": "Android app that intercepts notifications, prioritizes them with an AI agent, and reads critical ones aloud. 100% serverless AWS backend.",
+      "description": "Android app that cuts notification noise: an AI agent decides which ones matter and reads them out loud.",
       "highlights": [
-        "Agent built with Strands Agents SDK and Amazon Bedrock that scores each notification against user rules and preferences, and learns from explicit feedback",
-        "Serverless backend on AWS Lambda, API Gateway, Cognito, DynamoDB, and SQS, defined as infrastructure as code with AWS SAM",
-        "Text-to-speech for critical notifications with Amazon Polly and a native Android widget"
+        "Solves notification overload: an AI agent detects what's urgent and reads it aloud, so users don't need to check their phone",
+        "Learns from every user response (thumbs up/down and conversation with the agent) to prioritize better over time",
+        "100% serverless infrastructure: near-zero cost when idle and scales on its own as demand grows"
       ],
       "keywords": [
         "React Native",
         "Expo",
         "TypeScript",
-        "Amazon Bedrock",
-        "Strands Agents",
-        "AWS Lambda",
-        "DynamoDB",
-        "AWS SAM"
+        "AWS serverless (Lambda, Bedrock, DynamoDB, Cognito, SQS, Polly, SAM)",
+        "Strands Agents"
       ],
       "url": "https://github.com/LorenGrz/Prioria"
     },
     {
       "name": "StudyQuest",
-      "description": "Collaborative study platform with real-time matchmaking and AI-generated quizzes from notes and PDFs. Running in production on AWS.",
+      "description": "Collaborative study platform that turns notes into AI-generated quizzes and lets students compete in real time.",
       "highlights": [
-        "LLM-powered quiz generation from PDF and DOCX files: Markdown conversion through a Python microservice (MarkItDown) and a pluggable AI provider (Amazon Bedrock by default, Google Gemini as fallback)",
-        "Hybrid persistence: PostgreSQL with TypeORM for metadata and results, DynamoDB with TTL for quiz content, and S3 with presigned URLs for files",
-        "Real-time matchmaking, study rooms, and chat over WebSockets (Socket.IO); NestJS API on AWS Lightsail with Docker Compose, Caddy (TLS), and least-privilege IAM",
-        "Changes specified with OpenSpec before implementation (Spec-Driven Development)"
+        "Turns notes and PDFs into playable quizzes in minutes, saving the manual work of building practice material",
+        "Real-time group study: matchmaking, rooms, and chat to practice with other students",
+        "Swappable AI provider to pick the model per user plan and keep costs under control",
+        "Every change is specified before it is coded (Spec-Driven Development), reducing rework"
       ],
       "keywords": [
         "React",
@@ -217,10 +218,11 @@
     },
     {
       "name": "OpenRuleta",
-      "description": "Self-hostable raffle toolkit for events: public sign-up form and an operator-facing winner wheel, built on Supabase.",
+      "description": "Frictionless event raffles: attendees sign up from their phones and the operator draws winners on the big screen.",
       "highlights": [
-        "Used live at Data Saturday LATAM Argentina 2026 with ~300 concurrent mobile sign-ups on Supabase's free tier",
-        "Security through Row Level Security: the public app can only insert; the operator wheel uses the service key behind HTTP Basic Auth"
+        "Presented and run live at KCD, Ekoparty, and Data Saturday LATAM Argentina 2026 (~300 concurrent sign-ups from phones at the latter)",
+        "Zero infrastructure cost: everything runs on Supabase's free tier",
+        "Secure by design: the public form can only register entries and never read other participants' data"
       ],
       "keywords": [
         "Next.js",
@@ -235,10 +237,11 @@
     },
     {
       "name": "FraudDetector",
-      "description": "Bank fraud detection over 100k+ transactions using a consensus of 3 unsupervised ML models and an interactive dashboard.",
+      "description": "Bank fraud detection over 100k+ transactions using a 3-model ML consensus and an interactive dashboard.",
       "highlights": [
-        "Ensemble of Isolation Forest, LOF, and K-Means: a client is flagged only when at least 2 models agree (~35% fewer false positives than a single model)",
-        "REST API with FastAPI: 110–150 ms per client analysis and 40–60 ms per transaction"
+        "Cuts false alarms by ~35% versus a single model: a customer is flagged only when at least 2 of 3 models agree",
+        "40–150 ms responses per analysis, fast enough to review cases on the spot",
+        "Visual dashboard so a non-technical analyst can understand why a customer is risky"
       ],
       "keywords": [
         "Python",
@@ -254,8 +257,9 @@
       "name": "BookLibre",
       "description": "Full-stack book reservation and rental system, group academic project (UNSAM).",
       "highlights": [
-        "Polyglot persistence with PostgreSQL, MongoDB, and Redis behind a Kotlin + Spring Boot backend",
-        "JWT authentication with HttpOnly cookies and SameSite=None for cross-origin sessions"
+        "Teamwork with a pull-request and code-review flow, as in a professional team",
+        "Each kind of data in the database that suits it best (relational, document, and cache) so the app responds fast",
+        "Secure sessions between frontend and backend hosted on different domains"
       ],
       "keywords": [
         "React",
@@ -283,7 +287,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.en.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-30",
+    "lastModified": "2026-10-15",
     "extra": {
       "transport": "Own vehicle and valid driver's license",
       "availability": "Immediately available: on-site, hybrid, or remote"

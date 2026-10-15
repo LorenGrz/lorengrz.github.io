@@ -5,7 +5,7 @@
     "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11 6027-7080",
-    "summary": "Software Developer orientado a AI Engineering. Construyo aplicaciones full-stack con IA integrada: agentes con Amazon Bedrock y Strands Agents, generación con LLMs, RAG y servidores MCP. Stack principal: React, TypeScript, NestJS, Python/FastAPI y Kotlin/Spring Boot, con bases SQL y NoSQL y despliegue serverless en AWS. Trabajo con Spec-Driven Development y entornos agénticos (Claude Code con subagentes) para definir la arquitectura con criterio propio.",
+    "summary": "Software Developer y AI Engineer. Construyo productos con IA integrada que resuelven problemas concretos: filtrar lo urgente entre cientos de notificaciones, convertir apuntes en práctica de estudio, detectar fraude bancario con menos falsas alarmas. Llevé mi proyecto OpenRuleta a eventos de la comunidad tech (KCD, Ekoparty, Data Saturday LATAM), donde lo presenté y operé en vivo con cientos de asistentes. También asisto a Nerdearla y a charlas de AWS, OpenAI Codex y Microsoft (IA y GitHub Copilot), y participo en hackatones. Como ayudante de cátedra en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura. Trabajo full-stack (TypeScript y Python) con despliegue serverless en AWS.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -35,10 +35,11 @@
       "position": "Ayudante de Cátedra",
       "startDate": "2026-06",
       "location": "Buenos Aires, Argentina",
-      "summary": "Tutor en las materias Algoritmos 3 y PHM: acompaño a alumnos avanzados en el desarrollo de interfaces con React y en la aplicación de buenas prácticas de ingeniería de software.",
+      "summary": "Ayudante de cátedra en Algoritmos 3 y PHM: acompaño a equipos de alumnos avanzados a construir aplicaciones completas con buenas prácticas de ingeniería de software.",
       "highlights": [
-        "Guío la selección de tecnologías de almacenamiento (PostgreSQL, MongoDB, Redis) según el caso de uso de cada aplicación",
-        "Enseño a separar responsabilidades y reducir el acoplamiento para diseñar arquitecturas que puedan evolucionar hacia microservicios"
+        "Ayudo a cada equipo a elegir la base de datos adecuada para su problema (relacional, documentos o caché) y a justificar la decisión",
+        "Guío a los alumnos para que sus proyectos queden desacoplados y mantenibles, listos para crecer hacia microservicios",
+        "Traduzco conceptos técnicos complejos en explicaciones simples, adaptadas al nivel de cada alumno"
       ]
     },
     {
@@ -46,9 +47,11 @@
       "position": "Software Developer",
       "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
-      "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con proyectos propios que integran IA y automatizaciones al flujo de la aplicación.",
+      "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con productos propios que integran IA en el flujo de trabajo.",
       "highlights": [
-        "IA como parte del proceso (no una funcionalidad aislada): automatización de tareas y optimización de workflows priorizando soluciones seguras y escalables"
+        "Entrego soluciones a medida donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario",
+        "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados (serverless en AWS)",
+        "Llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas"
       ]
     },
     {
@@ -59,8 +62,8 @@
       "location": "Buenos Aires, Argentina",
       "summary": "Procesos administrativos y operativos: facturación, pagos, impuestos, sueldos, control de stock y manejo de información con distintos sistemas digitales.",
       "highlights": [
-        "Consultas SQL sobre la base de datos de producción para reporting operativo",
-        "Gestión contable con Xubio: cheques, transferencias y control de stock"
+        "Armé reportes operativos con consultas SQL directas sobre la base de producción, para tener la información del negocio a mano al tomar decisiones",
+        "Gestioné la contabilidad diaria con Xubio (cheques, transferencias y stock), cuidando la exactitud de los datos"
       ]
     },
     {
@@ -69,9 +72,10 @@
       "startDate": "2024-02",
       "endDate": "2025-08",
       "location": "Buenos Aires, Argentina",
-      "summary": "Atención y soporte a clientes por canales remotos: resolución de consultas y gestión de solicitudes con sistemas internos, priorizando precisión y seguridad en el manejo de datos.",
+      "summary": "Atención y soporte a clientes por canales remotos, priorizando precisión y seguridad en el manejo de datos.",
       "highlights": [
-        "Resolución de consultas de alto volumen con sistemas internos, siguiendo procedimientos establecidos"
+        "Resolví consultas de alto volumen con sistemas internos, explicando procesos bancarios a personas no técnicas",
+        "Manejé información sensible de clientes siguiendo procedimientos de seguridad estrictos"
       ]
     }
   ],
@@ -174,32 +178,29 @@
   "projects": [
     {
       "name": "Prioria",
-      "description": "App Android que intercepta notificaciones, las prioriza con un agente de IA y anuncia por voz las críticas. Backend 100% serverless en AWS.",
+      "description": "App Android que filtra el ruido de las notificaciones: un agente de IA decide cuáles importan y las anuncia por voz.",
       "highlights": [
-        "Agente con Strands Agents SDK y Amazon Bedrock que asigna prioridad a cada notificación según reglas y preferencias del usuario, y aprende del feedback explícito",
-        "Backend serverless con AWS Lambda, API Gateway, Cognito, DynamoDB y SQS, definido como infraestructura como código con AWS SAM",
-        "Lectura por voz de notificaciones críticas con Amazon Polly y widget nativo de Android"
+        "Resuelve la sobrecarga de notificaciones: un agente de IA detecta lo urgente y lo lee en voz alta, sin necesidad de mirar el teléfono",
+        "Aprende de cada respuesta del usuario (feedback positivo o negativo y conversación con el agente) para priorizar mejor con el tiempo",
+        "Infraestructura 100% serverless: costo prácticamente nulo sin uso y escala sola cuando crece la demanda"
       ],
       "keywords": [
         "React Native",
         "Expo",
         "TypeScript",
-        "Amazon Bedrock",
-        "Strands Agents",
-        "AWS Lambda",
-        "DynamoDB",
-        "AWS SAM"
+        "AWS serverless (Lambda, Bedrock, DynamoDB, Cognito, SQS, Polly, SAM)",
+        "Strands Agents"
       ],
       "url": "https://github.com/LorenGrz/Prioria"
     },
     {
       "name": "StudyQuest",
-      "description": "Plataforma de estudio colaborativo con matchmaking en tiempo real y quizzes generados por IA a partir de apuntes y PDFs. En producción en AWS.",
+      "description": "Plataforma de estudio colaborativo que convierte apuntes en quizzes con IA y permite competir en tiempo real.",
       "highlights": [
-        "Generación de quizzes con LLMs a partir de PDF y DOCX: conversión a Markdown con un microservicio Python (MarkItDown) y proveedor de IA intercambiable (Amazon Bedrock por defecto, Google Gemini como alternativa)",
-        "Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos",
-        "Matchmaking, salas de estudio y chat en tiempo real con WebSockets (Socket.IO); API NestJS en AWS Lightsail con Docker Compose, Caddy (TLS) e IAM de mínimo privilegio",
-        "Cambios especificados con OpenSpec antes de implementarlos (Spec-Driven Development)"
+        "Convierte apuntes y PDFs en quizzes jugables en minutos, ahorrando el armado manual de material de práctica",
+        "Estudio en grupo en tiempo real: matchmaking, salas y chat para practicar con otros estudiantes",
+        "Proveedor de IA intercambiable para elegir el modelo según el plan del usuario y controlar costos",
+        "Cada cambio se especifica antes de programarlo (Spec-Driven Development), lo que reduce retrabajo"
       ],
       "keywords": [
         "React",
@@ -217,10 +218,11 @@
     },
     {
       "name": "OpenRuleta",
-      "description": "Toolkit de sorteo para eventos: formulario público de inscripción y rueda de ganadores para el operador, sobre Supabase.",
+      "description": "Sorteos para eventos sin fricción: los asistentes se inscriben desde el celular y el operador sortea en pantalla grande.",
       "highlights": [
-        "Usado en vivo en Data Saturday LATAM Argentina 2026 con ~300 inscripciones simultáneas desde el celular, sobre el plan gratuito de Supabase",
-        "Seguridad con Row Level Security: la app pública solo puede insertar; la rueda del operador usa la service key detrás de HTTP Basic Auth"
+        "Presentado y operado en vivo en KCD, Ekoparty y Data Saturday LATAM Argentina 2026 (en este último, ~300 inscripciones simultáneas desde el celular)",
+        "Costo cero de infraestructura: todo corre sobre el plan gratuito de Supabase",
+        "Seguro por diseño: el formulario público solo puede inscribir y nunca leer datos de otros participantes"
       ],
       "keywords": [
         "Next.js",
@@ -235,10 +237,11 @@
     },
     {
       "name": "FraudDetector",
-      "description": "Detección de fraude bancario sobre 100k+ transacciones con consenso de 3 modelos de ML no supervisado y dashboard interactivo.",
+      "description": "Detección de fraude bancario sobre 100k+ transacciones con consenso de 3 modelos de ML y dashboard interactivo.",
       "highlights": [
-        "Ensemble de Isolation Forest, LOF y K-Means: un cliente se marca como riesgo solo si al menos 2 modelos coinciden (~35% menos falsos positivos que un modelo único)",
-        "API REST con FastAPI: 110–150 ms por análisis de cliente y 40–60 ms por transacción"
+        "Reduce ~35% las falsas alarmas frente a un modelo único: un cliente se marca como riesgo solo si al menos 2 de 3 modelos coinciden",
+        "Respuestas en 40–150 ms por análisis, aptas para revisar casos en el momento",
+        "Dashboard visual para que un analista no técnico entienda por qué un cliente es riesgoso"
       ],
       "keywords": [
         "Python",
@@ -254,8 +257,9 @@
       "name": "BookLibre",
       "description": "Sistema de reserva y alquiler de libros full-stack, proyecto académico grupal (UNSAM).",
       "highlights": [
-        "Persistencia políglota con PostgreSQL, MongoDB y Redis detrás de un backend Kotlin + Spring Boot",
-        "Autenticación JWT con cookies HttpOnly y SameSite=None para sesiones cross-origin"
+        "Trabajo en equipo con flujo de pull requests y revisiones de código, como en un equipo profesional",
+        "Cada tipo de dato en la base que mejor le sirve (relacional, documentos y caché) para que la app responda rápido",
+        "Sesiones seguras entre frontend y backend en dominios distintos"
       ],
       "keywords": [
         "React",
@@ -283,7 +287,7 @@
   "meta": {
     "canonical": "https://lorengrz.github.io/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-30",
+    "lastModified": "2026-10-15",
     "extra": {
       "transport": "Movilidad propia y licencia de conducir vigente",
       "availability": "Disponibilidad inmediata: presencial, híbrido o remoto"

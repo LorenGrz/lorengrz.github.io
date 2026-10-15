@@ -62,6 +62,18 @@ client-side sobre HTML/JS estáticos.
   Verificar con `pdftotext public/Lorenzo-Graizzaro-CV-ES.pdf -` que el texto
   salga en orden. `description` de cada proyecto no se imprime (solo stack +
   highlights) para no pasar de 2 páginas.
+- Orden de secciones del CV (2026-10-15): Perfil → Experiencia → Proyectos →
+  Educación → Habilidades → Info adicional (pensado para RRHH: primero
+  resultados, al final tecnologías). Sin emojis en el texto (no se extraen bien
+  en ATS).
+- Redacción orientada a valor (CV y `summary` de `seed-projects.ts`): las
+  tecnologías van solo en la línea "Stack:" / chips; los bullets y resúmenes
+  dicen problema → solución → resultado, con verbo de acción. No inventar
+  métricas: las únicas confirmadas son ~300 inscripciones de OpenRuleta (solo
+  en Data Saturday LATAM 2026), ~35% menos falsos positivos y 40–150 ms de
+  FraudDetector. Los eventos (KCD, Ekoparty, Data Saturday — presentó y operó
+  OpenRuleta —, Nerdearla, charlas AWS/Codex/Microsoft, hackatones) van en el
+  perfil profesional, no en una sección propia (decisión de Loren).
 
 ## Comandos
 
@@ -137,7 +149,8 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   que están en mi CV.").
 - Experiencia (`page.tsx` + `public/resume.json`/`resume.en.json`): las 4
   entradas (UNSAM, Freelance, FABRIC SRL, Banco Nación) están sincronizadas
-  con el LinkedIn de Loren (títulos, fechas y bullets), no son texto libre.
+  con el LinkedIn de Loren en títulos y fechas; los bullets se reescribieron
+  orientados a resultados (2026-10-15) y `page.tsx` usa la misma redacción.
   Si cambia el LinkedIn, hay que volver a pasarlo a mano (no hay scraping
   automático) y correr `pnpm cv` de nuevo para regenerar los PDFs.
 

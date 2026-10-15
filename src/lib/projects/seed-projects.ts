@@ -6,9 +6,9 @@ export const seedProjects = [
     title: "OpenRuleta",
     slug: "openruleta",
     summary:
-      "Toolkit de sorteo para eventos, self-hostable: un formulario público de inscripción (deployable) y una rueda de ganadores para el operador (local o detrás de una contraseña). Usado en vivo en Data Saturday LATAM Argentina 2026 con ~300 inscripciones en simultáneo.",
+      "Sorteos para eventos sin fricción: los asistentes se inscriben desde el celular y el operador sortea en pantalla grande. Lo presenté y operé en vivo en KCD, Ekoparty y Data Saturday LATAM Argentina 2026 (en este último, ~300 inscripciones simultáneas), con costo cero de infraestructura.",
     description:
-      "Monorepo pnpm con dos apps Next.js 16 sobre una sola tabla de Supabase. apps/form es la parte pública (Next estático deployable en Vercel): usa la anon key, que por RLS solo puede INSERT en participants, con honeypot anti-bot e índice único por email que rechaza duplicados con 409. apps/ruleta es la rueda que se proyecta en el evento: usa la service_role key (SELECT/UPDATE/DELETE), así que corre local — o hosteada detrás de HTTP Basic Auth activado con una sola variable de entorno. Tres paquetes compartidos (config, core, ui): TODO lo configurable — nombre del evento, textos, reglas del campo de documento, sponsors, tiempos de la rueda, colores del confeti, columnas del CSV — vive en un único archivo. El ganador se saca del bombo con won_at y el premio del modal se pre-carga con el título del sorteo. Se usó en el evento real con ~300 asistentes inscribiéndose desde el celular en simultáneo, todo sobre un proyecto de Supabase del plan gratuito.",
+      "Monorepo pnpm con dos apps Next.js 16 sobre una sola tabla de Supabase. apps/form es la parte pública (Next estático deployable en Vercel): usa la anon key, que por RLS solo puede INSERT en participants, con honeypot anti-bot e índice único por email que rechaza duplicados con 409. apps/ruleta es la rueda que se proyecta en el evento: usa la service_role key (SELECT/UPDATE/DELETE), así que corre local — o hosteada detrás de HTTP Basic Auth activado con una sola variable de entorno. Tres paquetes compartidos (config, core, ui): TODO lo configurable — nombre del evento, textos, reglas del campo de documento, sponsors, tiempos de la rueda, colores del confeti, columnas del CSV — vive en un único archivo. El ganador se saca del bombo con won_at y el premio del modal se pre-carga con el título del sorteo. Lo presenté y operé en vivo en KCD, Ekoparty y Data Saturday LATAM Argentina 2026 — en este último con ~300 asistentes inscribiéndose desde el celular en simultáneo —, todo sobre un proyecto de Supabase del plan gratuito.",
     stack: [
       "React/Next.js",
       "TypeScript",
@@ -34,7 +34,7 @@ export const seedProjects = [
     id: "contentcreator",
     title: "ContentCreator",
     slug: "contentcreator",
-    summary: "Bot serverless que cada día lee mi actividad real (GitHub, Hacker News, cuentas de X) y redacta borradores de tweets y posts de LinkedIn para que los apruebe por Telegram. No publica solo.",
+    summary: "Resuelve la falta de tiempo para comunicar lo que hago: cada día lee mi actividad real y me propone borradores de tweets y posts de LinkedIn por Telegram. Yo apruebo, edito o descarto; nunca publica solo.",
     description:
       "Una función Lambda (FastAPI + Mangum) que una vez al día ingiere señales de fuentes reales: eventos de GitHub (commits, PRs, repos nuevos), Hacker News y, opcionalmente, tweets de cuentas seguidas vía un puente RSS de Nitter. Un modelo de Amazon Bedrock (Strands Agents SDK) redacta tweets cortos y, solo cuando una compuerta de significancia basada en reglas lo justifica, un post de LinkedIn. Todo se guarda en una única tabla de DynamoDB y se envía a Telegram con botones Aprobar / Descartar / Editar; editar abre un loop de reescritura conversacional. Si un borrador nace de un tweet de una cuenta seguida, propone un quote tweet con mi ángulo en vez de un post original. Publicar siempre es manual. Secretos en SSM Parameter Store, despliegue con AWS SAM, corrida diaria por EventBridge Scheduler. 63 tests unitarios.",
     stack: [
@@ -65,7 +65,7 @@ export const seedProjects = [
     id: "humandetector",
     title: "HumanDetector",
     slug: "humandetector",
-    summary: "Instalación satírica de \"verificación de humanidad\": pide gestos por cámara, escala los pedidos hasta lo imposible y nunca aprueba.",
+    summary: "Instalación satírica para una antihackathon: un \"verificador de humanidad\" que pide gestos por cámara, escala los pedidos hasta lo absurdo y nunca aprueba. Visión por computadora en tiempo real puesta al servicio del humor.",
     description:
       "Verificador de humanidad para una antihackathon. El frontend (Next.js export estático) captura la cámara y la manda por WebSocket a un backend FastAPI que hace detección real de gestos con MediaPipe (parpadeo, giro de cabeza, inclinación, boca) y corre una máquina de estados de 10 pasos que escala la exigencia hasta pedidos absurdos. Backend contenerizado en EC2 (ya dado de baja) con Caddy y TLS automático de Let's Encrypt; imagen construida en AWS CodeBuild y publicada en ECR. Sin base de datos: todo el estado vive en memoria por conexión.",
     stack: [
@@ -99,7 +99,7 @@ export const seedProjects = [
     id: "prioria",
     title: "Prioria",
     slug: "prioria",
-    summary: "App Android que intercepta notificaciones, las prioriza con un agente de IA y las muestra en un widget. TTS automático vía Amazon Polly.",
+    summary: "Filtra el ruido de las notificaciones: un agente de IA decide cuáles importan y las lee en voz alta, sin tener que mirar el teléfono. Aprende de cada respuesta del usuario y corre sobre infraestructura serverless de costo casi nulo.",
     description:
       "MVP Android-first construido con Expo (SDK 57) y React Native. Un agente serverless (Strands Agents SDK + Bedrock) analiza cada notificación según las preferencias y reglas del usuario y le asigna un score de prioridad. Las críticas se envían al widget vía FCM y se leen por voz con Amazon Polly (voces Lucía/Enrique). El usuario refuerza el modelo con feedback explícito (👍/👎), apertura desde el widget y conversación directa con el agente en la pantalla Entrenar. Backend 100% serverless AWS: SAM, Lambda (Node 24 + Python 3.13), API Gateway, Cognito, DynamoDB, SQS.",
     stack: [
@@ -134,7 +134,7 @@ export const seedProjects = [
     id: "serverlessscanner",
     title: "ServerlessScanner",
     slug: "serverlessscanner",
-    summary: "Herramienta de análisis de arquitectura AWS que detecta oportunidades de migración serverless en stacks CloudFormation.",
+    summary: "Ayuda a decidir qué partes de una arquitectura AWS conviene llevar a serverless: analiza la infraestructura existente, señala candidatos a migrar y estima el ahorro de costos.",
     description:
       "API en FastAPI que analiza templates de CloudFormation e identifica recursos (EC2, RDS, ECS, etc.) que pueden migrarse a Lambda, Aurora Serverless, DynamoDB y otros servicios serverless, estimando el ahorro de costos potencial.",
     stack: ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS SAM"],
@@ -155,7 +155,7 @@ export const seedProjects = [
     id: "studyquest",
     title: "StudyQuest",
     slug: "studyquest",
-    summary: "Plataforma de estudio colaborativo: subís tus apuntes o PDFs, un LLM en Amazon Bedrock arma quizzes jugables y competís en salas en tiempo real.",
+    summary: "Convierte apuntes y PDFs en quizzes jugables con IA en minutos, ahorrando el armado manual de material de práctica, y permite estudiar en grupo compitiendo en salas en tiempo real.",
     description:
       "Frontend React 19 + Vite (Zustand, Tailwind, Socket.IO client) en GitHub Pages y API NestJS 11 en AWS Lightsail, con Docker Compose y Caddy para TLS automático. Los apuntes (PDF/DOCX) pasan por un microservicio Python (MarkItDown) y un LLM genera el quiz detrás de un proveedor intercambiable: Amazon Bedrock por defecto (Nova Lite en el plan free, Claude Haiku en Pro), con Gemini, OpenAI y otros como alternativa. Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos. Matchmaking, salas de estudio y chat en tiempo real sobre Socket.IO, y un study bot que responde con el historial del usuario como contexto. IAM de mínimo privilegio y backups a S3.",
     stack: [
@@ -188,7 +188,7 @@ export const seedProjects = [
     id: "frauddetector",
     title: "FraudDetector",
     slug: "frauddetector",
-    summary: "Herramienta de detección de fraude bancario que analiza 100k+ transacciones usando consenso de 3 modelos ML y visualiza el riesgo en un dashboard interactivo.",
+    summary: "Detecta fraude bancario sobre 100k+ transacciones con ~35% menos falsas alarmas que un modelo único, gracias al consenso de 3 modelos de ML, y lo muestra en un dashboard que un analista no técnico puede leer.",
     description:
       "Procesa datasets de 100k+ transacciones bancarias para identificar clientes y operaciones sospechosas. Tres modelos de ML no supervisado (Isolation Forest, LOF, K-Means) analizan cada caso en paralelo: un cliente se marca como riesgo solo cuando ≥ 2 modelos coinciden, lo que reduce falsos positivos un ~35% frente a un modelo único. El dashboard interactivo (Plotly) muestra la distribución de riesgo por cliente, compara perfiles y permite inspeccionar transacciones individuales con scatter plots y boxplots. API REST con tiempos de respuesta de 110–150 ms por análisis de cliente y 40–60 ms por transacción.",
     stack: ["Python", "FastAPI", "scikit-learn", "SQLite", "SQLAlchemy", "Plotly", "Bootstrap"],
@@ -209,7 +209,7 @@ export const seedProjects = [
     id: "booklibre",
     title: "BookLibre",
     slug: "booklibre",
-    summary: "Sistema de reserva y alquiler de libros con stack full-stack completamente dockerizado.",
+    summary: "Sistema de reserva y alquiler de libros hecho en equipo con flujo profesional de pull requests y revisiones, donde cada tipo de dato vive en la base que mejor le sirve para responder rápido.",
     description:
       "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker Compose y persistencia políglota con PostgreSQL, MongoDB y Redis.",
     stack: [
@@ -241,7 +241,7 @@ export const seedProjects = [
     id: "algo-que-pedir",
     title: "Algo Que Pedir",
     slug: "algo-que-pedir",
-    summary: "Aplicación full-stack académica estilo PedidosYa para gestión de productos, órdenes y usuarios.",
+    summary: "App de pedidos estilo PedidosYa hecha en equipo: gestión de productos, órdenes y usuarios, con arquitectura por capas y flujo de pull requests como en un equipo profesional.",
     description:
       "Proyecto académico grupal con frontends SPA, backend REST, arquitectura por capas, flujo de PRs en GitHub y Docker Compose.",
     stack: ["React", "Svelte", "TypeScript", "Tailwind", "Kotlin", "Spring Boot", "Docker Compose"],

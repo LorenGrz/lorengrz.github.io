@@ -246,10 +246,10 @@ ${b.label ? `<p class="cv-label">${escapeHtml(b.label)}</p>` : ""}
 <p class="cv-contact">${contactParts.map(escapeHtml).join(" | ")}</p>
 
 ${section(labels.summary, `<p class="summary-text">${escapeHtml(b.summary)}</p>`)}
-${section(labels.skills, renderSkills(resume.skills))}
-${section(labels.projects, renderProjects(resume.projects))}
 ${section(labels.work, renderWork(resume.work))}
+${section(labels.projects, renderProjects(resume.projects))}
 ${section(labels.education, renderEducation(resume.education))}
+${section(labels.skills, renderSkills(resume.skills))}
 ${section(labels.additional, renderAdditional(resume))}
 
 </body>

@@ -65,7 +65,7 @@ const experience = [
     period: "Jun 2026 - Presente",
     current: true,
     description:
-      "Tutor en las materias Algoritmos 3 y PHM: acompaño a alumnos avanzados en el desarrollo de interfaces con React y en la aplicación de buenas prácticas de ingeniería de software. Los guío en la selección de tecnologías de almacenamiento (PostgreSQL, MongoDB, Redis) y en diseñar arquitecturas que puedan evolucionar hacia microservicios.",
+      "Acompaño a equipos de alumnos avanzados de Algoritmos 3 y PHM a construir aplicaciones completas con buenas prácticas: los ayudo a elegir la base de datos adecuada para su problema y a justificarla, y a que sus proyectos queden desacoplados y mantenibles, listos para crecer. Traduzco conceptos técnicos complejos en explicaciones simples.",
   },
   {
     role: "Software Developer",
@@ -73,7 +73,7 @@ const experience = [
     period: "Ene 2026 - Presente",
     current: true,
     description:
-      "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con proyectos propios que integran IA y automatizaciones al flujo de la aplicación: no como una funcionalidad aislada, sino como parte de procesos que automatizan tareas y mejoran la experiencia de usuario.",
+      "Entrego aplicaciones a medida para clientes donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario, con soluciones seguras y costos de infraestructura acotados. En paralelo llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas.",
   },
   {
     role: "Especialista Administrativo",
@@ -81,7 +81,7 @@ const experience = [
     period: "Ene 2025 - Dic 2025",
     current: false,
     description:
-      "Procesos administrativos y operativos: facturación, pagos, impuestos, sueldos, control de stock y manejo de información con distintos sistemas digitales. Consultas SQL sobre datos de producción para reporting operativo y gestión contable con Xubio.",
+      "Facturación, pagos, impuestos, sueldos y control de stock. Armé reportes operativos con consultas SQL directas sobre la base de producción, para tener la información del negocio a mano al tomar decisiones, y gestioné la contabilidad diaria con Xubio cuidando la exactitud de los datos.",
   },
   {
     role: "Servicio de Atención al Cliente",
@@ -89,7 +89,7 @@ const experience = [
     period: "Feb 2024 - Ago 2025",
     current: false,
     description:
-      "Atención y soporte a clientes por canales remotos: resolución de consultas y gestión de solicitudes con sistemas internos, priorizando precisión y seguridad en el manejo de datos.",
+      "Resolví consultas de alto volumen por canales remotos, explicando procesos bancarios a personas no técnicas y manejando información sensible de clientes con procedimientos de seguridad estrictos.",
   },
 ] as const;
 
@@ -121,9 +121,9 @@ export default function Home() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-7 text-on-surface-variant sm:text-xl sm:leading-8">
                 <span className="font-semibold text-on-surface">Software developer y AI Engineer.</span> Construyo
-                aplicaciones con IA integrada en su flujo: defino la arquitectura con criterio propio y armo mis
-                propios entornos agénticos para gestionar el contexto. Stack principal: React/Next.js, TypeScript,
-                Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot.
+                productos con IA integrada que resuelven problemas concretos, del primer boceto al uso real: mi
+                proyecto OpenRuleta lo presenté y operé en vivo en KCD, Ekoparty y Data Saturday LATAM. Stack
+                principal: React/Next.js, TypeScript, Node.js/NestJS, Python/FastAPI y Kotlin/Spring Boot.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a className="button-primary" href="#projects">
@@ -182,9 +182,13 @@ export default function Home() {
               <h2 className="section-title">Desarrollador de software especializado en aplicaciones impulsadas por IA</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Software Developer y AI Engineer usando React/Next.js, TypeScript, Node.js/NestJS, Python/FastAPI,
-                  Kotlin/Spring Boot y Docker. Me importan las interfaces claras y un backend claro y mantenible. Me
-                  interesa el ecosistema de IA y Automatizaciones.
+                  Soy Software Developer y AI Engineer. Me enfoco en el problema antes que en la herramienta: filtrar
+                  lo urgente entre cientos de notificaciones, convertir apuntes en práctica de estudio o detectar
+                  fraude con menos falsas alarmas. Uso la IA como parte del proceso, no como un agregado.
+                </p>
+                <p>
+                  Como ayudante de cátedra en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura, y
+                  participo en la comunidad tech en eventos como KCD, Ekoparty, Nerdearla y Data Saturday LATAM.
                 </p>
               </div>
               <div className="mt-6 rounded-xl border border-outline-variant bg-surface p-5">

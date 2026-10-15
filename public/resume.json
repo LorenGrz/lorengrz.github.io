@@ -31,18 +31,6 @@
   },
   "work": [
     {
-      "name": "Universidad Nacional de San Martín",
-      "position": "Ayudante de Cátedra",
-      "startDate": "2026-06",
-      "location": "Buenos Aires, Argentina",
-      "summary": "Ayudante de cátedra en Algoritmos 3 y PHM: acompaño a equipos de alumnos avanzados a construir aplicaciones completas con buenas prácticas de ingeniería de software.",
-      "highlights": [
-        "Ayudo a cada equipo a elegir la base de datos adecuada para su problema (relacional, documentos o caché) y a justificar la decisión",
-        "Guío a los alumnos para que sus proyectos queden desacoplados y mantenibles, listos para crecer hacia microservicios",
-        "Traduzco conceptos técnicos complejos en explicaciones simples, adaptadas al nivel de cada alumno"
-      ]
-    },
-    {
       "name": "Freelance",
       "position": "Software Developer",
       "startDate": "2026-01",
@@ -52,6 +40,18 @@
         "Entrego soluciones a medida donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario",
         "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados (serverless en AWS)",
         "Llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas"
+      ]
+    },
+    {
+      "name": "Universidad Nacional de San Martín",
+      "position": "Ayudante de Cátedra",
+      "startDate": "2026-06",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Ayudante de cátedra en Algoritmos 3 y PHM: acompaño a equipos de alumnos avanzados a construir aplicaciones completas con buenas prácticas de ingeniería de software.",
+      "highlights": [
+        "Ayudo a cada equipo a elegir la base de datos adecuada para su problema (relacional, documentos o caché) y a justificar la decisión",
+        "Guío a los alumnos para que sus proyectos queden desacoplados y mantenibles, listos para crecer hacia microservicios",
+        "Traduzco conceptos técnicos complejos en explicaciones simples, adaptadas al nivel de cada alumno"
       ]
     },
     {

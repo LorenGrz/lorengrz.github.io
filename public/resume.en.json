@@ -31,18 +31,6 @@
   },
   "work": [
     {
-      "name": "Universidad Nacional de San Martín",
-      "position": "Teaching Assistant",
-      "startDate": "2026-06",
-      "location": "Buenos Aires, Argentina",
-      "summary": "Teaching assistant for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
-      "highlights": [
-        "Help each team choose the right database for its problem (relational, document, or cache) and justify the decision",
-        "Guide students to keep their projects decoupled and maintainable, ready to grow toward microservices",
-        "Turn complex technical concepts into simple explanations adapted to each student's level"
-      ]
-    },
-    {
       "name": "Freelance",
       "position": "Software Developer",
       "startDate": "2026-01",
@@ -52,6 +40,18 @@
         "Deliver custom solutions where AI is part of the process, not an add-on: it automates repetitive tasks and simplifies the user's work",
         "Prioritize secure, scalable solutions with controlled infrastructure costs (serverless on AWS)",
         "Take my own products from idea to real use: OpenRuleta ran live at events with hundreds of people"
+      ]
+    },
+    {
+      "name": "Universidad Nacional de San Martín",
+      "position": "Teaching Assistant",
+      "startDate": "2026-06",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Teaching assistant for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
+      "highlights": [
+        "Help each team choose the right database for its problem (relational, document, or cache) and justify the decision",
+        "Guide students to keep their projects decoupled and maintainable, ready to grow toward microservices",
+        "Turn complex technical concepts into simple explanations adapted to each student's level"
       ]
     },
     {

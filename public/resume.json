@@ -5,7 +5,7 @@
     "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11 6027-7080",
-    "summary": "Software Developer y AI Engineer. Construyo productos con IA integrada que resuelven problemas concretos: filtrar lo urgente entre cientos de notificaciones o convertir apuntes en práctica de estudio. Llevé mi proyecto OpenRuleta a eventos de la comunidad tech (KCD, Ekoparty, Data Saturday LATAM), donde lo presenté y operé en vivo con cientos de asistentes. También asisto a Nerdearla y a charlas de AWS, OpenAI Codex y Microsoft (IA y GitHub Copilot), y participo en hackatones. Como ayudante de cátedra en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura. Trabajo full-stack (TypeScript y Python) con despliegue serverless en AWS.",
+    "summary": "Software Developer y AI Engineer. Construyo productos con IA integrada que resuelven problemas concretos: filtrar lo urgente entre cientos de notificaciones o convertir apuntes en práctica de estudio. Llevé mi proyecto OpenRuleta a eventos de la comunidad tech (KCD, Ekoparty, Data Saturday LATAM), donde lo presenté y operé en vivo con cientos de asistentes. También asisto a Nerdearla y a charlas de AWS, OpenAI Codex y Microsoft (IA y GitHub Copilot), y participo en hackatones. Como ayudante de cátedra en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura. Trabajo full-stack (TypeScript y Python) con despliegue en AWS.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -38,7 +38,7 @@
       "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con productos propios que integran IA en el flujo de trabajo.",
       "highlights": [
         "Entrego soluciones a medida donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario",
-        "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados (serverless en AWS)",
+        "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados en AWS",
         "Llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas"
       ]
     },
@@ -182,13 +182,13 @@
       "highlights": [
         "Resuelve la sobrecarga de notificaciones: un agente de IA detecta lo urgente y lo lee en voz alta, sin necesidad de mirar el teléfono",
         "Aprende de cada respuesta del usuario (feedback positivo o negativo y conversación con el agente) para priorizar mejor con el tiempo",
-        "Infraestructura 100% serverless: costo prácticamente nulo sin uso y escala sola cuando crece la demanda"
+        "Infraestructura en AWS con costo prácticamente nulo sin uso, que escala sola cuando crece la demanda"
       ],
       "keywords": [
         "React Native",
         "Expo",
         "TypeScript",
-        "AWS serverless (Lambda, Bedrock, DynamoDB, Cognito, SQS, Polly, SAM)",
+        "AWS suite",
         "Strands Agents"
       ],
       "url": "https://github.com/LorenGrz/Prioria"

@@ -62,16 +62,18 @@ client-side sobre HTML/JS estáticos.
   Verificar con `pdftotext public/Lorenzo-Graizzaro-CV-ES.pdf -` que el texto
   salga en orden. `description` de cada proyecto no se imprime (solo stack +
   highlights) para no pasar de 2 páginas.
-- Orden de secciones del CV (2026-10-15): Perfil → Experiencia → Proyectos →
-  Educación → Habilidades → Info adicional (pensado para RRHH: primero
-  resultados, al final tecnologías). Sin emojis en el texto (no se extraen bien
+- Orden de secciones del CV (2026-10-15, pedido de Loren): Perfil → Educación →
+  Proyectos → Experiencia → Habilidades → Info adicional. La página 1 tiene que
+  mostrar Educación y Proyectos completos. El CV lleva solo 3 proyectos:
+  Prioria, StudyQuest, OpenRuleta (se sacaron FraudDetector y BookLibre solo
+  del CV, no del sitio). Sin emojis en el texto (no se extraen bien
   en ATS).
 - Redacción orientada a valor (CV y `summary` de `seed-projects.ts`): las
   tecnologías van solo en la línea "Stack:" / chips; los bullets y resúmenes
   dicen problema → solución → resultado, con verbo de acción. No inventar
   métricas: las únicas confirmadas son ~300 inscripciones de OpenRuleta (solo
   en Data Saturday LATAM 2026), ~35% menos falsos positivos y 40–150 ms de
-  FraudDetector. Los eventos (KCD, Ekoparty, Data Saturday — presentó y operó
+  FraudDetector (este último ya no está en el CV, sí en el sitio). Los eventos (KCD, Ekoparty, Data Saturday — presentó y operó
   OpenRuleta —, Nerdearla, charlas AWS/Codex/Microsoft, hackatones) van en el
   perfil profesional, no en una sección propia (decisión de Loren).
 
@@ -118,7 +120,8 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   dependencia sin justificar peso de bundle).
 - Proyectos (`projects-section.tsx` + `project-carousel.tsx`): los destacados
   ahora son los 5 que aparecen en el CV (`public/resume.json`), en ese mismo
-  orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre — en un
+  orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre (desde
+  2026-10-15 el CV solo tiene los 3 primeros; el carrusel sigue con 5) — en un
   carrusel de a uno (2026-10-07): con JS el track se mueve con `transform` +
   transición CSS (no `scrollIntoView` smooth, que se ignora si el SO/navegador
   tiene animaciones desactivadas), con drag/swipe por pointer events y ←/→;

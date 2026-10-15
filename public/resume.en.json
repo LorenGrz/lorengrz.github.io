@@ -5,7 +5,7 @@
     "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11 6027-7080",
-    "summary": "Software Developer and AI Engineer. I build AI-powered products that solve concrete problems: filtering what's urgent out of hundreds of notifications, turning study notes into practice quizzes, detecting bank fraud with fewer false alarms. I took my project OpenRuleta to tech community events (KCD, Ekoparty, Data Saturday LATAM), where I presented and ran it live with hundreds of attendees. I also attend Nerdearla and talks by AWS, OpenAI Codex, and Microsoft (AI and GitHub Copilot), and take part in hackathons. As a teaching assistant at UNSAM I support student teams in their architecture decisions. I work full-stack (TypeScript and Python) with serverless deployment on AWS.",
+    "summary": "Software Developer and AI Engineer. I build AI-powered products that solve concrete problems: filtering what's urgent out of hundreds of notifications or turning study notes into practice quizzes. I took my project OpenRuleta to tech community events (KCD, Ekoparty, Data Saturday LATAM), where I presented and ran it live with hundreds of attendees. I also attend Nerdearla and talks by AWS, OpenAI Codex, and Microsoft (AI and GitHub Copilot), and take part in hackathons. As a teaching assistant at UNSAM I support student teams in their architecture decisions. I work full-stack (TypeScript and Python) with serverless deployment on AWS.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -234,44 +234,6 @@
         "pnpm workspaces"
       ],
       "url": "https://github.com/LorenGrz/OpenRuleta"
-    },
-    {
-      "name": "FraudDetector",
-      "description": "Bank fraud detection over 100k+ transactions using a 3-model ML consensus and an interactive dashboard.",
-      "highlights": [
-        "Cuts false alarms by ~35% versus a single model: a customer is flagged only when at least 2 of 3 models agree",
-        "40–150 ms responses per analysis, fast enough to review cases on the spot",
-        "Visual dashboard so a non-technical analyst can understand why a customer is risky"
-      ],
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "scikit-learn",
-        "SQLAlchemy",
-        "SQLite",
-        "Plotly"
-      ],
-      "url": "https://github.com/LorenGrz/FraudDetector"
-    },
-    {
-      "name": "BookLibre",
-      "description": "Full-stack book reservation and rental system, group academic project (UNSAM).",
-      "highlights": [
-        "Teamwork with a pull-request and code-review flow, as in a professional team",
-        "Each kind of data in the database that suits it best (relational, document, and cache) so the app responds fast",
-        "Secure sessions between frontend and backend hosted on different domains"
-      ],
-      "keywords": [
-        "React",
-        "TypeScript",
-        "Kotlin",
-        "Spring Boot",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Docker Compose"
-      ],
-      "url": "https://github.com/LorenGrz/BookLibre"
     }
   ],
   "languages": [

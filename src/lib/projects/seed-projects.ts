@@ -157,7 +157,7 @@ export const seedProjects = [
     slug: "studyquest",
     summary: "Convierte apuntes y PDFs en quizzes jugables con IA en minutos, ahorrando el armado manual de material de práctica, y permite estudiar en grupo compitiendo en salas en tiempo real.",
     description:
-      "Frontend React 19 + Vite (Zustand, Tailwind, Socket.IO client) en GitHub Pages y API NestJS 11 en AWS Lightsail, con Docker Compose y Caddy para TLS automático. Los apuntes (PDF/DOCX) pasan por un microservicio Python (MarkItDown) y un LLM genera el quiz detrás de un proveedor intercambiable: Amazon Bedrock por defecto (Nova Lite en el plan free, Claude Haiku en Pro), con Gemini, OpenAI y otros como alternativa. Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos. Matchmaking, salas de estudio y chat en tiempo real sobre Socket.IO, y un study bot que responde con el historial del usuario como contexto. IAM de mínimo privilegio y backups a S3.",
+      "Frontend React 19 + Vite (Zustand, Tailwind, Socket.IO client) en GitHub Pages y API NestJS 11 en AWS Lightsail, con Docker y Caddy para TLS automático. Los apuntes (PDF/DOCX) pasan por un microservicio Python (MarkItDown) y un LLM genera el quiz detrás de un proveedor intercambiable: Amazon Bedrock por defecto (Nova Lite en el plan free, Claude Haiku en Pro), con Gemini, OpenAI y otros como alternativa. Persistencia híbrida: PostgreSQL con TypeORM para metadatos y resultados, DynamoDB con TTL para el contenido de los quizzes y S3 con URLs prefirmadas para archivos. Matchmaking, salas de estudio y chat en tiempo real sobre Socket.IO, y un study bot que responde con el historial del usuario como contexto. IAM de mínimo privilegio y backups a S3.",
     stack: [
       "React",
       "Node.js/NestJS",
@@ -168,7 +168,7 @@ export const seedProjects = [
       "TypeScript",
       "AWS S3",
       "AWS Lightsail",
-      "Docker Compose",
+      "Docker",
       "Tailwind",
     ],
     githubUrl: "https://github.com/LorenGrz/StudyQuest",
@@ -211,7 +211,7 @@ export const seedProjects = [
     slug: "booklibre",
     summary: "Sistema de reserva y alquiler de libros hecho en equipo con flujo profesional de pull requests y revisiones, donde cada tipo de dato vive en la base que mejor le sirve para responder rápido.",
     description:
-      "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker Compose y persistencia políglota con PostgreSQL, MongoDB y Redis.",
+      "Sistema de reserva y alquiler usando React, TypeScript, Chakra UI, Kotlin, Spring Boot, Docker y persistencia políglota con PostgreSQL, MongoDB y Redis.",
     stack: [
       "React",
       "Kotlin",
@@ -221,7 +221,7 @@ export const seedProjects = [
       "Redis",
       "TypeScript",
       "Chakra UI",
-      "Docker Compose",
+      "Docker",
     ],
     githubUrl: "https://github.com/LorenGrz/BookLibre",
     liveUrl: "https://lorengrz.github.io/landing-booklibre/",
@@ -243,8 +243,8 @@ export const seedProjects = [
     slug: "algo-que-pedir",
     summary: "App de pedidos estilo PedidosYa hecha en equipo: gestión de productos, órdenes y usuarios, con arquitectura por capas y flujo de pull requests como en un equipo profesional.",
     description:
-      "Proyecto académico grupal con frontends SPA, backend REST, arquitectura por capas, flujo de PRs en GitHub y Docker Compose.",
-    stack: ["React", "Svelte", "TypeScript", "Tailwind", "Kotlin", "Spring Boot", "Docker Compose"],
+      "Proyecto académico grupal con frontends SPA, backend REST, arquitectura por capas, flujo de PRs en GitHub y Docker.",
+    stack: ["React", "Svelte", "TypeScript", "Tailwind", "Kotlin", "Spring Boot", "Docker"],
     githubUrl: "https://github.com/LorenGrz/AlgoQuePedir",
     repositoryNote: "Proyecto académico grupal — UNSAM.",
     status: "completed",

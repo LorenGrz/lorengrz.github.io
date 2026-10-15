@@ -167,7 +167,6 @@
       "name": "DevOps y herramientas",
       "keywords": [
         "Docker",
-        "Docker Compose",
         "GitHub Actions",
         "CI/CD",
         "Git",
@@ -212,7 +211,7 @@
         "DynamoDB",
         "AWS S3",
         "AWS Lightsail",
-        "Docker Compose"
+        "Docker"
       ],
       "url": "https://github.com/LorenGrz/StudyQuest"
     },

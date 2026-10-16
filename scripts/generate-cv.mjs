@@ -74,7 +74,8 @@ const bulletList = (items) =>
     ? `<ul>${items.map((item) => `<li><span class="dot">•</span><span>${escapeHtml(item)}</span></li>`).join("")}</ul>`
     : "";
 
-const section = (title, body) => (body ? `<section><h2>${title}</h2>${body}</section>` : "");
+const section = (title, body, className = "") =>
+  body ? `<section${className ? ` class="${className}"` : ""}><h2>${title}</h2>${body}</section>` : "";
 
 function renderSkills(skills) {
   return (skills || [])
@@ -186,6 +187,9 @@ const html = `<!DOCTYPE html>
 
   section { margin-bottom: 7pt; }
 
+  /* Keep the whole section on one page instead of splitting it. */
+  section.keep-together { break-inside: avoid; }
+
   h2 {
     font-size: 10pt;
     font-weight: bold;
@@ -246,9 +250,9 @@ ${b.label ? `<p class="cv-label">${escapeHtml(b.label)}</p>` : ""}
 <p class="cv-contact">${contactParts.map(escapeHtml).join(" | ")}</p>
 
 ${section(labels.summary, `<p class="summary-text">${escapeHtml(b.summary)}</p>`)}
-${section(labels.work, renderWork(resume.work))}
-${section(labels.projects, renderProjects(resume.projects))}
 ${section(labels.education, renderEducation(resume.education))}
+${section(labels.projects, renderProjects(resume.projects))}
+${section(labels.work, renderWork(resume.work), "keep-together")}
 ${section(labels.skills, renderSkills(resume.skills))}
 ${section(labels.additional, renderAdditional(resume))}
 

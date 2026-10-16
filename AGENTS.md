@@ -62,9 +62,13 @@ client-side sobre HTML/JS estáticos.
   Verificar con `pdftotext public/Lorenzo-Graizzaro-CV-ES.pdf -` que el texto
   salga en orden. `description` de cada proyecto no se imprime (solo stack +
   highlights) para no pasar de 2 páginas.
-- Orden de secciones del CV (2026-10-15): Perfil → Experiencia → Proyectos →
-  Educación → Habilidades → Info adicional (pensado para RRHH: primero
-  resultados, al final tecnologías). Sin emojis en el texto (no se extraen bien
+- Orden de secciones del CV (2026-10-15, pedido de Loren): Perfil → Educación →
+  Proyectos → Experiencia → Habilidades → Info adicional. La página 1 tiene que
+  mostrar Educación y Proyectos completos. El CV lleva 4 proyectos:
+  Prioria, StudyQuest, OpenRuleta, FraudDetector (BookLibre se sacó solo del
+  CV, no del sitio). FraudDetector se reincorporó para que Experiencia no
+  quede cortada entre páginas; además la sección Experiencia lleva
+  `keep-together` (`break-inside: avoid`) en `generate-cv.mjs`. Sin emojis en el texto (no se extraen bien
   en ATS).
 - Redacción orientada a valor (CV y `summary` de `seed-projects.ts`): las
   tecnologías van solo en la línea "Stack:" / chips; los bullets y resúmenes
@@ -118,7 +122,8 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   dependencia sin justificar peso de bundle).
 - Proyectos (`projects-section.tsx` + `project-carousel.tsx`): los destacados
   ahora son los 5 que aparecen en el CV (`public/resume.json`), en ese mismo
-  orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre — en un
+  orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre (desde
+  2026-10-15 el CV tiene los 4 primeros; el carrusel sigue con 5) — en un
   carrusel de a uno (2026-10-07): con JS el track se mueve con `transform` +
   transición CSS (no `scrollIntoView` smooth, que se ignora si el SO/navegador
   tiene animaciones desactivadas), con drag/swipe por pointer events y ←/→;

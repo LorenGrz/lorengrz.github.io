@@ -233,6 +233,24 @@
         "pnpm workspaces"
       ],
       "url": "https://github.com/LorenGrz/OpenRuleta"
+    },
+    {
+      "name": "FraudDetector",
+      "description": "Bank fraud detection over 100k+ transactions using a 3-model ML consensus and an interactive dashboard.",
+      "highlights": [
+        "Cuts false alarms by ~35% versus a single model: a customer is flagged only when at least 2 of 3 models agree",
+        "40–150 ms responses per analysis, fast enough to review cases on the spot",
+        "Visual dashboard so a non-technical analyst can understand why a customer is risky"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "SQLAlchemy",
+        "SQLite",
+        "Plotly"
+      ],
+      "url": "https://github.com/LorenGrz/FraudDetector"
     }
   ],
   "languages": [

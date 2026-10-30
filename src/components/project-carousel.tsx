@@ -149,7 +149,7 @@ export function ProjectCarousel({ projects }: Props) {
                   <span className="font-mono text-xs text-on-surface-variant">
                     {String(i + 1).padStart(2, "0")}/{String(projects.length).padStart(2, "0")}
                   </span>
-                  <span className="shrink-0 rounded-full bg-primary-soft px-2.5 py-1 font-mono text-xs text-primary">
+                  <span className="shrink-0 rounded-full bg-primary-soft px-2.5 py-1 text-xs font-medium text-primary">
                     {statusLabel[project.status] ?? project.status.replace("_", " ")}
                   </span>
                 </div>
@@ -182,7 +182,7 @@ export function ProjectCarousel({ projects }: Props) {
                       </a>
                     ))
                   ) : (
-                    <span className="font-mono text-sm text-on-surface-variant">Repositorio privado</span>
+                    <span className="text-sm text-on-surface-variant">Repositorio privado</span>
                   )}
                 </div>
               </div>

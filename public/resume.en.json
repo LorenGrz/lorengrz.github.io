@@ -5,7 +5,7 @@
     "label": "Software Developer | AI Engineer",
     "email": "lorenzograizzaro55@gmail.com",
     "phone": "+54 11 6027-7080",
-    "summary": "Software Developer and AI Engineer. I build AI-powered products that solve concrete problems: filtering what's urgent out of hundreds of notifications or turning study notes into practice quizzes. I took my project OpenRuleta to tech community events (KCD, Ekoparty, Data Saturday LATAM), where I presented and ran it live with hundreds of attendees. I also attend Nerdearla and talks by AWS, OpenAI Codex, and Microsoft (AI and GitHub Copilot), and take part in hackathons. As a teaching assistant at UNSAM I support student teams in their architecture decisions. I work full-stack (TypeScript and Python) deploying on AWS.",
+    "summary": "Software Developer and AI Engineer. I build AI-powered products that solve concrete problems: filtering what's urgent out of hundreds of notifications or turning study notes into practice quizzes. I took my project OpenRuleta to tech community events (KCD, Ekoparty, Data Saturday LATAM), where I presented and ran it live with hundreds of attendees. I also attend Nerdearla and talks by AWS, OpenAI Codex, and Microsoft (AI and GitHub Copilot), and take part in hackathons. As a university instructor at UNSAM I support student teams in their architecture decisions. I work full-stack (TypeScript and Python) deploying on AWS.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -44,10 +44,10 @@
     },
     {
       "name": "Universidad Nacional de San Martín",
-      "position": "Teaching Assistant",
+      "position": "University Instructor",
       "startDate": "2026-06",
       "location": "Buenos Aires, Argentina",
-      "summary": "Teaching assistant for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
+      "summary": "University instructor for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
       "highlights": [
         "Help each team choose the right database for its problem (relational, document, or cache) and justify the decision",
         "Guide students to keep their projects decoupled and maintainable, ready to grow toward microservices",

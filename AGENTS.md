@@ -167,6 +167,10 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   orientados a resultados (2026-10-15) y `page.tsx` usa la misma redacción.
   Si cambia el LinkedIn, hay que volver a pasarlo a mano (no hay scraping
   automático) y correr `pnpm cv` de nuevo para regenerar los PDFs.
+  Excepción (2026-10-30, pedido de Loren): el puesto de UNSAM se muestra como
+  "Instructor Universitario" / "University Instructor" en sitio y CV, no
+  "Ayudante de Cátedra". About cierra con un párrafo personal (básquet y
+  videojuegos).
 
 ## Última revisión
 

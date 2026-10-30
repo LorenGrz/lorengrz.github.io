@@ -190,17 +190,17 @@ export default function Home() {
                     <span className="text-agent-worker">worker</span>
                     <span>implementa la entrada nueva</span>
                   </div>
-                  <p className="mt-2.5">
-                    <span className="text-secondary">✓</span> pnpm lint &nbsp;
-                    <span className="text-secondary">✓</span> typecheck &nbsp;
-                    <span className="text-secondary">✓</span> build
+                  <p className="mt-2.5 flex gap-x-4">
+                    <span><span className="text-secondary">✓</span> pnpm lint</span>
+                    <span><span className="text-secondary">✓</span> typecheck</span>
+                    <span><span className="text-secondary">✓</span> build</span>
                   </p>
                   <p>
                     <span className="text-secondary">✓</span> deploy en GitHub Pages
                   </p>
-                  <p className="mt-1.5">
-                    <span className="text-primary">›</span>{" "}
-                    <span aria-hidden className="caret-blink inline-block h-4 w-2 -translate-y-0.5 bg-on-surface" />
+                  <p className="mt-1.5 flex items-center gap-2">
+                    <span className="text-primary">›</span>
+                    <span aria-hidden className="caret-blink h-[1.15em] w-[0.6em] bg-on-surface" />
                   </p>
                 </div>
               </div>
@@ -214,13 +214,13 @@ export default function Home() {
               <h2 className="section-title">Sobre mí</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Soy Software Developer y AI Engineer. Me enfoco en el problema antes que en la herramienta: filtrar
+                  Me enfoco en el problema antes que en la herramienta: filtrar
                   lo urgente entre cientos de notificaciones, convertir apuntes en práctica de estudio o detectar
                   fraude con menos falsas alarmas. Uso la IA como parte del proceso, no como un agregado.
                 </p>
                 <p>
                   Como instructor universitario en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura, y
-                  participo en la comunidad tech en eventos como KCD, Ekoparty, Nerdearla y Data Saturday LATAM.
+                  participo en la comunidad tech en eventos como KCD, Ekoparty, Nerdearla, Data Saturday LATAM y muchos otros más.
                 </p>
               </div>
               <div className="mt-6 rounded-xl border border-outline-variant bg-surface p-5">

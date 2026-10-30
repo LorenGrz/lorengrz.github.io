@@ -214,13 +214,18 @@ export default function Home() {
               <h2 className="section-title">Sobre mí</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-on-surface-variant">
                 <p>
-                  Me enfoco en el problema antes que en la herramienta: filtrar
-                  lo urgente entre cientos de notificaciones, convertir apuntes en práctica de estudio o detectar
-                  fraude con menos falsas alarmas. Uso la IA como parte del proceso, no como un agregado.
+                  Soy un apasionado de la tecnología y la vuelco en productos con IA integrada. Me enfoco en el
+                  problema antes que en la herramienta: filtrar lo urgente entre cientos de notificaciones, convertir
+                  apuntes en práctica de estudio o detectar fraude con menos falsas alarmas.
                 </p>
                 <p>
                   Como instructor universitario en UNSAM acompaño a equipos de alumnos en sus decisiones de arquitectura, y
-                  participo en la comunidad tech en eventos como KCD, Ekoparty, Nerdearla, Data Saturday LATAM y muchos otros más.
+                  participo en la comunidad tech en eventos como KCD, Ekoparty, Nerdearla, Data Saturday LATAM y muchos
+                  otros más.
+                </p>
+                <p>
+                  Fuera del código juego al básquet y a los videojuegos. Del básquet me llevo el juego en equipo; de los
+                  videojuegos, la curiosidad por entender cómo está hecho lo que uso.
                 </p>
               </div>
               <div className="mt-6 rounded-xl border border-outline-variant bg-surface p-5">

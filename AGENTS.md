@@ -115,11 +115,20 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   mismo `open`/Escape de antes; los links de redes del menú mobile reusan la
   clase `.contact-link` (vía `src/lib/contact-links.ts`, compartido con la
   sección Contacto) en vez de texto plano.
-- Hero: sin imagen de fondo (se borró `public/hero-bg.jpg`) — grid CSS con
-  fade, dos blobs de aurora animados y grano SVG inline, todo en
-  `globals.css`. Sin librería de animación: motion es CSS + React state
-  (se evaluó `motion`/framer-motion pero no se usó, para no sumar una
-  dependencia sin justificar peso de bundle).
+- Hero: sin imagen de fondo. Desde 2026-10-30 (refinamiento con
+  `frontend-design`) el fondo es un SVG estático `HeroGraph` en `page.tsx`:
+  un grafo de ramas git (feat/fix/refactor que vuelven a master con merges
+  `--no-ff`), con la clase `.hero-graph` en `globals.css`, enmascarado hacia
+  el texto y oculto en < 640px. Se quitaron la aurora, la grilla, el grano y
+  la píldora "Disponible para nuevas oportunidades". La terminal del hero es
+  el único elemento llamativo; sus colores de agente son tokens
+  `--agent-scout/-reasoner/-worker`. El único movimiento automático es la
+  entrada del hero: no hay scroll-reveal (se borró `scroll-reveal.tsx`) ni
+  rótulos `section-kicker` sobre los títulos. Los `h2` son cortos ("Sobre
+  mí", "Habilidades", "Proyectos destacados", "Experiencia", "Contacto"),
+  alineados a la izquierda y sin punto final. Mono solo para código/datos
+  (terminal, stack de proyectos, fechas). Sin librería de animación: se
+  evaluó `motion`/framer-motion pero no se usó.
 - Proyectos (`projects-section.tsx` + `project-carousel.tsx`): los destacados
   ahora son los 5 que aparecen en el CV (`public/resume.json`), en ese mismo
   orden — Prioria, StudyQuest, OpenRuleta, FraudDetector, BookLibre (desde
@@ -142,15 +151,15 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   fuera de ese layer, ganan por orden de cascada sobre utilities de Tailwind
   con el mismo selector (ej. `md:hidden` dejaba de aplicar). Si se agregan
   clases nuevas ahí, van dentro del mismo `@layer components`.
-- About: la foto (`me.jpg`) tiene un halo con gradiente/blur detrás en vez del
-  borde grueso de antes, y es más grande en mobile (`w-64` vs `w-48`).
+- About: la foto (`me.jpg`) lleva solo un borde fino (el halo con
+  gradiente/blur se quitó el 2026-10-30) y es más grande en mobile (`w-64`).
 - Título "Software Developer & AI Engineer" (no solo "Software Developer") en
   `<title>`, OpenGraph, Twitter card y JSON-LD (`layout.tsx`), y "Software
   developer y AI Engineer" en el hero/About. Siempre "React/Next.js" en texto
   genérico sobre el stack propio (hero, About, categoría Frontend de Skills);
   en el stack de un proyecto puntual solo si ese proyecto usa Next.js de
   verdad (ver OpenRuleta) — no se fuerza en proyectos que son Vite/CRA.
-- Proyectos: el heading de la sección dice "Proyectos destacados." (no "Los
+- Proyectos: el heading de la sección dice "Proyectos destacados" (no "Los
   que están en mi CV.").
 - Experiencia (`page.tsx` + `public/resume.json`/`resume.en.json`): las 4
   entradas (UNSAM, Freelance, FABRIC SRL, Banco Nación) están sincronizadas

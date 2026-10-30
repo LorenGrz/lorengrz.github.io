@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Mona_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ScrollReveal } from "@/components/scroll-reveal"
 
 const monaSans = Mona_Sans({
   subsets: ["latin"],
@@ -110,7 +109,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Progressive enhancement flag: scroll-reveal only hides content when JS is available. */}
+        {/* Progressive enhancement flag: JS-only motion (hero entrance, carousel) is gated on html.js. */}
         <script
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js')",
@@ -130,7 +129,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-full bg-background text-on-surface" suppressHydrationWarning>
         {children}
-        <ScrollReveal />
       </body>
     </html>
   );

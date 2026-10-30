@@ -13,6 +13,9 @@
   --primary-dark: #ea6600;
   --primary-soft: #2d1500;
   --secondary: #22c55e;
+  --agent-scout: #7cc4ff;
+  --agent-reasoner: #c4a7ff;
+  --agent-worker: #ffb37a;
 }
 
 @theme inline {
@@ -28,6 +31,9 @@
   --color-primary-dark: var(--primary-dark);
   --color-primary-soft: var(--primary-soft);
   --color-secondary: var(--secondary);
+  --color-agent-scout: var(--agent-scout);
+  --color-agent-reasoner: var(--agent-reasoner);
+  --color-agent-worker: var(--agent-worker);
   --font-sans: var(--font-mona-sans), "Mona Sans", Arial, Helvetica, sans-serif;
   --font-mono: var(--font-jetbrains), "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --container-container: 1120px;
@@ -123,14 +129,6 @@ body {
 .button-secondary:hover {
   border-color: var(--primary);
   color: var(--primary);
-}
-
-.section-kicker {
-  margin-bottom: 0.75rem;
-  color: var(--primary);
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 
 .section-title {
@@ -252,86 +250,48 @@ body {
   border-color: var(--primary);
 }
 
-/* ── Hero: grid, aurora glow and grain (no static background image) ── */
-.hero-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-}
-
-.hero-aurora {
+/* ── Hero background: a static git graph of the branch flow (see HeroGraph
+   in page.tsx), faded toward the text column so it never competes with it. ── */
+.hero-graph {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(20px);
+  inset: 0 0 0 auto;
+  width: min(100%, 900px);
+  height: 100%;
   pointer-events: none;
+  opacity: 0.45;
+  mask-image: linear-gradient(to left, black 30%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to left, black 30%, transparent 85%);
 }
 
-.hero-aurora-primary {
-  right: -10%;
-  bottom: -30%;
-  width: 60vw;
-  height: 60vw;
-  max-width: 900px;
-  max-height: 900px;
-  background: radial-gradient(closest-side, rgba(249, 115, 22, 0.28), rgba(249, 115, 22, 0.06) 55%, transparent);
-  animation: aurora-drift-a 22s ease-in-out infinite alternate;
+.hero-graph path {
+  stroke: var(--outline);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
 }
 
-.hero-aurora-secondary {
-  left: 20%;
-  top: 5%;
-  width: 34vw;
-  height: 34vw;
-  max-width: 520px;
-  max-height: 520px;
-  background: radial-gradient(closest-side, rgba(255, 179, 122, 0.14), transparent);
-  animation: aurora-drift-b 26s ease-in-out infinite alternate;
+.hero-graph circle {
+  fill: var(--background);
+  stroke: var(--outline);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
 }
 
-@keyframes aurora-drift-a {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(-4%, -6%) scale(1.08); }
+.hero-graph .hero-graph-head {
+  fill: var(--primary);
+  stroke: var(--primary);
 }
 
-@keyframes aurora-drift-b {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(5%, 4%) scale(0.94); }
+@media (max-width: 1023px) {
+  .hero-graph {
+    opacity: 0.25;
+  }
 }
 
-.grain {
-  position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size: 160px 160px;
-}
-
-.dot-pulse {
-  position: relative;
-  display: inline-flex;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--secondary);
-}
-
-.dot-pulse::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: var(--secondary);
-  animation: dot-pulse 2s ease-out infinite;
-}
-
-@keyframes dot-pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  100% { transform: scale(2.6); opacity: 0; }
+/* On phones the graph would sit behind the text column — drop it. */
+@media (max-width: 639px) {
+  .hero-graph {
+    display: none;
+  }
 }
 
 .caret-blink {
@@ -343,9 +303,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-aurora-primary,
-  .hero-aurora-secondary,
-  .dot-pulse::after,
   .caret-blink {
     animation: none;
   }
@@ -490,44 +447,6 @@ html:not(.js) .carousel-controls {
   background: var(--primary);
 }
 
-/* ── Scroll reveal animations ──
-   Content is visible by default; it only starts hidden when JS is available
-   (html.js), so a failed/slow script never leaves a blank section. */
-.reveal {
-  transition:
-    opacity 0.4s ease-out,
-    transform 0.4s ease-out;
-}
-
-html.js .reveal {
-  opacity: 0;
-}
-
-html.js .reveal-left {
-  transform: translateX(-24px);
-}
-
-html.js .reveal-right {
-  transform: translateX(24px);
-}
-
-html.js .reveal-up {
-  transform: translateY(20px);
-}
-
-html.js .reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html.js .reveal {
-    transition: none;
-    opacity: 1;
-    transform: none;
-  }
-}
-
 /* ── CV modal ── */
 @keyframes modal-backdrop-in  { from { opacity: 0; }                                    to { opacity: 1; } }
 @keyframes modal-backdrop-out { from { opacity: 1; }                                    to { opacity: 0; } }
@@ -540,8 +459,7 @@ html.js .reveal.is-visible {
 .modal-leaving  .modal-card     { animation: modal-card-out     0.2s ease both; }
 
 /* ── Hero intro ──
-   Staggered entrance for the hero content on first paint. Same html.js gate as
-   .reveal so a missing/slow script never leaves content hidden, and fully
+   Staggered entrance for the hero content on first paint. Gated on html.js so a missing/slow script never leaves content hidden, and fully
    disabled under prefers-reduced-motion. Pure CSS: the SSR markup and the first
    client render are identical, so this can never cause a hydration mismatch. */
 @keyframes hero-rise {
@@ -558,7 +476,6 @@ html.js .hero-intro > *:nth-child(1) { animation-delay: 0.05s; }
 html.js .hero-intro > *:nth-child(2) { animation-delay: 0.14s; }
 html.js .hero-intro > *:nth-child(3) { animation-delay: 0.23s; }
 html.js .hero-intro > *:nth-child(4) { animation-delay: 0.32s; }
-html.js .hero-intro > *:nth-child(5) { animation-delay: 0.41s; }
 
 html.js .hero-aside {
   opacity: 0;

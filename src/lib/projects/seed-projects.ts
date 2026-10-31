@@ -54,8 +54,8 @@ export const seedProjects = [
     featured: false,
     images: [
       {
-        url: "/disfrazate.jpg",
-        alt: "Lorenzo disfrazado de choripán al lado de una parrilla, imagen generada con la app.",
+        url: "/disfrazate-cover.jpg",
+        alt: "Collage de disfraces del catálogo de Disfrazate con el nombre del proyecto sobre una franja roja.",
       },
     ],
     createdAt: new Date("2026-10-26T00:00:00.000Z").toISOString(),

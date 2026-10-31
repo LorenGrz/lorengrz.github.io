@@ -31,6 +31,37 @@ export const seedProjects = [
     updatedAt: new Date("2026-09-06T00:00:00.000Z").toISOString(),
   }),
   new Project({
+    id: "disfrazate",
+    title: "Disfrazate",
+    slug: "disfrazate",
+    summary:
+      "Resuelve el clásico de Halloween de no tener disfraz: busca uno en todas las tiendas del planeta (de mentira), te lleva a una búsqueda real de MercadoLibre y, con un botón, te muestra disfrazado con IA en situaciones absurdas a partir de una sola foto. Lo hice para el evento SIDEQUEST.",
+    description:
+      "App Next.js 16 con 60 disfraces en 8 categorías y un buscador con scraping actuado que linkea a búsquedas reales de MercadoLibre. El botón DISFRAZATE toma una foto y genera 4 imágenes en paralelo con FLUX.2 klein 4B, eligiendo entre 48 escenas y 6 estilos fotográficos. El modelo corre en un endpoint de SageMaker que cobra por hora, así que se prende solo para el evento, con un runbook y una prueba de humo contra producción. Si el disfraz buscado no existe, Nova Lite traduce y modera el texto, la misma GPU genera la foto de producto y el disfraz queda en Supabase. Las fotos de participantes solo se guardan con consentimiento, en un bucket privado.",
+    stack: [
+      "React/Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "AWS SageMaker",
+      "FLUX.2",
+      "Amazon Bedrock",
+    ],
+    githubUrl: "https://github.com/LorenGrz/Disfrazate",
+    liveUrl: "https://lorengrz.github.io/landing-disfrazate/",
+    repositoryNote: "La generación de imágenes usa una GPU que se prende solo para eventos.",
+    status: "completed",
+    featured: false,
+    images: [
+      {
+        url: "/disfrazate.jpg",
+        alt: "Lorenzo disfrazado de choripán al lado de una parrilla, imagen generada con la app.",
+      },
+    ],
+    createdAt: new Date("2026-10-26T00:00:00.000Z").toISOString(),
+    updatedAt: new Date("2026-10-31T00:00:00.000Z").toISOString(),
+  }),
+  new Project({
     id: "contentcreator",
     title: "ContentCreator",
     slug: "contentcreator",

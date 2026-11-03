@@ -81,7 +81,6 @@ const personJsonLd = {
   sameAs: [
     "https://github.com/LorenGrz",
     "https://linkedin.com/in/lorenzo-graizzaro",
-    "https://leetcode.com/u/LorenGrz/",
   ],
   knowsAbout: [
     "React",

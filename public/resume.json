@@ -31,27 +31,37 @@
   },
   "work": [
     {
-      "name": "Freelance",
-      "position": "Software Developer",
-      "startDate": "2026-01",
+      "name": "Reino Homecenter",
+      "position": "Full Stack Developer",
+      "startDate": "2026-11",
       "location": "Buenos Aires, Argentina",
-      "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con productos propios que integran IA en el flujo de trabajo.",
+      "summary": "Desarrollo full-stack dentro del equipo de Reino Homecenter.",
       "highlights": [
-        "Entrego soluciones a medida donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario",
-        "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados en AWS",
-        "Llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas"
+        "Desarrollo aplicaciones full-stack para Reino Homecenter, trabajando en equipo y de forma presencial"
       ]
     },
     {
       "name": "Universidad Nacional de San Martín",
       "position": "Instructor Universitario",
-      "startDate": "2026-06",
+      "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
       "summary": "Instructor universitario en Algoritmos 3 y PHM: acompaño a equipos de alumnos avanzados a construir aplicaciones completas con buenas prácticas de ingeniería de software.",
       "highlights": [
         "Ayudo a cada equipo a elegir la base de datos adecuada para su problema (relacional, documentos o caché) y a justificar la decisión",
         "Guío a los alumnos para que sus proyectos queden desacoplados y mantenibles, listos para crecer hacia microservicios",
         "Traduzco conceptos técnicos complejos en explicaciones simples, adaptadas al nivel de cada alumno"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Software Developer",
+      "startDate": "2025-01",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Desarrollo de aplicaciones a medida para clientes en plataformas freelance, en paralelo con productos propios que integran IA en el flujo de trabajo.",
+      "highlights": [
+        "Entrego soluciones a medida donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario",
+        "Priorizo soluciones seguras y escalables, con costos de infraestructura acotados en AWS",
+        "Llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas"
       ]
     },
     {
@@ -69,8 +79,8 @@
     {
       "name": "Banco de la Nación Argentina",
       "position": "Servicio de Atención al Cliente",
-      "startDate": "2024-02",
-      "endDate": "2025-08",
+      "startDate": "2024-01",
+      "endDate": "2025-01",
       "location": "Buenos Aires, Argentina",
       "summary": "Atención y soporte a clientes por canales remotos, priorizando precisión y seguridad en el manejo de datos.",
       "highlights": [

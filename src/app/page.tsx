@@ -60,9 +60,17 @@ const skills = [
 
 const experience = [
   {
+    role: "Full Stack Developer",
+    company: "Reino Homecenter",
+    period: "Nov 2026 - Presente",
+    current: true,
+    description:
+      "Desarrollo aplicaciones full-stack para Reino Homecenter, trabajando en equipo y de forma presencial.",
+  },
+  {
     role: "Instructor Universitario",
     company: "UNSAM",
-    period: "Jun 2026 - Presente",
+    period: "Ene 2026 - Presente",
     current: true,
     description:
       "Acompaño a equipos de alumnos avanzados de Algoritmos 3 y PHM a construir aplicaciones completas con buenas prácticas: los ayudo a elegir la base de datos adecuada para su problema y a justificarla, y a que sus proyectos queden desacoplados y mantenibles, listos para crecer. Traduzco conceptos técnicos complejos en explicaciones simples.",
@@ -70,7 +78,7 @@ const experience = [
   {
     role: "Software Developer",
     company: "Freelance",
-    period: "Ene 2026 - Presente",
+    period: "Ene 2025 - Presente",
     current: true,
     description:
       "Entrego aplicaciones a medida para clientes donde la IA es parte del proceso y no un agregado: automatiza tareas repetitivas y simplifica el trabajo del usuario, con soluciones seguras y costos de infraestructura acotados. En paralelo llevo mis propios productos de la idea al uso real: OpenRuleta se usó en vivo en eventos con cientos de personas.",
@@ -86,7 +94,7 @@ const experience = [
   {
     role: "Servicio de Atención al Cliente",
     company: "Banco Nación",
-    period: "Feb 2024 - Ago 2025",
+    period: "Ene 2024 - Ene 2025",
     current: false,
     description:
       "Resolví consultas de alto volumen por canales remotos, explicando procesos bancarios a personas no técnicas y manejando información sensible de clientes con procedimientos de seguridad estrictos.",
@@ -305,7 +313,7 @@ export default function Home() {
             <p className="mt-4 max-w-xl text-base leading-7 text-on-surface-variant">
               Estoy disponible para entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
             </p>
-            <div className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 max-sm:[&>:last-child:nth-child(odd)]:col-span-2">
               {contactLinks.map((link) => (
                 <a
                   className="contact-link"

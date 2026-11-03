@@ -143,7 +143,7 @@ export function SiteHeader() {
             <div className="sm:hidden">
               <CVDownloadModal variant="hero" />
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 [&>:last-child:nth-child(odd)]:col-span-2">
               {contactLinks.map((link) => (
                 <a
                   className="contact-link"

@@ -161,10 +161,16 @@ en Claude Design: https://claude.ai/artifact/1FMhf2NTbVFmeYEANoR8Tj (privado).
   verdad (ver OpenRuleta) — no se fuerza en proyectos que son Vite/CRA.
 - Proyectos: el heading de la sección dice "Proyectos destacados" (no "Los
   que están en mi CV.").
-- Experiencia (`page.tsx` + `public/resume.json`/`resume.en.json`): las 4
-  entradas (UNSAM, Freelance, FABRIC SRL, Banco Nación) están sincronizadas
-  con el LinkedIn de Loren en títulos y fechas; los bullets se reescribieron
+- Experiencia (`page.tsx` + `public/resume.json`/`resume.en.json`): las 5
+  entradas (Reino Homecenter, UNSAM, Freelance, FABRIC SRL, Banco Nación)
+  están sincronizadas con el LinkedIn de Loren en títulos y fechas (última
+  sincronización 2026-11-03; el puesto de Vendedor en Panda Distribuidora no
+  se muestra a propósito); los bullets se reescribieron
   orientados a resultados (2026-10-15) y `page.tsx` usa la misma redacción.
+  El bullet de Reino Homecenter es genérico: LinkedIn no trae descripción.
+  Contacto: son 3 links (Email, GitHub, LinkedIn; se sacó LeetCode el
+  2026-11-03) y las grillas de Contacto y del menú mobile se adaptan a
+  cualquier cantidad (el último botón impar ocupa el ancho completo).
   Si cambia el LinkedIn, hay que volver a pasarlo a mano (no hay scraping
   automático) y correr `pnpm cv` de nuevo para regenerar los PDFs.
   Excepción (2026-10-30, pedido de Loren): el puesto de UNSAM se muestra como

@@ -31,27 +31,37 @@
   },
   "work": [
     {
-      "name": "Freelance",
-      "position": "Software Developer",
-      "startDate": "2026-01",
+      "name": "Reino Homecenter",
+      "position": "Full Stack Developer",
+      "startDate": "2026-11",
       "location": "Buenos Aires, Argentina",
-      "summary": "Custom application development for clients on freelance platforms, alongside my own products that embed AI into the workflow.",
+      "summary": "Full-stack development within the Reino Homecenter team.",
       "highlights": [
-        "Deliver custom solutions where AI is part of the process, not an add-on: it automates repetitive tasks and simplifies the user's work",
-        "Prioritize secure, scalable solutions with controlled infrastructure costs on AWS",
-        "Take my own products from idea to real use: OpenRuleta ran live at events with hundreds of people"
+        "Build full-stack applications for Reino Homecenter, working on-site as part of the team"
       ]
     },
     {
       "name": "Universidad Nacional de San Martín",
       "position": "University Instructor",
-      "startDate": "2026-06",
+      "startDate": "2026-01",
       "location": "Buenos Aires, Argentina",
       "summary": "University instructor for Algorithms 3 and PHM: I support teams of advanced students building complete applications with solid software engineering practices.",
       "highlights": [
         "Help each team choose the right database for its problem (relational, document, or cache) and justify the decision",
         "Guide students to keep their projects decoupled and maintainable, ready to grow toward microservices",
         "Turn complex technical concepts into simple explanations adapted to each student's level"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Software Developer",
+      "startDate": "2025-01",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Custom application development for clients on freelance platforms, alongside my own products that embed AI into the workflow.",
+      "highlights": [
+        "Deliver custom solutions where AI is part of the process, not an add-on: it automates repetitive tasks and simplifies the user's work",
+        "Prioritize secure, scalable solutions with controlled infrastructure costs on AWS",
+        "Take my own products from idea to real use: OpenRuleta ran live at events with hundreds of people"
       ]
     },
     {
@@ -69,8 +79,8 @@
     {
       "name": "Banco de la Nación Argentina",
       "position": "Customer Service Representative",
-      "startDate": "2024-02",
-      "endDate": "2025-08",
+      "startDate": "2024-01",
+      "endDate": "2025-01",
       "location": "Buenos Aires, Argentina",
       "summary": "Customer support over remote channels, prioritizing accuracy and data security.",
       "highlights": [

@@ -313,7 +313,7 @@ export default function Home() {
             <p className="mt-4 max-w-xl text-base leading-7 text-on-surface-variant">
               Estoy disponible para entrevistas técnicas y conversaciones sobre aplicaciones web prácticas.
             </p>
-            <div className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 max-sm:[&>:last-child:nth-child(odd)]:col-span-2">
               {contactLinks.map((link) => (
                 <a
                   className="contact-link"
